@@ -276,79 +276,6 @@ print(f"✅ GraphML 文件已保存: {os.path.abspath(graphml_output)}")
 # ==========================================
 # 5.1 可视化 networkx 图进行验证
 # ==========================================
-def visualize_networkx_graph(G, output_path, layout='spring'):
-    """
-    可视化 networkx 图
-    """
-    print(f"\n🎨 正在生成 NetworkX 图可视化...")
-    
-    # 选择布局
-    if layout == 'spring':
-        pos = nx.spring_layout(G, k=0.5, iterations=50, seed=42)
-    elif layout == 'kamada_kawai':
-        pos0 = nx.spring_layout(G, k=0.8, seed=42)
-        pos = nx.kamada_kawai_layout(G, pos=pos0)
-    elif layout == 'hierarchical':
-        # 尝试使用层次化布局
-        try:
-            pos = nx.nx_agraph.graphviz_layout(G, prog='dot')
-        except:
-            # 如果没有 graphviz，使用 spring layout
-            pos = nx.spring_layout(G, k=0.5, iterations=50, seed=42)
-    else:
-        pos = nx.spring_layout(G, k=0.5, iterations=50, seed=42)
-    
-    # 创建图形
-    plt.figure(figsize=(20, 14))
-    
-    # 根据节点类型设置不同的颜色
-    node_colors = []
-    for node in G.nodes():
-        # 判断节点类型：如果 operation 不为空，说明是结果节点
-        op = G.nodes[node].get("operation", "")
-        if op:
-            node_colors.append('#ff4d4d')  # 红色：结果节点
-        else:
-            node_colors.append('#4C89C6')  # 蓝色：条件节点
-    
-    # 绘制边
-    nx.draw_networkx_edges(
-        G, pos, 
-        alpha=0.3, 
-        width=0.8, 
-        arrows=True, 
-        arrowstyle='-|>', 
-        arrowsize=15,
-        edge_color='#808080'
-    )
-    
-    # 绘制节点
-    nx.draw_networkx_nodes(
-        G, pos,
-        node_size=1000,
-        node_color=node_colors,
-        alpha=0.9,
-        linewidths=1.5,
-        edgecolors='#1c3d5a'
-    )
-    
-    # 显示节点标签
-    labels = {node: node for node in G.nodes()}
-    nx.draw_networkx_labels(
-        G, pos, 
-        labels,
-        font_size=8,
-        font_weight='bold'
-    )
-    
-    plt.axis('off')
-    plt.title('NetworkX 图可视化验证', fontsize=16, pad=20)
-    plt.tight_layout()
-    
-    # 保存图片
-    plt.savefig(output_path, dpi=200, bbox_inches='tight')
-    print(f"✅ NetworkX 图可视化已保存: {os.path.abspath(output_path)}")
-    plt.close()
 
 ## 可视化 networkx 图
 #nx_viz_output = "merged_graph_viz.png"
@@ -365,4 +292,4 @@ print(f"\n📝 输出文件:")
 print(f"  - GraphML: {os.path.abspath(graphml_output)} (用于图遍历)")
 #print(f"  - PNG: {os.path.abspath(nx_viz_output)} (NetworkX 图可视化)")
 print(f"  - HTML: {os.path.abspath(output_file)} (交互式可视化)")
-webbrowser.open("file://" + os.path.abspath(output_file))
+# webbrowser.open("file://" + os.path.abspath(output_file))
