@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import webbrowser
 import os
 import json
+import argparse
 
 # 确保中文能够正确显示
 matplotlib.rcParams['font.sans-serif'] = ['SimHei', 'Noto Sans CJK SC', 'Arial Unicode MS', 'DejaVu Sans']
@@ -23,10 +24,14 @@ matplotlib.rcParams['axes.unicode_minus'] = False
 # ==========================================
 GRAPH_DATA_DIR = "graph_data"
 
-def load_graph_data_from_json_files():
+def load_graph_data_from_json_files(file_list=None):
     """
-    从 graph_data 目录下的所有 JSON 文件加载法条和子图数据
+    从 graph_data 目录下的 JSON 文件加载法条和子图数据
     返回融合后的规则数据列表，每个规则包含法条信息
+    
+    Args:
+        file_list: 可选，指定要处理的文件名列表。如果为 None，则处理所有文件。
+                   文件名可以是完整路径，或相对于 graph_data 目录的文件名。
     """
     graph_data_dir = os.path.join(os.path.dirname(__file__), GRAPH_DATA_DIR)
     
@@ -34,17 +39,39 @@ def load_graph_data_from_json_files():
         print(f"⚠️  目录不存在: {graph_data_dir}")
         return [], []
     
-    # 获取所有 JSON 文件
-    all_files = os.listdir(graph_data_dir)
-    json_files = [
-        os.path.join(graph_data_dir, f) 
-        for f in all_files 
-        if f.endswith('.json') and os.path.isfile(os.path.join(graph_data_dir, f))
-    ]
-    
-    if not json_files:
-        print(f"⚠️  在 {graph_data_dir} 目录下未找到 JSON 文件")
-        return [], []
+    # 如果指定了文件列表，只处理这些文件
+    if file_list:
+        json_files = []
+        for file_name in file_list:
+            # 如果已经是完整路径
+            if os.path.isabs(file_name):
+                if os.path.exists(file_name):
+                    json_files.append(file_name)
+                else:
+                    print(f"⚠️  文件不存在: {file_name}")
+            else:
+                # 相对路径，尝试在 graph_data 目录下查找
+                full_path = os.path.join(graph_data_dir, file_name)
+                if os.path.exists(full_path):
+                    json_files.append(full_path)
+                else:
+                    print(f"⚠️  文件不存在: {full_path}")
+        
+        if not json_files:
+            print(f"⚠️  没有找到任何有效的 JSON 文件")
+            return [], []
+    else:
+        # 获取所有 JSON 文件
+        all_files = os.listdir(graph_data_dir)
+        json_files = [
+            os.path.join(graph_data_dir, f) 
+            for f in all_files 
+            if f.endswith('.json') and os.path.isfile(os.path.join(graph_data_dir, f))
+        ]
+        
+        if not json_files:
+            print(f"⚠️  在 {graph_data_dir} 目录下未找到 JSON 文件")
+            return [], []
     
     # 存储所有规则数据（每个规则包含法条信息）
     all_rules = []
@@ -86,8 +113,54 @@ def load_graph_data_from_json_files():
     print(f"\n✅ 共加载 {len(all_rules)} 条规则")
     return all_rules, law_info_list
 
+# ==========================================
+# 1. 解析命令行参数
+# ==========================================
+def parse_args():
+    """解析命令行参数"""
+    parser = argparse.ArgumentParser(
+        description='法条图谱可视化工具 - 融合多个法条子图并生成可视化图谱',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+示例:
+  # 处理所有 graph_data 目录下的 JSON 文件
+  python json_to_graph_v2.py
+
+  # 只处理指定的文件（文件名相对于 graph_data 目录）
+  python json_to_graph_v2.py -f 刑法_第93条.json 刑法_第385条.json
+
+  # 使用完整路径指定文件
+  python json_to_graph_v2.py -f graph_data/刑法_第93条.json graph_data/刑法_第385条.json
+        """
+    )
+    parser.add_argument(
+        '-f', '--files',
+        nargs='+',
+        default=None,
+        help='指定要处理的 JSON 文件列表（相对于 graph_data 目录的文件名或完整路径）'
+    )
+    parser.add_argument(
+        '-o', '--output',
+        type=str,
+        default='merged_graph.graphml',
+        help='输出的 GraphML 文件名（默认: merged_graph.graphml）'
+    )
+    parser.add_argument(
+        '--html-output',
+        type=str,
+        default='bribe_law_graph.html',
+        help='输出的 HTML 文件名（默认: bribe_law_graph.html）'
+    )
+    return parser.parse_args()
+
+# ==========================================
+# 主程序入口
+# ==========================================
+# 解析命令行参数
+args = parse_args()
+
 # 加载并融合所有子图数据
-rules_data, law_info_list = load_graph_data_from_json_files()
+rules_data, law_info_list = load_graph_data_from_json_files(args.files)
 
 if not rules_data:
     print("❌ 未加载到任何规则数据，程序退出")
@@ -104,7 +177,7 @@ print()
 # 2. 初始化画布和 networkx 图
 # ==========================================
 # 初始化 pyvis 可视化网络
-net = Network(height="800px", width="100%", bgcolor="#ffffff", font_color="black", directed=True)
+net = Network(height="100vh", width="100%", bgcolor="#ffffff", font_color="black", directed=True)
 
 # 初始化 networkx 有向图，用于保存 GraphML
 nx_graph = nx.DiGraph()
@@ -266,7 +339,7 @@ for node in nx_graph.nodes():
             node_data[attr] = ""
 
 # 保存为 GraphML 格式
-graphml_output = "merged_graph.graphml"
+graphml_output = args.output
 nx.write_graphml(nx_graph, graphml_output, encoding='utf-8')
 print(f"\n📊 NetworkX 图统计:")
 print(f"  - 节点数: {nx_graph.number_of_nodes()}")
@@ -284,8 +357,46 @@ print(f"✅ GraphML 文件已保存: {os.path.abspath(graphml_output)}")
 # ==========================================
 # 6. 生成 HTML 可视化并打开
 # ==========================================
-output_file = "bribe_law_graph.html"
+output_file = args.html_output
 net.write_html(output_file)
+
+# 优化 HTML 样式，使其铺满浏览器窗口
+try:
+    with open(output_file, 'r', encoding='utf-8') as f:
+        html_content = f.read()
+    
+    # 替换固定的高度为 100vh
+    html_content = html_content.replace('height: 800px', 'height: 100vh')
+    html_content = html_content.replace('height:800px', 'height:100vh')
+    
+    # 修改 #mynetwork 样式，使其铺满全屏
+    html_content = html_content.replace('position: relative;', 'position: absolute;')
+    html_content = html_content.replace('float: left;', '')
+    html_content = html_content.replace('border: 1px solid lightgray;', 'border: none;')
+    
+    # 在 head 标签的 style 部分添加全屏样式
+    style_addition = """
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+"""
+    
+    # 找到 </style> 标签并在之前插入新样式
+    if '</style>' in html_content:
+        html_content = html_content.replace('</style>', style_addition + '</style>', 1)
+    else:
+        # 如果没有 style 标签，在 head 中添加
+        if '</head>' in html_content:
+            html_content = html_content.replace('</head>', '<style>' + style_addition + '</style></head>', 1)
+    
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(html_content)
+except Exception as e:
+    print(f"⚠️  优化 HTML 样式时出错: {e}")
 
 print(f"✅ 图谱已生成: {os.path.abspath(output_file)}")
 print(f"\n📝 输出文件:")
