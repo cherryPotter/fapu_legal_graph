@@ -1,0 +1,841 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d4" for="node" attr.name="case_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="operation" attr.type="string"/>
+<key id="d2" for="node" attr.name="prompt" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="node_name" attr.type="string"/>
+<graph edgedefault="directed"><node id="重大责任事故罪的犯罪主体">
+  <data key="d0">重大责任事故罪的犯罪主体</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="直接从事生产、作业的人员">
+  <data key="d0">直接从事生产、作业的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="一线工人">
+  <data key="d0">一线工人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="对生产、作业负有组织、指挥职责的负责人">
+  <data key="d0">对生产、作业负有组织、指挥职责的负责人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="对生产、作业负有管理职责的管理人员">
+  <data key="d0">对生产、作业负有管理职责的管理人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="生产、作业单位的实际控制人（通过投资关系、协议等实际支配单位行为的人）">
+  <data key="d0">生产、作业单位的实际控制人（通过投资关系、协议等实际支配单位行为的人）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="对生产、作业负有组织、指挥或者管理职责的投资人">
+  <data key="d0">对生产、作业负有组织、指挥或者管理职责的投资人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="群众合作经营组织的从业人员">
+  <data key="d0">群众合作经营组织的从业人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="个体工商户的从业人员">
+  <data key="d0">个体工商户的从业人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="无证开采小煤矿等非法生产经营活动的从业人员">
+  <data key="d0">无证开采小煤矿等非法生产经营活动的从业人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="工程非法转包后负责施工的真正主管人员">
+  <data key="d0">工程非法转包后负责施工的真正主管人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="劳务派遣人员参与生产、作业的">
+  <data key="d0">劳务派遣人员参与生产、作业的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="临时用工人员参与生产、作业的">
+  <data key="d0">临时用工人员参与生产、作业的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="生产、作业过程">
+  <data key="d0">生产、作业过程</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="工厂的生产、作业活动">
+  <data key="d0">工厂的生产、作业活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="矿山的生产、作业活动">
+  <data key="d0">矿山的生产、作业活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="林场的生产、作业活动">
+  <data key="d0">林场的生产、作业活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="建筑企业的生产、作业活动">
+  <data key="d0">建筑企业的生产、作业活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="其他企业、事业单位的生产、作业活动">
+  <data key="d0">其他企业、事业单位的生产、作业活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="群众合作经营组织的生产、作业活动">
+  <data key="d0">群众合作经营组织的生产、作业活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="个体工商户的生产、作业活动">
+  <data key="d0">个体工商户的生产、作业活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="无证开采、无照经营等非法生产、作业活动">
+  <data key="d0">无证开采、无照经营等非法生产、作业活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="城市下水管道疏浚等体力劳动性质的作业活动">
+  <data key="d0">城市下水管道疏浚等体力劳动性质的作业活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="具有潜在重大安全风险的各类工作过程（符合生产、作业本质特征：不特定多数人的生命、健康安全和公私财产安全）">
+  <data key="d0">具有潜在重大安全风险的各类工作过程（符合生产、作业本质特征：不特定多数人的生命、健康安全和公私财产安全）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="违反有关安全管理的规定">
+  <data key="d0">违反有关安全管理的规定</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="违反国家颁布的安全生产相关法律（如《安全生产法》《矿山安全法》）">
+  <data key="d0">违反国家颁布的安全生产相关法律（如《安全生产法》《矿山安全法》）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="违反国家颁布的安全生产相关行政法规（如《煤矿安全监察条例》）">
+  <data key="d0">违反国家颁布的安全生产相关行政法规（如《煤矿安全监察条例》）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="违反企业、事业单位制定的操作规程">
+  <data key="d0">违反企业、事业单位制定的操作规程</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="违反企业、事业单位制定的作业指南">
+  <data key="d0">违反企业、事业单位制定的作业指南</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="违反企业、事业单位及其上级主管机关制定的章程、规则">
+  <data key="d0">违反企业、事业单位及其上级主管机关制定的章程、规则</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="违反本行业普遍认同并通行遵守的操作习惯">
+  <data key="d0">违反本行业普遍认同并通行遵守的操作习惯</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="违反本行业普遍认同并通行遵守的行业惯例">
+  <data key="d0">违反本行业普遍认同并通行遵守的行业惯例</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="在生产、作业中违反有关安全管理的规定">
+  <data key="d0">在生产、作业中违反有关安全管理的规定</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="行为可能危及不特定或多数人的生命健康、公私财产安全">
+  <data key="d0">行为可能危及不特定或多数人的生命健康、公私财产安全</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="发生重大伤亡事故或者造成其他严重后果">
+  <data key="d0">发生重大伤亡事故或者造成其他严重后果</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="造成死亡一人以上">
+  <data key="d0">造成死亡一人以上</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="造成重伤三人以上">
+  <data key="d0">造成重伤三人以上</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="造成直接经济损失一百万元以上">
+  <data key="d0">造成直接经济损失一百万元以上</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="发生矿山生产安全事故造成直接经济损失一百万元以上">
+  <data key="d0">发生矿山生产安全事故造成直接经济损失一百万元以上</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="其他造成严重后果或者重大安全事故的情形">
+  <data key="d0">其他造成严重后果或者重大安全事故的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="经常违反规章制度屡教不改，引发事故">
+  <data key="d0">经常违反规章制度屡教不改，引发事故</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="行为人违反安全管理规定的行为导致了重大伤亡事故或者造成了其他严重后果">
+  <data key="d0">行为人违反安全管理规定的行为导致了重大伤亡事故或者造成了其他严重后果</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="经常违反规章制度，屡教不改">
+  <data key="d0">经常违反规章制度，屡教不改</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="明知没有安全保证仍不听劝阻，引发事故">
+  <data key="d0">明知没有安全保证仍不听劝阻，引发事故</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="明知没有安全保证，仍然不听劝阻">
+  <data key="d0">明知没有安全保证，仍然不听劝阻</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="发生过事故后不引以为戒继续蛮干，引发事故">
+  <data key="d0">发生过事故后不引以为戒继续蛮干，引发事故</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="发生过事故后不引以为戒，继续蛮干">
+  <data key="d0">发生过事故后不引以为戒，继续蛮干</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="受过行政处罚后仍违反安全管理规定，引发事故">
+  <data key="d0">受过行政处罚后仍违反安全管理规定，引发事故</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="已经因为违反规章制度受到批评教育或行政处罚而不改正，再次违反安全管理规定">
+  <data key="d0">已经因为违反规章制度受到批评教育或行政处罚而不改正，再次违反安全管理规定</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="发现事故苗头拒不采纳意见，一意孤行引发事故">
+  <data key="d0">发现事故苗头拒不采纳意见，一意孤行引发事故</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="已经发现事故苗头，仍然不听劝阻、一意孤行，拒不采纳工人和技术人员的意见">
+  <data key="d0">已经发现事故苗头，仍然不听劝阻、一意孤行，拒不采纳工人和技术人员的意见</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="通过恶劣手段掩盖安全隐患蒙骗工人作业，引发事故">
+  <data key="d0">通过恶劣手段掩盖安全隐患蒙骗工人作业，引发事故</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="通过恶劣手段掩盖安全生产隐患，蒙骗工人作业">
+  <data key="d0">通过恶劣手段掩盖安全生产隐患，蒙骗工人作业</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="出现险情后仍继续生产、作业或指挥作业，引发事故">
+  <data key="d0">出现险情后仍继续生产、作业或指挥作业，引发事故</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="在出现险情的情况下仍然继续生产、作业或者指挥工人生产、作业">
+  <data key="d0">在出现险情的情况下仍然继续生产、作业或者指挥工人生产、作业</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="情节特别恶劣">
+  <data key="d0">情节特别恶劣</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="造成死亡三人以上且负事故主要责任">
+  <data key="d0">造成死亡三人以上且负事故主要责任</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="造成重伤十人以上且负事故主要责任">
+  <data key="d0">造成重伤十人以上且负事故主要责任</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="造成直接经济损失五百万元以上且负事故主要责任">
+  <data key="d0">造成直接经济损失五百万元以上且负事故主要责任</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="其他造成特别严重后果、情节特别恶劣或者后果特别严重的情形">
+  <data key="d0">其他造成特别严重后果、情节特别恶劣或者后果特别严重的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="主观方面为过失">
+  <data key="d0">主观方面为过失</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="应当预见违反安全管理规定可能引发事故，因疏忽大意没有预见">
+  <data key="d0">应当预见违反安全管理规定可能引发事故，因疏忽大意没有预见</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="已经预见违反安全管理规定可能引发事故，但轻信能够避免">
+  <data key="d0">已经预见违反安全管理规定可能引发事故，但轻信能够避免</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="违反安全管理规定的行为与危害结果存在刑法上因果关系">
+  <data key="d0">违反安全管理规定的行为与危害结果存在刑法上因果关系</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="行为人实施了违反有关安全管理规定的行为">
+  <data key="d0">行为人实施了违反有关安全管理规定的行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="发生了重大伤亡事故或者其他严重后果">
+  <data key="d0">发生了重大伤亡事故或者其他严重后果</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="违反安全管理规定的行为与危害结果之间存在引起与被引起的关系">
+  <data key="d0">违反安全管理规定的行为与危害结果之间存在引起与被引起的关系</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="排除其他介入因素切断因果关系的情形">
+  <data key="d0">排除其他介入因素切断因果关系的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="意外事故">
+  <data key="d0">意外事故</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="事故由地震、洪水、干旱、台风、海啸等自然原因造成">
+  <data key="d0">事故由地震、洪水、干旱、台风、海啸等自然原因造成</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="事故由行为人不能预见的原因造成">
+  <data key="d0">事故由行为人不能预见的原因造成</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="事故由行为人不能抗拒的强制力造成">
+  <data key="d0">事故由行为人不能抗拒的强制力造成</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="外在强制力超出人或物本身应有的最大抗御能力">
+  <data key="d0">外在强制力超出人或物本身应有的最大抗御能力</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="医疗事故罪">
+  <data key="d0">医疗事故罪</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="侵犯的客体为国家对医务工作的管理秩序和就诊人生命、健康权利（而非生产、作业安全）">
+  <data key="d0">侵犯的客体为国家对医务工作的管理秩序和就诊人生命、健康权利（而非生产、作业安全）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="客观方面表现为行为人在医务工作中严重不负责任（而非生产、作业中违反安全管理规定）">
+  <data key="d0">客观方面表现为行为人在医务工作中严重不负责任（而非生产、作业中违反安全管理规定）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="危害结果要求造成就诊人死亡或严重损害就诊人身体健康（不含单纯财产损失）">
+  <data key="d0">危害结果要求造成就诊人死亡或严重损害就诊人身体健康（不含单纯财产损失）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="犯罪主体为医务人员，即经过医药院校教育,或者经培训后考核合格,并经过卫⽣⾏政机关批准,取得⾏医资格,从事医疗实践⼯作的⼈员（特殊主体，含合法个体医务工作者，不含非法行医人员）">
+  <data key="d0">犯罪主体为医务人员，即经过医药院校教育,或者经培训后考核合格,并经过卫⽣⾏政机关批准,取得⾏医资格,从事医疗实践⼯作的⼈员（特殊主体，含合法个体医务工作者，不含非法行医人员）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="不纳入重大责任事故罪追究刑事责任的人员范围">
+  <data key="d0">不纳入重大责任事故罪追究刑事责任的人员范围</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="仅购买少量上市公司股票、不参与经营决策的中小投资人">
+  <data key="d0">仅购买少量上市公司股票、不参与经营决策的中小投资人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="未对生产、作业负有组织、指挥或管理职责的普通投资人">
+  <data key="d0">未对生产、作业负有组织、指挥或管理职责的普通投资人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="未实施违反安全管理规定行为的人员">
+  <data key="d0">未实施违反安全管理规定行为的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="其行为与危害结果无刑法上因果关系的人员">
+  <data key="d0">其行为与危害结果无刑法上因果关系的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="不在不纳入重大责任事故罪追究刑事责任的人员范围">
+  <data key="d0">不在不纳入重大责任事故罪追究刑事责任的人员范围</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="不符合 “在生产、作业中违反有关安全管理规定” 的情形">
+  <data key="d0">不符合 “在生产、作业中违反有关安全管理规定” 的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="下班后违反禁烟规定引发火灾（非生产、作业过程中）">
+  <data key="d0">下班后违反禁烟规定引发火灾（非生产、作业过程中）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="休息时段实施的违反安全管理规定行为">
+  <data key="d0">休息时段实施的违反安全管理规定行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="间隙时间实施的违反安全管理规定行为">
+  <data key="d0">间隙时间实施的违反安全管理规定行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="不属于不符合 “在生产、作业中违反有关安全管理规定” 的情形">
+  <data key="d0">不属于不符合 “在生产、作业中违反有关安全管理规定” 的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="构成重大责任事故罪">
+  <data key="d0">构成重大责任事故罪</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="不属于意外事故">
+  <data key="d0">不属于意外事故</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="处三年以下有期徒刑或者拘役">
+  <data key="d0">处三年以下有期徒刑或者拘役</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="无情节特别恶劣">
+  <data key="d0">无情节特别恶劣</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="处三年以上七年以下有期徒刑">
+  <data key="d0">处三年以上七年以下有期徒刑</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="重大责任事故罪量刑中可以从轻处罚的情形">
+  <data key="d0">重大责任事故罪量刑中可以从轻处罚的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="事故发生后自首">
+  <data key="d0">事故发生后自首</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="事故发生后积极组织抢救">
+  <data key="d0">事故发生后积极组织抢救</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="事故发生后主动赔偿损失并取得被害人谅解">
+  <data key="d0">事故发生后主动赔偿损失并取得被害人谅解</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="在多因一果案件中责任较小">
+  <data key="d0">在多因一果案件中责任较小</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="重大责任事故罪量刑中应当酌情从重处罚的情形">
+  <data key="d0">重大责任事故罪量刑中应当酌情从重处罚的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="在多因一果案件中负主要责任">
+  <data key="d0">在多因一果案件中负主要责任</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="多次违反规章制度屡教不改">
+  <data key="d0">多次违反规章制度屡教不改</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="掩盖安全隐患蒙骗工人作业">
+  <data key="d0">掩盖安全隐患蒙骗工人作业</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<node id="出现险情后仍继续指挥作业">
+  <data key="d0">出现险情后仍继续指挥作业</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">重大责任事故罪</data>
+</node>
+<edge source="重大责任事故罪的犯罪主体" target="构成重大责任事故罪"/>
+<edge source="直接从事生产、作业的人员" target="重大责任事故罪的犯罪主体"/>
+<edge source="一线工人" target="重大责任事故罪的犯罪主体"/>
+<edge source="对生产、作业负有组织、指挥职责的负责人" target="重大责任事故罪的犯罪主体"/>
+<edge source="对生产、作业负有管理职责的管理人员" target="重大责任事故罪的犯罪主体"/>
+<edge source="生产、作业单位的实际控制人（通过投资关系、协议等实际支配单位行为的人）" target="重大责任事故罪的犯罪主体"/>
+<edge source="对生产、作业负有组织、指挥或者管理职责的投资人" target="重大责任事故罪的犯罪主体"/>
+<edge source="群众合作经营组织的从业人员" target="重大责任事故罪的犯罪主体"/>
+<edge source="个体工商户的从业人员" target="重大责任事故罪的犯罪主体"/>
+<edge source="无证开采小煤矿等非法生产经营活动的从业人员" target="重大责任事故罪的犯罪主体"/>
+<edge source="工程非法转包后负责施工的真正主管人员" target="重大责任事故罪的犯罪主体"/>
+<edge source="劳务派遣人员参与生产、作业的" target="重大责任事故罪的犯罪主体"/>
+<edge source="临时用工人员参与生产、作业的" target="重大责任事故罪的犯罪主体"/>
+<edge source="生产、作业过程" target="在生产、作业中违反有关安全管理的规定"/>
+<edge source="工厂的生产、作业活动" target="生产、作业过程"/>
+<edge source="矿山的生产、作业活动" target="生产、作业过程"/>
+<edge source="林场的生产、作业活动" target="生产、作业过程"/>
+<edge source="建筑企业的生产、作业活动" target="生产、作业过程"/>
+<edge source="其他企业、事业单位的生产、作业活动" target="生产、作业过程"/>
+<edge source="群众合作经营组织的生产、作业活动" target="生产、作业过程"/>
+<edge source="个体工商户的生产、作业活动" target="生产、作业过程"/>
+<edge source="无证开采、无照经营等非法生产、作业活动" target="生产、作业过程"/>
+<edge source="城市下水管道疏浚等体力劳动性质的作业活动" target="生产、作业过程"/>
+<edge source="具有潜在重大安全风险的各类工作过程（符合生产、作业本质特征：不特定多数人的生命、健康安全和公私财产安全）" target="生产、作业过程"/>
+<edge source="违反有关安全管理的规定" target="在生产、作业中违反有关安全管理的规定"/>
+<edge source="违反国家颁布的安全生产相关法律（如《安全生产法》《矿山安全法》）" target="违反有关安全管理的规定"/>
+<edge source="违反国家颁布的安全生产相关行政法规（如《煤矿安全监察条例》）" target="违反有关安全管理的规定"/>
+<edge source="违反企业、事业单位制定的操作规程" target="违反有关安全管理的规定"/>
+<edge source="违反企业、事业单位制定的作业指南" target="违反有关安全管理的规定"/>
+<edge source="违反企业、事业单位及其上级主管机关制定的章程、规则" target="违反有关安全管理的规定"/>
+<edge source="违反本行业普遍认同并通行遵守的操作习惯" target="违反有关安全管理的规定"/>
+<edge source="违反本行业普遍认同并通行遵守的行业惯例" target="违反有关安全管理的规定"/>
+<edge source="在生产、作业中违反有关安全管理的规定" target="构成重大责任事故罪"/>
+<edge source="行为可能危及不特定或多数人的生命健康、公私财产安全" target="在生产、作业中违反有关安全管理的规定"/>
+<edge source="发生重大伤亡事故或者造成其他严重后果" target="构成重大责任事故罪"/>
+<edge source="发生重大伤亡事故或者造成其他严重后果" target="处三年以下有期徒刑或者拘役"/>
+<edge source="造成死亡一人以上" target="发生重大伤亡事故或者造成其他严重后果"/>
+<edge source="造成重伤三人以上" target="发生重大伤亡事故或者造成其他严重后果"/>
+<edge source="造成直接经济损失一百万元以上" target="发生重大伤亡事故或者造成其他严重后果"/>
+<edge source="发生矿山生产安全事故造成直接经济损失一百万元以上" target="发生重大伤亡事故或者造成其他严重后果"/>
+<edge source="其他造成严重后果或者重大安全事故的情形" target="发生重大伤亡事故或者造成其他严重后果"/>
+<edge source="经常违反规章制度屡教不改，引发事故" target="情节特别恶劣"/>
+<edge source="行为人违反安全管理规定的行为导致了重大伤亡事故或者造成了其他严重后果" target="经常违反规章制度屡教不改，引发事故"/>
+<edge source="行为人违反安全管理规定的行为导致了重大伤亡事故或者造成了其他严重后果" target="明知没有安全保证仍不听劝阻，引发事故"/>
+<edge source="行为人违反安全管理规定的行为导致了重大伤亡事故或者造成了其他严重后果" target="发生过事故后不引以为戒继续蛮干，引发事故"/>
+<edge source="行为人违反安全管理规定的行为导致了重大伤亡事故或者造成了其他严重后果" target="受过行政处罚后仍违反安全管理规定，引发事故"/>
+<edge source="行为人违反安全管理规定的行为导致了重大伤亡事故或者造成了其他严重后果" target="发现事故苗头拒不采纳意见，一意孤行引发事故"/>
+<edge source="行为人违反安全管理规定的行为导致了重大伤亡事故或者造成了其他严重后果" target="通过恶劣手段掩盖安全隐患蒙骗工人作业，引发事故"/>
+<edge source="行为人违反安全管理规定的行为导致了重大伤亡事故或者造成了其他严重后果" target="出现险情后仍继续生产、作业或指挥作业，引发事故"/>
+<edge source="经常违反规章制度，屡教不改" target="经常违反规章制度屡教不改，引发事故"/>
+<edge source="明知没有安全保证仍不听劝阻，引发事故" target="情节特别恶劣"/>
+<edge source="明知没有安全保证，仍然不听劝阻" target="明知没有安全保证仍不听劝阻，引发事故"/>
+<edge source="发生过事故后不引以为戒继续蛮干，引发事故" target="情节特别恶劣"/>
+<edge source="发生过事故后不引以为戒，继续蛮干" target="发生过事故后不引以为戒继续蛮干，引发事故"/>
+<edge source="受过行政处罚后仍违反安全管理规定，引发事故" target="情节特别恶劣"/>
+<edge source="已经因为违反规章制度受到批评教育或行政处罚而不改正，再次违反安全管理规定" target="受过行政处罚后仍违反安全管理规定，引发事故"/>
+<edge source="发现事故苗头拒不采纳意见，一意孤行引发事故" target="情节特别恶劣"/>
+<edge source="已经发现事故苗头，仍然不听劝阻、一意孤行，拒不采纳工人和技术人员的意见" target="发现事故苗头拒不采纳意见，一意孤行引发事故"/>
+<edge source="通过恶劣手段掩盖安全隐患蒙骗工人作业，引发事故" target="情节特别恶劣"/>
+<edge source="通过恶劣手段掩盖安全生产隐患，蒙骗工人作业" target="通过恶劣手段掩盖安全隐患蒙骗工人作业，引发事故"/>
+<edge source="出现险情后仍继续生产、作业或指挥作业，引发事故" target="情节特别恶劣"/>
+<edge source="在出现险情的情况下仍然继续生产、作业或者指挥工人生产、作业" target="出现险情后仍继续生产、作业或指挥作业，引发事故"/>
+<edge source="情节特别恶劣" target="处三年以上七年以下有期徒刑"/>
+<edge source="造成死亡三人以上且负事故主要责任" target="情节特别恶劣"/>
+<edge source="造成重伤十人以上且负事故主要责任" target="情节特别恶劣"/>
+<edge source="造成直接经济损失五百万元以上且负事故主要责任" target="情节特别恶劣"/>
+<edge source="其他造成特别严重后果、情节特别恶劣或者后果特别严重的情形" target="情节特别恶劣"/>
+<edge source="主观方面为过失" target="构成重大责任事故罪"/>
+<edge source="应当预见违反安全管理规定可能引发事故，因疏忽大意没有预见" target="主观方面为过失"/>
+<edge source="已经预见违反安全管理规定可能引发事故，但轻信能够避免" target="主观方面为过失"/>
+<edge source="违反安全管理规定的行为与危害结果存在刑法上因果关系" target="构成重大责任事故罪"/>
+<edge source="行为人实施了违反有关安全管理规定的行为" target="违反安全管理规定的行为与危害结果存在刑法上因果关系"/>
+<edge source="发生了重大伤亡事故或者其他严重后果" target="违反安全管理规定的行为与危害结果存在刑法上因果关系"/>
+<edge source="违反安全管理规定的行为与危害结果之间存在引起与被引起的关系" target="违反安全管理规定的行为与危害结果存在刑法上因果关系"/>
+<edge source="排除其他介入因素切断因果关系的情形" target="违反安全管理规定的行为与危害结果存在刑法上因果关系"/>
+<edge source="事故由地震、洪水、干旱、台风、海啸等自然原因造成" target="意外事故"/>
+<edge source="事故由行为人不能预见的原因造成" target="意外事故"/>
+<edge source="事故由行为人不能抗拒的强制力造成" target="意外事故"/>
+<edge source="外在强制力超出人或物本身应有的最大抗御能力" target="意外事故"/>
+<edge source="侵犯的客体为国家对医务工作的管理秩序和就诊人生命、健康权利（而非生产、作业安全）" target="医疗事故罪"/>
+<edge source="客观方面表现为行为人在医务工作中严重不负责任（而非生产、作业中违反安全管理规定）" target="医疗事故罪"/>
+<edge source="危害结果要求造成就诊人死亡或严重损害就诊人身体健康（不含单纯财产损失）" target="医疗事故罪"/>
+<edge source="犯罪主体为医务人员，即经过医药院校教育,或者经培训后考核合格,并经过卫⽣⾏政机关批准,取得⾏医资格,从事医疗实践⼯作的⼈员（特殊主体，含合法个体医务工作者，不含非法行医人员）" target="医疗事故罪"/>
+<edge source="不纳入重大责任事故罪追究刑事责任的人员范围" target="不在不纳入重大责任事故罪追究刑事责任的人员范围"/>
+<edge source="仅购买少量上市公司股票、不参与经营决策的中小投资人" target="不纳入重大责任事故罪追究刑事责任的人员范围"/>
+<edge source="未对生产、作业负有组织、指挥或管理职责的普通投资人" target="不纳入重大责任事故罪追究刑事责任的人员范围"/>
+<edge source="未实施违反安全管理规定行为的人员" target="不纳入重大责任事故罪追究刑事责任的人员范围"/>
+<edge source="其行为与危害结果无刑法上因果关系的人员" target="不纳入重大责任事故罪追究刑事责任的人员范围"/>
+<edge source="不在不纳入重大责任事故罪追究刑事责任的人员范围" target="构成重大责任事故罪"/>
+<edge source="不符合 “在生产、作业中违反有关安全管理规定” 的情形" target="不属于不符合 “在生产、作业中违反有关安全管理规定” 的情形"/>
+<edge source="下班后违反禁烟规定引发火灾（非生产、作业过程中）" target="不符合 “在生产、作业中违反有关安全管理规定” 的情形"/>
+<edge source="休息时段实施的违反安全管理规定行为" target="不符合 “在生产、作业中违反有关安全管理规定” 的情形"/>
+<edge source="间隙时间实施的违反安全管理规定行为" target="不符合 “在生产、作业中违反有关安全管理规定” 的情形"/>
+<edge source="不属于不符合 “在生产、作业中违反有关安全管理规定” 的情形" target="构成重大责任事故罪"/>
+<edge source="构成重大责任事故罪" target="处三年以下有期徒刑或者拘役"/>
+<edge source="构成重大责任事故罪" target="处三年以上七年以下有期徒刑"/>
+<edge source="不属于意外事故" target="构成重大责任事故罪"/>
+<edge source="无情节特别恶劣" target="处三年以下有期徒刑或者拘役"/>
+<edge source="事故发生后自首" target="重大责任事故罪量刑中可以从轻处罚的情形"/>
+<edge source="事故发生后积极组织抢救" target="重大责任事故罪量刑中可以从轻处罚的情形"/>
+<edge source="事故发生后主动赔偿损失并取得被害人谅解" target="重大责任事故罪量刑中可以从轻处罚的情形"/>
+<edge source="在多因一果案件中责任较小" target="重大责任事故罪量刑中可以从轻处罚的情形"/>
+<edge source="在多因一果案件中负主要责任" target="重大责任事故罪量刑中应当酌情从重处罚的情形"/>
+<edge source="多次违反规章制度屡教不改" target="重大责任事故罪量刑中应当酌情从重处罚的情形"/>
+<edge source="掩盖安全隐患蒙骗工人作业" target="重大责任事故罪量刑中应当酌情从重处罚的情形"/>
+<edge source="出现险情后仍继续指挥作业" target="重大责任事故罪量刑中应当酌情从重处罚的情形"/>
+</graph></graphml>
