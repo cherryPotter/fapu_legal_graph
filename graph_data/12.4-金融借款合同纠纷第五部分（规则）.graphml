@@ -1,0 +1,1735 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d4" for="node" attr.name="case_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="operation" attr.type="string"/>
+<key id="d2" for="node" attr.name="prompt" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="node_name" attr.type="string"/>
+<graph edgedefault="directed"><node id="金融借款合同要件事实审查合格">
+  <data key="d0">金融借款合同要件事实审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融借款合同成立与生效的认定审查合格">
+  <data key="d0">金融借款合同成立与生效的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融借款金额的认定审查合格">
+  <data key="d0">金融借款金额的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融借款中担保的认定审查合格">
+  <data key="d0">金融借款中担保的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融借款合同中夫妻共同债务的认定审查合格">
+  <data key="d0">金融借款合同中夫妻共同债务的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权转让的审查认定合格">
+  <data key="d0">债权转让的审查认定合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="电子借款合同的审查认定合格">
+  <data key="d0">电子借款合同的审查认定合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="刑民交叉案件的审查认定合格">
+  <data key="d0">刑民交叉案件的审查认定合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="双方当事人就合同的主要条款达成合意">
+  <data key="d0">双方当事人就合同的主要条款达成合意</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="无当事人另行约定或法律另有规定的除外情形">
+  <data key="d0">无当事人另行约定或法律另有规定的除外情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="预扣利息认定审查合格">
+  <data key="d0">预扣利息认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="借款本金的认定审查合格">
+  <data key="d0">借款本金的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="利息、逾期利息及违约金等的认定审查合格">
+  <data key="d0">利息、逾期利息及违约金等的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同中约定的借款金额与放款金额一致，不存在预先扣除利息的情形或其他类似的规避法律关于'预先扣除利息'规定的行为">
+  <data key="d0">合同中约定的借款金额与放款金额一致，不存在预先扣除利息的情形或其他类似的规避法律关于'预先扣除利息'规定的行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同中约定的借款金额与放款金额一致，若存在预先扣除利息的情形，按照实际借款数额返还借款并计算利息">
+  <data key="d0">合同中约定的借款金额与放款金额一致，若存在预先扣除利息的情形，按照实际借款数额返还借款并计算利息</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="一般情况，债权凭证载明的金额即为借款本金，若约定预先在本金中扣除利息的，借款本金为实际放款的金额">
+  <data key="d0">一般情况，债权凭证载明的金额即为借款本金，若约定预先在本金中扣除利息的，借款本金为实际放款的金额</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="借款本金中的咨询费、服务费等，出借人实际为借款人提供了相应的服务以及提供相关服务的价值">
+  <data key="d0">借款本金中的咨询费、服务费等，出借人实际为借款人提供了相应的服务以及提供相关服务的价值</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融借款合同中有关于利息、逾期利息及违约金的合同约定，且约定的利息、逾期利息、违约金没有超过法律保护的上限">
+  <data key="d0">金融借款合同中有关于利息、逾期利息及违约金的合同约定，且约定的利息、逾期利息、违约金没有超过法律保护的上限</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融借款合同对利息约定不明且无法达成补充协议，结合借贷合同的内容、当地或者当事人的交易方式、交易习惯、市场利率等因素综合确定利息">
+  <data key="d0">金融借款合同对利息约定不明且无法达成补充协议，结合借贷合同的内容、当地或者当事人的交易方式、交易习惯、市场利率等因素综合确定利息</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="保证期间的认定审查合格">
+  <data key="d0">保证期间的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保范围的认定审查合格">
+  <data key="d0">担保范围的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保主体的认定审查合格">
+  <data key="d0">担保主体的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保方式的认定审查合格">
+  <data key="d0">担保方式的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="实现担保物权的审查合格">
+  <data key="d0">实现担保物权的审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款质押的认定审查合格">
+  <data key="d0">应收账款质押的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="公司对外担保认定审查合格">
+  <data key="d0">公司对外担保认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同明确定有保证期间的情况审查合格">
+  <data key="d0">合同明确定有保证期间的情况审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同未约定保证期间或约定不明的情况审查合格">
+  <data key="d0">合同未约定保证期间或约定不明的情况审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同明确约定了保证期间">
+  <data key="d0">合同明确约定了保证期间</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="约定的保证期间晚于主债务履行期限">
+  <data key="d0">约定的保证期间晚于主债务履行期限</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="主张保证责任发生在合同约定的保证期间">
+  <data key="d0">主张保证责任发生在合同约定的保证期间</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同中没有约定保证期间或约定不明，保证期间为主债务履行期届满之日起6个月">
+  <data key="d0">合同中没有约定保证期间或约定不明，保证期间为主债务履行期届满之日起6个月</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="主债务履行期限有约定，保证期间从主债务履行届满之日起算；主债务履行期限没有约定或者约定不明的，保证期间自债权人请求债务人履行债务的宽限期限届满之日起计算">
+  <data key="d0">主债务履行期限有约定，保证期间从主债务履行届满之日起算；主债务履行期限没有约定或者约定不明的，保证期间自债权人请求债务人履行债务的宽限期限届满之日起计算</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="有约定的担保范围的认定审查合格">
+  <data key="d0">有约定的担保范围的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="无约定的担保范围的认定审查合格">
+  <data key="d0">无约定的担保范围的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同中对担保范围有明确约定">
+  <data key="d0">合同中对担保范围有明确约定</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同约定的担保责任范围小于或等于主债务，即不存在保证金额高于主债务，对保证责任约定专门的违约责任、担保责任的履行期先于主债务履行届满等情况">
+  <data key="d0">合同约定的担保责任范围小于或等于主债务，即不存在保证金额高于主债务，对保证责任约定专门的违约责任、担保责任的履行期先于主债务履行届满等情况</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同中对担保范围没有明确约定">
+  <data key="d0">合同中对担保范围没有明确约定</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保范围认定包括：主债权、利息、违约金、损害赔偿金、保管担保财产和实现担保物权的费用">
+  <data key="d0">担保范围认定包括：主债权、利息、违约金、损害赔偿金、保管担保财产和实现担保物权的费用</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保主体为具备完全民事行为能力的民事主体">
+  <data key="d0">担保主体为具备完全民事行为能力的民事主体</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保主体为法律特别规定的主体但满足相应条件">
+  <data key="d0">担保主体为法律特别规定的主体但满足相应条件</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保主体是机关法人，但属于经国务院批准为使用外国政府或者国际经济组织贷款进行转贷的情况">
+  <data key="d0">担保主体是机关法人，但属于经国务院批准为使用外国政府或者国际经济组织贷款进行转贷的情况</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保主体是居民委员会、村民委员会，但属于依法代行村集体经济组织职能的村民委员会，且依照村民委员会组织法规定的讨论决定程序对外提供担保的情况">
+  <data key="d0">担保主体是居民委员会、村民委员会，但属于依法代行村集体经济组织职能的村民委员会，且依照村民委员会组织法规定的讨论决定程序对外提供担保的情况</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保主体是以公益为目的的非营利性学校、幼儿园、医疗机构、养老机构等，但属于在购入或者以融资租赁方式承租教育设施、医疗卫生设施、养老服务设施和其他公益设施时，出卖人、出租人为担保价款或者租金实现而在该公益设施上保留所有权的情况，或属于以教育设施、医疗卫生设施、养老服务设施和其他公益设施以外的不动产、动产或者财产权利设立担保物权的情况">
+  <data key="d0">担保主体是以公益为目的的非营利性学校、幼儿园、医疗机构、养老机构等，但属于在购入或者以融资租赁方式承租教育设施、医疗卫生设施、养老服务设施和其他公益设施时，出卖人、出租人为担保价款或者租金实现而在该公益设施上保留所有权的情况，或属于以教育设施、医疗卫生设施、养老服务设施和其他公益设施以外的不动产、动产或者财产权利设立担保物权的情况</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="保证方式的认定审查合格">
+  <data key="d0">保证方式的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="抵押担保的认定审查合格">
+  <data key="d0">抵押担保的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="质押担保合同的认定审查合格">
+  <data key="d0">质押担保合同的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="增信措施的认定审查合格">
+  <data key="d0">增信措施的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="非典型担保的认定审查合格">
+  <data key="d0">非典型担保的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同中对保证方式有明确约定的，以合同约定为准">
+  <data key="d0">合同中对保证方式有明确约定的，以合同约定为准</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同中对保证方式约定不明或没有约定的，按照一般保证承担保证责任">
+  <data key="d0">合同中对保证方式约定不明或没有约定的，按照一般保证承担保证责任</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="具有符合书面形式要件的抵押担保合同">
+  <data key="d0">具有符合书面形式要件的抵押担保合同</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="提供质押担保主体及质押物适格">
+  <data key="d0">提供质押担保主体及质押物适格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不动产完成抵押登记">
+  <data key="d0">不动产完成抵押登记</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="具有书面合同，包括合同书、信件等传统意义上的书面形式">
+  <data key="d0">具有书面合同，包括合同书、信件等传统意义上的书面形式</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="具有包括电报、电传、传真，以及以电子数据交换、电子邮件等方式能够有形地表现所载内容，并可以随时调取查用的数据电文等形式">
+  <data key="d0">具有包括电报、电传、传真，以及以电子数据交换、电子邮件等方式能够有形地表现所载内容，并可以随时调取查用的数据电文等形式</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="建筑物和其他土地附着物">
+  <data key="d0">建筑物和其他土地附着物</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="建设用地使用权">
+  <data key="d0">建设用地使用权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="海域使用权">
+  <data key="d0">海域使用权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="产设备、原材料、半成品、产品">
+  <data key="d0">产设备、原材料、半成品、产品</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="在建造的建筑物、船舶、航空器">
+  <data key="d0">在建造的建筑物、船舶、航空器</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="通运输工具">
+  <data key="d0">通运输工具</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="法律、行政法规未禁止抵押的其他财产">
+  <data key="d0">法律、行政法规未禁止抵押的其他财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="法律、行政法规禁止抵押的其他财产">
+  <data key="d0">法律、行政法规禁止抵押的其他财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="土地所有权">
+  <data key="d0">土地所有权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="基地、自留地、自留山等集体所有土地的使用权，但是法律规定可以抵押的除外">
+  <data key="d0">基地、自留地、自留山等集体所有土地的使用权，但是法律规定可以抵押的除外</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="学校、幼儿园、医疗机构等为公益目的成立的非营利法人的教育设施、医疗卫生设施和其他公益设施">
+  <data key="d0">学校、幼儿园、医疗机构等为公益目的成立的非营利法人的教育设施、医疗卫生设施和其他公益设施</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="所有权、使用权不明或者有争议的财产">
+  <data key="d0">所有权、使用权不明或者有争议的财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="法被查封、扣押、监管的财产">
+  <data key="d0">法被查封、扣押、监管的财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="其他不得抵押的财产">
+  <data key="d0">其他不得抵押的财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="具有书面形式要件的质押担保合同">
+  <data key="d0">具有书面形式要件的质押担保合同</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="提供质押担保主题即质押物合格">
+  <data key="d0">提供质押担保主题即质押物合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="动产质押需要完成交付；权利质押，有权利凭证的需要交付权利凭证，没有权利凭证的需要完成登记程序">
+  <data key="d0">动产质押需要完成交付；权利质押，有权利凭证的需要交付权利凭证，没有权利凭证的需要完成登记程序</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="有相关意思表示，但既不符合保证，也不符合债务加入的构成要件的，债权人可以依据承诺性文件要求第三人履行约定的义务或者承担相应的民事责任，保证金质押的，具备要式合同、质押财产特定化即转移占有">
+  <data key="d0">有相关意思表示，但既不符合保证，也不符合债务加入的构成要件的，债权人可以依据承诺性文件要求第三人履行约定的义务或者承担相应的民事责任，保证金质押的，具备要式合同、质押财产特定化即转移占有</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="具有提供担保意思表示的，依照保证的有关规定处理">
+  <data key="d0">具有提供担保意思表示的，依照保证的有关规定处理</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="具有加入债务或者与债务人共同承担债务等意思表示的，依照债务加入的有关规则处理">
+  <data key="d0">具有加入债务或者与债务人共同承担债务等意思表示的，依照债务加入的有关规则处理</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="有相关意思表示，但是根据合同约定难以确定是保证还是债务加入的，认定为保证">
+  <data key="d0">有相关意思表示，但是根据合同约定难以确定是保证还是债务加入的，认定为保证</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="有相关意思表示，但既不符合保证，也不符合债务加入的构成要件的，债权人可以依据承诺性文件要求第三人履行约定的义务或者承担相应的民事责任">
+  <data key="d0">有相关意思表示，但既不符合保证，也不符合债务加入的构成要件的，债权人可以依据承诺性文件要求第三人履行约定的义务或者承担相应的民事责任</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="没有相关意思表示的，则不存在增信措施">
+  <data key="d0">没有相关意思表示的，则不存在增信措施</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不属于典型担保，即不属于抵押、质押、留置及保证的情况">
+  <data key="d0">不属于典型担保，即不属于抵押、质押、留置及保证的情况</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="具有担保的意思表示">
+  <data key="d0">具有担保的意思表示</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="采用了相应方式进行了担保公示">
+  <data key="d0">采用了相应方式进行了担保公示</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不涉及担保物权的实现">
+  <data key="d0">不涉及担保物权的实现</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="实现担保物权的条件审查合格">
+  <data key="d0">实现担保物权的条件审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="存在担保物权">
+  <data key="d0">存在担保物权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保合同有效成立">
+  <data key="d0">担保合同有效成立</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="完成必要的法定程序">
+  <data key="d0">完成必要的法定程序</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="合同届期未履行或发生当事人约定的实现担保物权的情形">
+  <data key="d0">合同届期未履行或发生当事人约定的实现担保物权的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不涉及应收账款质押">
+  <data key="d0">不涉及应收账款质押</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款质押的条件认定审查合格">
+  <data key="d0">应收账款质押的条件认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款质押的生效审查合格">
+  <data key="d0">应收账款质押的生效审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="提供质押的应收账款的范围审查合格">
+  <data key="d0">提供质押的应收账款的范围审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款质权的实现审查合格">
+  <data key="d0">应收账款质权的实现审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权人提供符合形式要件的质押合同">
+  <data key="d0">债权人提供符合形式要件的质押合同</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="已办理质押登记">
+  <data key="d0">已办理质押登记</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="有应收账款的基础合同等相关要素，能够证明应收账款真实存在">
+  <data key="d0">有应收账款的基础合同等相关要素，能够证明应收账款真实存在</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款的债务人能够明确表示确认应收账款的存在">
+  <data key="d0">应收账款的债务人能够明确表示确认应收账款的存在</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款设立质权已通知应收账款债务人">
+  <data key="d0">应收账款设立质权已通知应收账款债务人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款满足法律规定的形式要件">
+  <data key="d0">应收账款满足法律规定的形式要件</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="以将有的应收账款进行质押的，质权人可以举证证明将有的应收账款在办理质押登记时具有合理的期待利益，且债权范围可合理识别">
+  <data key="d0">以将有的应收账款进行质押的，质权人可以举证证明将有的应收账款在办理质押登记时具有合理的期待利益，且债权范围可合理识别</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款下的债务到期情况审查合格">
+  <data key="d0">应收账款下的债务到期情况审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款范围审查合格">
+  <data key="d0">应收账款范围审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款债务人主张抵消条件审查合格">
+  <data key="d0">应收账款债务人主张抵消条件审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="主债权早于应收账款到期的，待应收账款到期后，质权人就应收账款行使质权">
+  <data key="d0">主债权早于应收账款到期的，待应收账款到期后，质权人就应收账款行使质权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="主债权晚于应收账款到期的，质权人将应收账款进行提存或设置监管账户，或在代位物上实现担保物权">
+  <data key="d0">主债权晚于应收账款到期的，质权人将应收账款进行提存或设置监管账户，或在代位物上实现担保物权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款质押合同中约定的应收账款范围大于登记载明范围的，债权人在登记载明的范围内行使质权">
+  <data key="d0">应收账款质押合同中约定的应收账款范围大于登记载明范围的，债权人在登记载明的范围内行使质权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="登记载明范围大于合同约定的，债权人在合同约定的范围内行使质权">
+  <data key="d0">登记载明范围大于合同约定的，债权人在合同约定的范围内行使质权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款债务人未主张抵销">
+  <data key="d0">应收账款债务人未主张抵销</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="应收账款债务人主张抵销，应收账款债务人接到质权人通知的时间、对应收账款债权及主债权到期时间以及应收账款债务人的债权与质押应收账款基于同一合同产生">
+  <data key="d0">应收账款债务人主张抵销，应收账款债务人接到质权人通知的时间、对应收账款债权及主债权到期时间以及应收账款债务人的债权与质押应收账款基于同一合同产生</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不涉及公司对外担保的情况">
+  <data key="d0">不涉及公司对外担保的情况</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="公司对外担保的效力认定审查合格">
+  <data key="d0">公司对外担保的效力认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="公司对外担保担保合同有效的审查合格">
+  <data key="d0">公司对外担保担保合同有效的审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="公司对外担保担保合同无效的审查合格">
+  <data key="d0">公司对外担保担保合同无效的审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="担保合同符合法律规定的形式要件">
+  <data key="d0">担保合同符合法律规定的形式要件</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="订立担保合同时对公司权力机关的决议进行了必要的形式审查，仅要求尽到必要注意义务，不对机关决议系法定代表人伪造或者变造、决议程序违法、签章(名)不真实、担保金额超过法定的限额等事由进行审查">
+  <data key="d0">订立担保合同时对公司权力机关的决议进行了必要的形式审查，仅要求尽到必要注意义务，不对机关决议系法定代表人伪造或者变造、决议程序违法、签章(名)不真实、担保金额超过法定的限额等事由进行审查</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="公司对外担保担保合同有效特殊情况的审查合格">
+  <data key="d0">公司对外担保担保合同有效特殊情况的审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="一人公司包括自然人设定的公司及母公司的全资子公司对外担保的，采用一般合同成立的认定方式，且审查合格">
+  <data key="d0">一人公司包括自然人设定的公司及母公司的全资子公司对外担保的，采用一般合同成立的认定方式，且审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="上市公司对外担保的，上市公司公开披露的关于担保事项已经有权机关决议通过的信息审查合格">
+  <data key="d0">上市公司对外担保的，上市公司公开披露的关于担保事项已经有权机关决议通过的信息审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不属于一人公司或上市公司对外担保的情况，无需特殊审查">
+  <data key="d0">不属于一人公司或上市公司对外担保的情况，无需特殊审查</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不存在担保合同本身无效的情形，例如违反合同效力性强制性规定、无权处分担保标的物等情况">
+  <data key="d0">不存在担保合同本身无效的情形，例如违反合同效力性强制性规定、无权处分担保标的物等情况</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不存在主合同无效导致担保合同无效的情况">
+  <data key="d0">不存在主合同无效导致担保合同无效的情况</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融借款合同中涉及妻共同债务问题，夫妻共同债务的认定审查合格">
+  <data key="d0">金融借款合同中涉及妻共同债务问题，夫妻共同债务的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融借款合同中不涉及夫妻共同债务问题">
+  <data key="d0">金融借款合同中不涉及夫妻共同债务问题</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="夫妻共同债务的认定审查合格">
+  <data key="d0">夫妻共同债务的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="夫妻共同债务的举证责任分配审查合格">
+  <data key="d0">夫妻共同债务的举证责任分配审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="具有夫妻共同举债的意思表示">
+  <data key="d0">具有夫妻共同举债的意思表示</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债务用于夫妻共同生活或共同生产、经营活动">
+  <data key="d0">债务用于夫妻共同生活或共同生产、经营活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不属于典型的夫妻个人债务">
+  <data key="d0">不属于典型的夫妻个人债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="属于明示的意思表示，括夫妻双方共同签订借款合同或夫妻一方以书面、邮件、短信或者微信等方式表示合意；非举债方以夫妻共同名下的财产或个人名下的财产为借款设立抵押，借款后有过归还借款等追认行为">
+  <data key="d0">属于明示的意思表示，括夫妻双方共同签订借款合同或夫妻一方以书面、邮件、短信或者微信等方式表示合意；非举债方以夫妻共同名下的财产或个人名下的财产为借款设立抵押，借款后有过归还借款等追认行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="属于默示的意思表示，意思表示出能够推断出共同负债的行为，如借款实际汇入配偶名下实际控制的账户等">
+  <data key="d0">属于默示的意思表示，意思表示出能够推断出共同负债的行为，如借款实际汇入配偶名下实际控制的账户等</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债务用于夫妻共同生活">
+  <data key="d0">债务用于夫妻共同生活</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债务用于夫妻共同生产、经营活动">
+  <data key="d0">债务用于夫妻共同生产、经营活动</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="购置家庭生活用品、支付家庭生活开支所负的债务">
+  <data key="d0">购置家庭生活用品、支付家庭生活开支所负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="修建、购买、装修房屋所负的债务">
+  <data key="d0">修建、购买、装修房屋所负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="夫妻为继承遗产或接受赠与所负的债务">
+  <data key="d0">夫妻为继承遗产或接受赠与所负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="履行抚养教育子女所支出的教育、医疗、资助子女结婚等以及赡养扶助父母等义务所负的债务">
+  <data key="d0">履行抚养教育子女所支出的教育、医疗、资助子女结婚等以及赡养扶助父母等义务所负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="夫妻一方或双方为治疗疾病所负的债务">
+  <data key="d0">夫妻一方或双方为治疗疾病所负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="从事双方同意的文化教育、文娱体育活动所负的债务">
+  <data key="d0">从事双方同意的文化教育、文娱体育活动所负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="未年子女对他人侵权所负的债务">
+  <data key="d0">未年子女对他人侵权所负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="夫妻协议约定为共同债务的情形以及其他在日常家庭生活中发生的债务">
+  <data key="d0">夫妻协议约定为共同债务的情形以及其他在日常家庭生活中发生的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="双方共同从事个体工商业、农村承包经营所负的债务">
+  <data key="d0">双方共同从事个体工商业、农村承包经营所负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="双方共同从事投资或者其他金融证券交易活动所负的债务">
+  <data key="d0">双方共同从事投资或者其他金融证券交易活动所负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="经双方同意由一方经营且收入用于共同生活所负的债务">
+  <data key="d0">经双方同意由一方经营且收入用于共同生活所负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="夫妻一方用夫妻共同财产投资，以个人名义从事生产、经营活动，或虽由一方独自筹资但收益用于共同生活所负的债务等">
+  <data key="d0">夫妻一方用夫妻共同财产投资，以个人名义从事生产、经营活动，或虽由一方独自筹资但收益用于共同生活所负的债务等</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="属于典型的夫妻个人债务">
+  <data key="d0">属于典型的夫妻个人债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="夫妻一方婚前的债务。例如因婚前购买住房(且该住房不用于共同居住的)而负的债务">
+  <data key="d0">夫妻一方婚前的债务。例如因婚前购买住房(且该住房不用于共同居住的)而负的债务</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="捐助他人所负的债务，而双方未就此达成合意">
+  <data key="d0">捐助他人所负的债务，而双方未就此达成合意</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="因遗嘱继承所负的债务，而相关遗嘱中明确遗产仅归一方所有">
+  <data key="d0">因遗嘱继承所负的债务，而相关遗嘱中明确遗产仅归一方所有</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="受赠方因赠与合同所负的债务，合同中明确约定赠与之财产仅归一方所有">
+  <data key="d0">受赠方因赠与合同所负的债务，合同中明确约定赠与之财产仅归一方所有</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="因沉迷于非法活动或明显不利于家庭的活动所负的债务，例如参与赌博、吸食毒品、无节制地喝酒">
+  <data key="d0">因沉迷于非法活动或明显不利于家庭的活动所负的债务，例如参与赌博、吸食毒品、无节制地喝酒</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="夫妻双方约定由个人负担的债务，且债权人知晓的">
+  <data key="d0">夫妻双方约定由个人负担的债务，且债权人知晓的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="夫妻一方个人不合理的开支">
+  <data key="d0">夫妻一方个人不合理的开支</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权人能举证证明夫妻共同举债的意思表示即提交夫妻双方共同签字的借款合同、欠条，或夫妻一方事后追认的证据，如电话录音、短信、微信记录、邮件等。为共签共认之债">
+  <data key="d0">债权人能举证证明夫妻共同举债的意思表示即提交夫妻双方共同签字的借款合同、欠条，或夫妻一方事后追认的证据，如电话录音、短信、微信记录、邮件等。为共签共认之债</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权人能够提供该债务为家庭日常生活需要所负的初步证据，如存在债权债务关系、债权金额符合当地普通居民的家庭日常消费标准或水平、债权人尽到了审慎注意义务等。不需要举证证明所借款项实际用于家庭日常生活。若配偶抗辩债务不属于夫妻共同债务但不能举证证明并非用于家庭日常生活。为满足满足夫妻日常生活所需之债">
+  <data key="d0">债权人能够提供该债务为家庭日常生活需要所负的初步证据，如存在债权债务关系、债权金额符合当地普通居民的家庭日常消费标准或水平、债权人尽到了审慎注意义务等。不需要举证证明所借款项实际用于家庭日常生活。若配偶抗辩债务不属于夫妻共同债务但不能举证证明并非用于家庭日常生活。为满足满足夫妻日常生活所需之债</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权转让管辖法院的确定审查合格">
+  <data key="d0">债权转让管辖法院的确定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权转让特殊裁判规则审查合格">
+  <data key="d0">债权转让特殊裁判规则审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="若金融机构与借款人、担保人之间的基础合同否存在管辖协议，按基础合同约定">
+  <data key="d0">若金融机构与借款人、担保人之间的基础合同否存在管辖协议，按基础合同约定</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="若存在转让协议且转让协议对管辖法院是否存在新的约定，借款人、担保人是同意新的管辖约定，按新的管辖约定">
+  <data key="d0">若存在转让协议且转让协议对管辖法院是否存在新的约定，借款人、担保人是同意新的管辖约定，按新的管辖约定</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="若金融机构与借款人、担保人之间的基础合同中存在关于'发生债权转让，借款人、担保人同意债权由受让人住所地法院管辖'的约定，可由受让人所在地法院管辖">
+  <data key="d0">若金融机构与借款人、担保人之间的基础合同中存在关于'发生债权转让，借款人、担保人同意债权由受让人住所地法院管辖'的约定，可由受让人所在地法院管辖</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="若金融机构与借款人、担保人之间存在仲裁约定，且受让人未明确反对，按仲裁约定">
+  <data key="d0">若金融机构与借款人、担保人之间存在仲裁约定，且受让人未明确反对，按仲裁约定</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权转让法律关系的认定审查合格">
+  <data key="d0">债权转让法律关系的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债券转让债权范围的认定审查合格">
+  <data key="d0">债券转让债权范围的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权转让通知的认定审查合格">
+  <data key="d0">债权转让通知的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权转让偿还的认定审查合格">
+  <data key="d0">债权转让偿还的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="受让人与债权人之间存在债权转让协议且受让款已经支付">
+  <data key="d0">受让人与债权人之间存在债权转让协议且受让款已经支付</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="受让人与金融机构或借款人、担保人之间不存在其他法律关系">
+  <data key="d0">受让人与金融机构或借款人、担保人之间不存在其他法律关系</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不存在不良债权转让合同无效情形">
+  <data key="d0">不存在不良债权转让合同无效情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权转让协议中有关于受让范围的约定允许进行该债权转让">
+  <data key="d0">债权转让协议中有关于受让范围的约定允许进行该债权转让</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="根据债权的性质允许转让">
+  <data key="d0">根据债权的性质允许转让</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="依照法律规定允许转让">
+  <data key="d0">依照法律规定允许转让</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="若存在最高额抵押担保且在最高额抵押担保的债权确认转让部分债权的，原最高额抵押担保合同中允许在最高额抵押担保的债权确定前将部分债权转让">
+  <data key="d0">若存在最高额抵押担保且在最高额抵押担保的债权确认转让部分债权的，原最高额抵押担保合同中允许在最高额抵押担保的债权确定前将部分债权转让</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权转让已通知借款人、担保人">
+  <data key="d0">债权转让已通知借款人、担保人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权转让通知特殊情况的认定审查合格">
+  <data key="d0">债权转让通知特殊情况的认定审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="原债权人通知借款人、担保人债权转让的事实后，单方撤销该转让通知的，已经过受让人同意">
+  <data key="d0">原债权人通知借款人、担保人债权转让的事实后，单方撤销该转让通知的，已经过受让人同意</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="银行不良债权发生转让后，在全国或省级有影响的报纸上发布的有催收内容的债权转让公告、通知或发布催收公告的主体为银行和金融资产管理公司">
+  <data key="d0">银行不良债权发生转让后，在全国或省级有影响的报纸上发布的有催收内容的债权转让公告、通知或发布催收公告的主体为银行和金融资产管理公司</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="债权转让后，债务人向原债权人清偿的，债权转让已通知债务人">
+  <data key="d0">债权转让后，债务人向原债权人清偿的，债权转让已通知债务人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="发生债权转让，原债权人单方撤销该转让通知，债务人应在受让人同意撤销前向受让人清偿">
+  <data key="d0">发生债权转让，原债权人单方撤销该转让通知，债务人应在受让人同意撤销前向受让人清偿</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="电子借款合同借款人审查合格">
+  <data key="d0">电子借款合同借款人审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="电子借款合同内容的审查合格">
+  <data key="d0">电子借款合同内容的审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="电子借款合同借款人身份的审查合格">
+  <data key="d0">电子借款合同借款人身份的审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="电子借款合同签署的审查合格">
+  <data key="d0">电子借款合同签署的审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融机构已提供被告系实际借款人的初步证据">
+  <data key="d0">金融机构已提供被告系实际借款人的初步证据</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="借款已经实际发放">
+  <data key="d0">借款已经实际发放</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="电子签约的合同系借款人本人签署。金融机构审查了借款人信息，且向借款人实名开立的账户发放的借款数额与纸质合同、电子合同均一致时，足以证明系该借款人或其授权人签署了借款合同">
+  <data key="d0">电子签约的合同系借款人本人签署。金融机构审查了借款人信息，且向借款人实名开立的账户发放的借款数额与纸质合同、电子合同均一致时，足以证明系该借款人或其授权人签署了借款合同</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="若存在线上签署合同的情形，对于复用签名、点击确认，而非逐一签名的系列合同，金融机构需证明借款人知悉并同意签署除借款合同外的其他合同。非线上签署合同无需证明。">
+  <data key="d0">若存在线上签署合同的情形，对于复用签名、点击确认，而非逐一签名的系列合同，金融机构需证明借款人知悉并同意签署除借款合同外的其他合同。非线上签署合同无需证明。</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融机构提交给法院的合同内容与借款人所签署的合同内容一致">
+  <data key="d0">金融机构提交给法院的合同内容与借款人所签署的合同内容一致</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融机构应举证证明其提供的借款合同系完整、可靠和未篡改的">
+  <data key="d0">金融机构应举证证明其提供的借款合同系完整、可靠和未篡改的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="借款人认为纸质借款合同内容与当时签署的电子合同内容一致">
+  <data key="d0">借款人认为纸质借款合同内容与当时签署的电子合同内容一致</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不属于刑民交叉案件">
+  <data key="d0">不属于刑民交叉案件</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="刑民交叉案件相关条件审查认定合格">
+  <data key="d0">刑民交叉案件相关条件审查认定合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="刑民交叉案件分别审理审查合格">
+  <data key="d0">刑民交叉案件分别审理审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不存在刑民交叉案件民事案件中止审理的情况">
+  <data key="d0">不存在刑民交叉案件民事案件中止审理的情况</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不存在刑民交叉案件金融借款合同无效的情形">
+  <data key="d0">不存在刑民交叉案件金融借款合同无效的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="刑民交叉案件金融借款合同有效审查合格">
+  <data key="d0">刑民交叉案件金融借款合同有效审查合格</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="民事案件与形式案件不存在同一事实">
+  <data key="d0">民事案件与形式案件不存在同一事实</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="民事案件与刑事案件为同一主体">
+  <data key="d0">民事案件与刑事案件为同一主体</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="属于刑民案件分别审理的情形">
+  <data key="d0">属于刑民案件分别审理的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="不属于涉众性经济犯罪,例如当事人因租赁、买卖、金融借款等与涉众型经济犯罪无关的民事纠纷">
+  <data key="d0">不属于涉众性经济犯罪,例如当事人因租赁、买卖、金融借款等与涉众型经济犯罪无关的民事纠纷</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="主合同的债务人涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，债权人请求担保人承担民事责任的">
+  <data key="d0">主合同的债务人涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，债权人请求担保人承担民事责任的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="行为人以法人、非法人组织或者他人名义订立合同的行为涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，合同相对人请求该法人、非法人组织或者他人承担民事责任的">
+  <data key="d0">行为人以法人、非法人组织或者他人名义订立合同的行为涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，合同相对人请求该法人、非法人组织或者他人承担民事责任的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="法人或者非法人组织的法定代表人、负责人或者其他工作人员的职务行为涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，受害人请求该法人或者非法人组织承担民事责任的">
+  <data key="d0">法人或者非法人组织的法定代表人、负责人或者其他工作人员的职务行为涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，受害人请求该法人或者非法人组织承担民事责任的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="侵权行为人涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，被保险人、受益人或者其他赔偿权利人请求保险人支付保险金的">
+  <data key="d0">侵权行为人涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，被保险人、受益人或者其他赔偿权利人请求保险人支付保险金的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="受害人请求涉嫌刑事犯罪的行为人之外的其他主体承担民事责任的">
+  <data key="d0">受害人请求涉嫌刑事犯罪的行为人之外的其他主体承担民事责任的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="其他应当分别审理的情形">
+  <data key="d0">其他应当分别审理的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="存在刑民交叉案件民事案件中止审理的情况">
+  <data key="d0">存在刑民交叉案件民事案件中止审理的情况</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="一方当事人死亡，需要等待继承人表明是否参加诉讼">
+  <data key="d0">一方当事人死亡，需要等待继承人表明是否参加诉讼</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="一方当事人丧失诉讼行为能力，尚未确定法定代理人的">
+  <data key="d0">一方当事人丧失诉讼行为能力，尚未确定法定代理人的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="作为一方当事人的法人或者其他组织终止，尚未确定权利义务承受人">
+  <data key="d0">作为一方当事人的法人或者其他组织终止，尚未确定权利义务承受人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="一方当事人因不可抗拒的事由，不能参加诉讼的">
+  <data key="d0">一方当事人因不可抗拒的事由，不能参加诉讼的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融借款案件必须以相关刑事案件的审理结果为依据">
+  <data key="d0">金融借款案件必须以相关刑事案件的审理结果为依据</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="其他应当中止诉讼的情形">
+  <data key="d0">其他应当中止诉讼的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="存在刑民交叉案件金融借款合同无效的情形">
+  <data key="d0">存在刑民交叉案件金融借款合同无效的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="刑事违法行为致使金融借款合同无效">
+  <data key="d0">刑事违法行为致使金融借款合同无效</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="金融借款合同符合《民法典》第一百四十六条、第一百五十三条等关于合同无效的情形">
+  <data key="d0">金融借款合同符合《民法典》第一百四十六条、第一百五十三条等关于合同无效的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="刑事案件认定的犯罪金额与民事案件认定的当事人应承担责任相同">
+  <data key="d0">刑事案件认定的犯罪金额与民事案件认定的当事人应承担责任相同</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<node id="若受害人在法院判决前收到刑事退赃，应调减相应诉请，或法院依职权进行调整；若不存在前述情况，则无需调整">
+  <data key="d0">若受害人在法院判决前收到刑事退赃，应调减相应诉请，或法院依职权进行调整；若不存在前述情况，则无需调整</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">金融借款合同纠纷</data>
+</node>
+<edge source="金融借款合同成立与生效的认定审查合格" target="金融借款合同要件事实审查合格"/>
+<edge source="金融借款金额的认定审查合格" target="金融借款合同要件事实审查合格"/>
+<edge source="金融借款中担保的认定审查合格" target="金融借款合同要件事实审查合格"/>
+<edge source="金融借款合同中夫妻共同债务的认定审查合格" target="金融借款合同要件事实审查合格"/>
+<edge source="债权转让的审查认定合格" target="金融借款合同要件事实审查合格"/>
+<edge source="电子借款合同的审查认定合格" target="金融借款合同要件事实审查合格"/>
+<edge source="刑民交叉案件的审查认定合格" target="金融借款合同要件事实审查合格"/>
+<edge source="双方当事人就合同的主要条款达成合意" target="金融借款合同成立与生效的认定审查合格"/>
+<edge source="无当事人另行约定或法律另有规定的除外情形" target="金融借款合同成立与生效的认定审查合格"/>
+<edge source="预扣利息认定审查合格" target="金融借款金额的认定审查合格"/>
+<edge source="借款本金的认定审查合格" target="金融借款金额的认定审查合格"/>
+<edge source="利息、逾期利息及违约金等的认定审查合格" target="金融借款金额的认定审查合格"/>
+<edge source="合同中约定的借款金额与放款金额一致，不存在预先扣除利息的情形或其他类似的规避法律关于'预先扣除利息'规定的行为" target="预扣利息认定审查合格"/>
+<edge source="合同中约定的借款金额与放款金额一致，若存在预先扣除利息的情形，按照实际借款数额返还借款并计算利息" target="预扣利息认定审查合格"/>
+<edge source="一般情况，债权凭证载明的金额即为借款本金，若约定预先在本金中扣除利息的，借款本金为实际放款的金额" target="借款本金的认定审查合格"/>
+<edge source="借款本金中的咨询费、服务费等，出借人实际为借款人提供了相应的服务以及提供相关服务的价值" target="借款本金的认定审查合格"/>
+<edge source="金融借款合同中有关于利息、逾期利息及违约金的合同约定，且约定的利息、逾期利息、违约金没有超过法律保护的上限" target="利息、逾期利息及违约金等的认定审查合格"/>
+<edge source="金融借款合同对利息约定不明且无法达成补充协议，结合借贷合同的内容、当地或者当事人的交易方式、交易习惯、市场利率等因素综合确定利息" target="利息、逾期利息及违约金等的认定审查合格"/>
+<edge source="保证期间的认定审查合格" target="金融借款中担保的认定审查合格"/>
+<edge source="担保范围的认定审查合格" target="金融借款中担保的认定审查合格"/>
+<edge source="担保主体的认定审查合格" target="金融借款中担保的认定审查合格"/>
+<edge source="担保方式的认定审查合格" target="金融借款中担保的认定审查合格"/>
+<edge source="实现担保物权的审查合格" target="金融借款中担保的认定审查合格"/>
+<edge source="应收账款质押的认定审查合格" target="金融借款中担保的认定审查合格"/>
+<edge source="公司对外担保认定审查合格" target="金融借款中担保的认定审查合格"/>
+<edge source="合同明确定有保证期间的情况审查合格" target="保证期间的认定审查合格"/>
+<edge source="合同未约定保证期间或约定不明的情况审查合格" target="保证期间的认定审查合格"/>
+<edge source="合同明确约定了保证期间" target="合同明确定有保证期间的情况审查合格"/>
+<edge source="约定的保证期间晚于主债务履行期限" target="合同明确定有保证期间的情况审查合格"/>
+<edge source="主张保证责任发生在合同约定的保证期间" target="合同明确定有保证期间的情况审查合格"/>
+<edge source="合同中没有约定保证期间或约定不明，保证期间为主债务履行期届满之日起6个月" target="合同未约定保证期间或约定不明的情况审查合格"/>
+<edge source="主债务履行期限有约定，保证期间从主债务履行届满之日起算；主债务履行期限没有约定或者约定不明的，保证期间自债权人请求债务人履行债务的宽限期限届满之日起计算" target="合同未约定保证期间或约定不明的情况审查合格"/>
+<edge source="有约定的担保范围的认定审查合格" target="担保范围的认定审查合格"/>
+<edge source="无约定的担保范围的认定审查合格" target="担保范围的认定审查合格"/>
+<edge source="合同中对担保范围有明确约定" target="有约定的担保范围的认定审查合格"/>
+<edge source="合同约定的担保责任范围小于或等于主债务，即不存在保证金额高于主债务，对保证责任约定专门的违约责任、担保责任的履行期先于主债务履行届满等情况" target="有约定的担保范围的认定审查合格"/>
+<edge source="合同中对担保范围没有明确约定" target="无约定的担保范围的认定审查合格"/>
+<edge source="担保范围认定包括：主债权、利息、违约金、损害赔偿金、保管担保财产和实现担保物权的费用" target="无约定的担保范围的认定审查合格"/>
+<edge source="担保主体为具备完全民事行为能力的民事主体" target="担保主体的认定审查合格"/>
+<edge source="担保主体为法律特别规定的主体但满足相应条件" target="担保主体的认定审查合格"/>
+<edge source="担保主体是机关法人，但属于经国务院批准为使用外国政府或者国际经济组织贷款进行转贷的情况" target="担保主体为法律特别规定的主体但满足相应条件"/>
+<edge source="担保主体是居民委员会、村民委员会，但属于依法代行村集体经济组织职能的村民委员会，且依照村民委员会组织法规定的讨论决定程序对外提供担保的情况" target="担保主体为法律特别规定的主体但满足相应条件"/>
+<edge source="担保主体是以公益为目的的非营利性学校、幼儿园、医疗机构、养老机构等，但属于在购入或者以融资租赁方式承租教育设施、医疗卫生设施、养老服务设施和其他公益设施时，出卖人、出租人为担保价款或者租金实现而在该公益设施上保留所有权的情况，或属于以教育设施、医疗卫生设施、养老服务设施和其他公益设施以外的不动产、动产或者财产权利设立担保物权的情况" target="担保主体为法律特别规定的主体但满足相应条件"/>
+<edge source="保证方式的认定审查合格" target="担保方式的认定审查合格"/>
+<edge source="抵押担保的认定审查合格" target="担保方式的认定审查合格"/>
+<edge source="质押担保合同的认定审查合格" target="担保方式的认定审查合格"/>
+<edge source="增信措施的认定审查合格" target="担保方式的认定审查合格"/>
+<edge source="非典型担保的认定审查合格" target="担保方式的认定审查合格"/>
+<edge source="合同中对保证方式有明确约定的，以合同约定为准" target="保证方式的认定审查合格"/>
+<edge source="合同中对保证方式约定不明或没有约定的，按照一般保证承担保证责任" target="保证方式的认定审查合格"/>
+<edge source="具有符合书面形式要件的抵押担保合同" target="抵押担保的认定审查合格"/>
+<edge source="提供质押担保主体及质押物适格" target="抵押担保的认定审查合格"/>
+<edge source="不动产完成抵押登记" target="抵押担保的认定审查合格"/>
+<edge source="具有书面合同，包括合同书、信件等传统意义上的书面形式" target="具有符合书面形式要件的抵押担保合同"/>
+<edge source="具有包括电报、电传、传真，以及以电子数据交换、电子邮件等方式能够有形地表现所载内容，并可以随时调取查用的数据电文等形式" target="具有符合书面形式要件的抵押担保合同"/>
+<edge source="建筑物和其他土地附着物" target="提供质押担保主体及质押物适格"/>
+<edge source="建设用地使用权" target="提供质押担保主体及质押物适格"/>
+<edge source="海域使用权" target="提供质押担保主体及质押物适格"/>
+<edge source="产设备、原材料、半成品、产品" target="提供质押担保主体及质押物适格"/>
+<edge source="在建造的建筑物、船舶、航空器" target="提供质押担保主体及质押物适格"/>
+<edge source="在建造的建筑物、船舶、航空器" target="法律、行政法规禁止抵押的其他财产"/>
+<edge source="通运输工具" target="提供质押担保主体及质押物适格"/>
+<edge source="法律、行政法规未禁止抵押的其他财产" target="提供质押担保主体及质押物适格"/>
+<edge source="法律、行政法规禁止抵押的其他财产" target="法律、行政法规未禁止抵押的其他财产"/>
+<edge source="土地所有权" target="法律、行政法规禁止抵押的其他财产"/>
+<edge source="基地、自留地、自留山等集体所有土地的使用权，但是法律规定可以抵押的除外" target="法律、行政法规禁止抵押的其他财产"/>
+<edge source="学校、幼儿园、医疗机构等为公益目的成立的非营利法人的教育设施、医疗卫生设施和其他公益设施" target="法律、行政法规禁止抵押的其他财产"/>
+<edge source="所有权、使用权不明或者有争议的财产" target="法律、行政法规禁止抵押的其他财产"/>
+<edge source="法被查封、扣押、监管的财产" target="法律、行政法规禁止抵押的其他财产"/>
+<edge source="其他不得抵押的财产" target="法律、行政法规禁止抵押的其他财产"/>
+<edge source="具有书面形式要件的质押担保合同" target="质押担保合同的认定审查合格"/>
+<edge source="提供质押担保主题即质押物合格" target="质押担保合同的认定审查合格"/>
+<edge source="动产质押需要完成交付；权利质押，有权利凭证的需要交付权利凭证，没有权利凭证的需要完成登记程序" target="质押担保合同的认定审查合格"/>
+<edge source="有相关意思表示，但既不符合保证，也不符合债务加入的构成要件的，债权人可以依据承诺性文件要求第三人履行约定的义务或者承担相应的民事责任，保证金质押的，具备要式合同、质押财产特定化即转移占有" target="质押担保合同的认定审查合格"/>
+<edge source="具有提供担保意思表示的，依照保证的有关规定处理" target="增信措施的认定审查合格"/>
+<edge source="具有加入债务或者与债务人共同承担债务等意思表示的，依照债务加入的有关规则处理" target="增信措施的认定审查合格"/>
+<edge source="有相关意思表示，但是根据合同约定难以确定是保证还是债务加入的，认定为保证" target="增信措施的认定审查合格"/>
+<edge source="有相关意思表示，但既不符合保证，也不符合债务加入的构成要件的，债权人可以依据承诺性文件要求第三人履行约定的义务或者承担相应的民事责任" target="增信措施的认定审查合格"/>
+<edge source="没有相关意思表示的，则不存在增信措施" target="增信措施的认定审查合格"/>
+<edge source="不属于典型担保，即不属于抵押、质押、留置及保证的情况" target="非典型担保的认定审查合格"/>
+<edge source="具有担保的意思表示" target="非典型担保的认定审查合格"/>
+<edge source="采用了相应方式进行了担保公示" target="非典型担保的认定审查合格"/>
+<edge source="不涉及担保物权的实现" target="实现担保物权的审查合格"/>
+<edge source="实现担保物权的条件审查合格" target="实现担保物权的审查合格"/>
+<edge source="存在担保物权" target="实现担保物权的条件审查合格"/>
+<edge source="担保合同有效成立" target="实现担保物权的条件审查合格"/>
+<edge source="完成必要的法定程序" target="实现担保物权的条件审查合格"/>
+<edge source="合同届期未履行或发生当事人约定的实现担保物权的情形" target="实现担保物权的条件审查合格"/>
+<edge source="不涉及应收账款质押" target="应收账款质押的认定审查合格"/>
+<edge source="应收账款质押的条件认定审查合格" target="应收账款质押的认定审查合格"/>
+<edge source="应收账款质押的生效审查合格" target="应收账款质押的条件认定审查合格"/>
+<edge source="提供质押的应收账款的范围审查合格" target="应收账款质押的条件认定审查合格"/>
+<edge source="应收账款质权的实现审查合格" target="应收账款质押的条件认定审查合格"/>
+<edge source="债权人提供符合形式要件的质押合同" target="应收账款质押的生效审查合格"/>
+<edge source="已办理质押登记" target="应收账款质押的生效审查合格"/>
+<edge source="有应收账款的基础合同等相关要素，能够证明应收账款真实存在" target="应收账款质押的生效审查合格"/>
+<edge source="应收账款的债务人能够明确表示确认应收账款的存在" target="应收账款质押的生效审查合格"/>
+<edge source="应收账款设立质权已通知应收账款债务人" target="应收账款质押的生效审查合格"/>
+<edge source="应收账款满足法律规定的形式要件" target="提供质押的应收账款的范围审查合格"/>
+<edge source="以将有的应收账款进行质押的，质权人可以举证证明将有的应收账款在办理质押登记时具有合理的期待利益，且债权范围可合理识别" target="提供质押的应收账款的范围审查合格"/>
+<edge source="应收账款下的债务到期情况审查合格" target="应收账款质权的实现审查合格"/>
+<edge source="应收账款范围审查合格" target="应收账款质权的实现审查合格"/>
+<edge source="应收账款债务人主张抵消条件审查合格" target="应收账款质权的实现审查合格"/>
+<edge source="主债权早于应收账款到期的，待应收账款到期后，质权人就应收账款行使质权" target="应收账款下的债务到期情况审查合格"/>
+<edge source="主债权晚于应收账款到期的，质权人将应收账款进行提存或设置监管账户，或在代位物上实现担保物权" target="应收账款下的债务到期情况审查合格"/>
+<edge source="应收账款质押合同中约定的应收账款范围大于登记载明范围的，债权人在登记载明的范围内行使质权" target="应收账款范围审查合格"/>
+<edge source="登记载明范围大于合同约定的，债权人在合同约定的范围内行使质权" target="应收账款范围审查合格"/>
+<edge source="应收账款债务人未主张抵销" target="应收账款债务人主张抵消条件审查合格"/>
+<edge source="应收账款债务人主张抵销，应收账款债务人接到质权人通知的时间、对应收账款债权及主债权到期时间以及应收账款债务人的债权与质押应收账款基于同一合同产生" target="应收账款债务人主张抵消条件审查合格"/>
+<edge source="不涉及公司对外担保的情况" target="公司对外担保认定审查合格"/>
+<edge source="公司对外担保的效力认定审查合格" target="公司对外担保认定审查合格"/>
+<edge source="公司对外担保担保合同有效的审查合格" target="公司对外担保的效力认定审查合格"/>
+<edge source="公司对外担保担保合同无效的审查合格" target="公司对外担保的效力认定审查合格"/>
+<edge source="担保合同符合法律规定的形式要件" target="公司对外担保担保合同有效的审查合格"/>
+<edge source="订立担保合同时对公司权力机关的决议进行了必要的形式审查，仅要求尽到必要注意义务，不对机关决议系法定代表人伪造或者变造、决议程序违法、签章(名)不真实、担保金额超过法定的限额等事由进行审查" target="公司对外担保担保合同有效的审查合格"/>
+<edge source="公司对外担保担保合同有效特殊情况的审查合格" target="公司对外担保担保合同有效的审查合格"/>
+<edge source="一人公司包括自然人设定的公司及母公司的全资子公司对外担保的，采用一般合同成立的认定方式，且审查合格" target="公司对外担保担保合同有效特殊情况的审查合格"/>
+<edge source="上市公司对外担保的，上市公司公开披露的关于担保事项已经有权机关决议通过的信息审查合格" target="公司对外担保担保合同有效特殊情况的审查合格"/>
+<edge source="不属于一人公司或上市公司对外担保的情况，无需特殊审查" target="公司对外担保担保合同有效特殊情况的审查合格"/>
+<edge source="不存在担保合同本身无效的情形，例如违反合同效力性强制性规定、无权处分担保标的物等情况" target="公司对外担保担保合同无效的审查合格"/>
+<edge source="不存在主合同无效导致担保合同无效的情况" target="公司对外担保担保合同无效的审查合格"/>
+<edge source="金融借款合同中涉及妻共同债务问题，夫妻共同债务的认定审查合格" target="金融借款合同中夫妻共同债务的认定审查合格"/>
+<edge source="金融借款合同中不涉及夫妻共同债务问题" target="金融借款合同中夫妻共同债务的认定审查合格"/>
+<edge source="夫妻共同债务的认定审查合格" target="夫妻共同债务的认定审查合格"/>
+<edge source="夫妻共同债务的举证责任分配审查合格" target="夫妻共同债务的认定审查合格"/>
+<edge source="具有夫妻共同举债的意思表示" target="夫妻共同债务的认定审查合格"/>
+<edge source="债务用于夫妻共同生活或共同生产、经营活动" target="夫妻共同债务的认定审查合格"/>
+<edge source="不属于典型的夫妻个人债务" target="夫妻共同债务的认定审查合格"/>
+<edge source="属于明示的意思表示，括夫妻双方共同签订借款合同或夫妻一方以书面、邮件、短信或者微信等方式表示合意；非举债方以夫妻共同名下的财产或个人名下的财产为借款设立抵押，借款后有过归还借款等追认行为" target="具有夫妻共同举债的意思表示"/>
+<edge source="属于默示的意思表示，意思表示出能够推断出共同负债的行为，如借款实际汇入配偶名下实际控制的账户等" target="具有夫妻共同举债的意思表示"/>
+<edge source="债务用于夫妻共同生活" target="债务用于夫妻共同生活或共同生产、经营活动"/>
+<edge source="债务用于夫妻共同生产、经营活动" target="债务用于夫妻共同生活或共同生产、经营活动"/>
+<edge source="购置家庭生活用品、支付家庭生活开支所负的债务" target="债务用于夫妻共同生活"/>
+<edge source="修建、购买、装修房屋所负的债务" target="债务用于夫妻共同生活"/>
+<edge source="夫妻为继承遗产或接受赠与所负的债务" target="债务用于夫妻共同生活"/>
+<edge source="履行抚养教育子女所支出的教育、医疗、资助子女结婚等以及赡养扶助父母等义务所负的债务" target="债务用于夫妻共同生活"/>
+<edge source="夫妻一方或双方为治疗疾病所负的债务" target="债务用于夫妻共同生活"/>
+<edge source="从事双方同意的文化教育、文娱体育活动所负的债务" target="债务用于夫妻共同生活"/>
+<edge source="未年子女对他人侵权所负的债务" target="债务用于夫妻共同生活"/>
+<edge source="夫妻协议约定为共同债务的情形以及其他在日常家庭生活中发生的债务" target="债务用于夫妻共同生活"/>
+<edge source="双方共同从事个体工商业、农村承包经营所负的债务" target="债务用于夫妻共同生产、经营活动"/>
+<edge source="双方共同从事投资或者其他金融证券交易活动所负的债务" target="债务用于夫妻共同生产、经营活动"/>
+<edge source="经双方同意由一方经营且收入用于共同生活所负的债务" target="债务用于夫妻共同生产、经营活动"/>
+<edge source="夫妻一方用夫妻共同财产投资，以个人名义从事生产、经营活动，或虽由一方独自筹资但收益用于共同生活所负的债务等" target="债务用于夫妻共同生产、经营活动"/>
+<edge source="属于典型的夫妻个人债务" target="不属于典型的夫妻个人债务"/>
+<edge source="夫妻一方婚前的债务。例如因婚前购买住房(且该住房不用于共同居住的)而负的债务" target="属于典型的夫妻个人债务"/>
+<edge source="捐助他人所负的债务，而双方未就此达成合意" target="属于典型的夫妻个人债务"/>
+<edge source="因遗嘱继承所负的债务，而相关遗嘱中明确遗产仅归一方所有" target="属于典型的夫妻个人债务"/>
+<edge source="受赠方因赠与合同所负的债务，合同中明确约定赠与之财产仅归一方所有" target="属于典型的夫妻个人债务"/>
+<edge source="因沉迷于非法活动或明显不利于家庭的活动所负的债务，例如参与赌博、吸食毒品、无节制地喝酒" target="属于典型的夫妻个人债务"/>
+<edge source="夫妻双方约定由个人负担的债务，且债权人知晓的" target="属于典型的夫妻个人债务"/>
+<edge source="夫妻一方个人不合理的开支" target="属于典型的夫妻个人债务"/>
+<edge source="债权人能举证证明夫妻共同举债的意思表示即提交夫妻双方共同签字的借款合同、欠条，或夫妻一方事后追认的证据，如电话录音、短信、微信记录、邮件等。为共签共认之债" target="夫妻共同债务的举证责任分配审查合格"/>
+<edge source="债权人能够提供该债务为家庭日常生活需要所负的初步证据，如存在债权债务关系、债权金额符合当地普通居民的家庭日常消费标准或水平、债权人尽到了审慎注意义务等。不需要举证证明所借款项实际用于家庭日常生活。若配偶抗辩债务不属于夫妻共同债务但不能举证证明并非用于家庭日常生活。为满足满足夫妻日常生活所需之债" target="夫妻共同债务的举证责任分配审查合格"/>
+<edge source="债权转让管辖法院的确定审查合格" target="债权转让的审查认定合格"/>
+<edge source="债权转让特殊裁判规则审查合格" target="债权转让的审查认定合格"/>
+<edge source="若金融机构与借款人、担保人之间的基础合同否存在管辖协议，按基础合同约定" target="债权转让管辖法院的确定审查合格"/>
+<edge source="若存在转让协议且转让协议对管辖法院是否存在新的约定，借款人、担保人是同意新的管辖约定，按新的管辖约定" target="债权转让管辖法院的确定审查合格"/>
+<edge source="若金融机构与借款人、担保人之间的基础合同中存在关于'发生债权转让，借款人、担保人同意债权由受让人住所地法院管辖'的约定，可由受让人所在地法院管辖" target="债权转让管辖法院的确定审查合格"/>
+<edge source="若金融机构与借款人、担保人之间存在仲裁约定，且受让人未明确反对，按仲裁约定" target="债权转让管辖法院的确定审查合格"/>
+<edge source="债权转让法律关系的认定审查合格" target="债权转让特殊裁判规则审查合格"/>
+<edge source="债券转让债权范围的认定审查合格" target="债权转让特殊裁判规则审查合格"/>
+<edge source="债权转让通知的认定审查合格" target="债权转让特殊裁判规则审查合格"/>
+<edge source="债权转让偿还的认定审查合格" target="债权转让特殊裁判规则审查合格"/>
+<edge source="受让人与债权人之间存在债权转让协议且受让款已经支付" target="债权转让法律关系的认定审查合格"/>
+<edge source="受让人与金融机构或借款人、担保人之间不存在其他法律关系" target="债权转让法律关系的认定审查合格"/>
+<edge source="不存在不良债权转让合同无效情形" target="债权转让法律关系的认定审查合格"/>
+<edge source="债权转让协议中有关于受让范围的约定允许进行该债权转让" target="债券转让债权范围的认定审查合格"/>
+<edge source="根据债权的性质允许转让" target="债券转让债权范围的认定审查合格"/>
+<edge source="依照法律规定允许转让" target="债券转让债权范围的认定审查合格"/>
+<edge source="若存在最高额抵押担保且在最高额抵押担保的债权确认转让部分债权的，原最高额抵押担保合同中允许在最高额抵押担保的债权确定前将部分债权转让" target="债券转让债权范围的认定审查合格"/>
+<edge source="债权转让已通知借款人、担保人" target="债权转让通知的认定审查合格"/>
+<edge source="债权转让通知特殊情况的认定审查合格" target="债权转让通知的认定审查合格"/>
+<edge source="原债权人通知借款人、担保人债权转让的事实后，单方撤销该转让通知的，已经过受让人同意" target="债权转让通知特殊情况的认定审查合格"/>
+<edge source="银行不良债权发生转让后，在全国或省级有影响的报纸上发布的有催收内容的债权转让公告、通知或发布催收公告的主体为银行和金融资产管理公司" target="债权转让通知特殊情况的认定审查合格"/>
+<edge source="债权转让后，债务人向原债权人清偿的，债权转让已通知债务人" target="债权转让偿还的认定审查合格"/>
+<edge source="发生债权转让，原债权人单方撤销该转让通知，债务人应在受让人同意撤销前向受让人清偿" target="债权转让偿还的认定审查合格"/>
+<edge source="电子借款合同借款人审查合格" target="电子借款合同的审查认定合格"/>
+<edge source="电子借款合同内容的审查合格" target="电子借款合同的审查认定合格"/>
+<edge source="电子借款合同借款人身份的审查合格" target="电子借款合同借款人审查合格"/>
+<edge source="电子借款合同签署的审查合格" target="电子借款合同借款人审查合格"/>
+<edge source="金融机构已提供被告系实际借款人的初步证据" target="电子借款合同借款人身份的审查合格"/>
+<edge source="借款已经实际发放" target="电子借款合同借款人身份的审查合格"/>
+<edge source="电子签约的合同系借款人本人签署。金融机构审查了借款人信息，且向借款人实名开立的账户发放的借款数额与纸质合同、电子合同均一致时，足以证明系该借款人或其授权人签署了借款合同" target="电子借款合同签署的审查合格"/>
+<edge source="若存在线上签署合同的情形，对于复用签名、点击确认，而非逐一签名的系列合同，金融机构需证明借款人知悉并同意签署除借款合同外的其他合同。非线上签署合同无需证明。" target="电子借款合同签署的审查合格"/>
+<edge source="金融机构提交给法院的合同内容与借款人所签署的合同内容一致" target="电子借款合同内容的审查合格"/>
+<edge source="金融机构应举证证明其提供的借款合同系完整、可靠和未篡改的" target="电子借款合同内容的审查合格"/>
+<edge source="借款人认为纸质借款合同内容与当时签署的电子合同内容一致" target="电子借款合同内容的审查合格"/>
+<edge source="不属于刑民交叉案件" target="刑民交叉案件的审查认定合格"/>
+<edge source="刑民交叉案件相关条件审查认定合格" target="刑民交叉案件的审查认定合格"/>
+<edge source="刑民交叉案件分别审理审查合格" target="刑民交叉案件相关条件审查认定合格"/>
+<edge source="不存在刑民交叉案件民事案件中止审理的情况" target="刑民交叉案件相关条件审查认定合格"/>
+<edge source="不存在刑民交叉案件金融借款合同无效的情形" target="刑民交叉案件相关条件审查认定合格"/>
+<edge source="刑民交叉案件金融借款合同有效审查合格" target="刑民交叉案件相关条件审查认定合格"/>
+<edge source="民事案件与形式案件不存在同一事实" target="刑民交叉案件分别审理审查合格"/>
+<edge source="民事案件与刑事案件为同一主体" target="刑民交叉案件分别审理审查合格"/>
+<edge source="属于刑民案件分别审理的情形" target="刑民交叉案件分别审理审查合格"/>
+<edge source="不属于涉众性经济犯罪,例如当事人因租赁、买卖、金融借款等与涉众型经济犯罪无关的民事纠纷" target="刑民交叉案件分别审理审查合格"/>
+<edge source="主合同的债务人涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，债权人请求担保人承担民事责任的" target="属于刑民案件分别审理的情形"/>
+<edge source="行为人以法人、非法人组织或者他人名义订立合同的行为涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，合同相对人请求该法人、非法人组织或者他人承担民事责任的" target="属于刑民案件分别审理的情形"/>
+<edge source="法人或者非法人组织的法定代表人、负责人或者其他工作人员的职务行为涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，受害人请求该法人或者非法人组织承担民事责任的" target="属于刑民案件分别审理的情形"/>
+<edge source="侵权行为人涉嫌刑事犯罪或者刑事裁判认定其构成犯罪，被保险人、受益人或者其他赔偿权利人请求保险人支付保险金的" target="属于刑民案件分别审理的情形"/>
+<edge source="受害人请求涉嫌刑事犯罪的行为人之外的其他主体承担民事责任的" target="属于刑民案件分别审理的情形"/>
+<edge source="其他应当分别审理的情形" target="属于刑民案件分别审理的情形"/>
+<edge source="存在刑民交叉案件民事案件中止审理的情况" target="不存在刑民交叉案件民事案件中止审理的情况"/>
+<edge source="一方当事人死亡，需要等待继承人表明是否参加诉讼" target="存在刑民交叉案件民事案件中止审理的情况"/>
+<edge source="一方当事人丧失诉讼行为能力，尚未确定法定代理人的" target="存在刑民交叉案件民事案件中止审理的情况"/>
+<edge source="作为一方当事人的法人或者其他组织终止，尚未确定权利义务承受人" target="存在刑民交叉案件民事案件中止审理的情况"/>
+<edge source="一方当事人因不可抗拒的事由，不能参加诉讼的" target="存在刑民交叉案件民事案件中止审理的情况"/>
+<edge source="金融借款案件必须以相关刑事案件的审理结果为依据" target="存在刑民交叉案件民事案件中止审理的情况"/>
+<edge source="其他应当中止诉讼的情形" target="存在刑民交叉案件民事案件中止审理的情况"/>
+<edge source="存在刑民交叉案件金融借款合同无效的情形" target="不存在刑民交叉案件金融借款合同无效的情形"/>
+<edge source="刑事违法行为致使金融借款合同无效" target="存在刑民交叉案件金融借款合同无效的情形"/>
+<edge source="金融借款合同符合《民法典》第一百四十六条、第一百五十三条等关于合同无效的情形" target="存在刑民交叉案件金融借款合同无效的情形"/>
+<edge source="刑事案件认定的犯罪金额与民事案件认定的当事人应承担责任相同" target="刑民交叉案件金融借款合同有效审查合格"/>
+<edge source="若受害人在法院判决前收到刑事退赃，应调减相应诉请，或法院依职权进行调整；若不存在前述情况，则无需调整" target="刑民交叉案件金融借款合同有效审查合格"/>
+</graph></graphml>
