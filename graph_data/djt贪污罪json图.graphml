@@ -1,0 +1,971 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d4" for="node" attr.name="case_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="operation" attr.type="string"/>
+<key id="d2" for="node" attr.name="prompt" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="node_name" attr.type="string"/>
+<graph edgedefault="directed"><node id="国家机关工作人员">
+  <data key="d0">国家机关工作人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="各级国家权力机关、行政机关、司法机关、监察机关中从事公务的人员">
+  <data key="d0">各级国家权力机关、行政机关、司法机关、监察机关中从事公务的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="依照法律、法规规定行使国家行政管理职权的组织中从事公务的人员">
+  <data key="d0">依照法律、法规规定行使国家行政管理职权的组织中从事公务的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="受国家机关委托代表国家机关行使职权的组织中从事公务的人员">
+  <data key="d0">受国家机关委托代表国家机关行使职权的组织中从事公务的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="虽未列入国家机关人员编制但在国家机关中从事公务的人员（如合同制书记员）">
+  <data key="d0">虽未列入国家机关人员编制但在国家机关中从事公务的人员（如合同制书记员）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="国家工作人员">
+  <data key="d0">国家工作人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="国有公司、企业、事业单位、人民团体中从事公务的人员">
+  <data key="d0">国有公司、企业、事业单位、人民团体中从事公务的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="国有公司、企业、事业单位、人民团体委派到非国有公司、企业、事业单位、社会团体从事公务的人员">
+  <data key="d0">国有公司、企业、事业单位、人民团体委派到非国有公司、企业、事业单位、社会团体从事公务的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="其他依照法律从事公务的人员">
+  <data key="d0">其他依照法律从事公务的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="依法履行职责的各级人民代表大会代表">
+  <data key="d0">依法履行职责的各级人民代表大会代表</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="依法履行审判职责的人民陪审员">
+  <data key="d0">依法履行审判职责的人民陪审员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="协助乡镇人民政府、街道办事处从事行政管理工作的村民委员会、居民委员会等农村和城市基层组织人员">
+  <data key="d0">协助乡镇人民政府、街道办事处从事行政管理工作的村民委员会、居民委员会等农村和城市基层组织人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="国有控股、参股公司中经国家出资企业中负有管理、监督国有资产职责的组织批准或研究决定，代表该组织从事经营管理工作的人员">
+  <data key="d0">国有控股、参股公司中经国家出资企业中负有管理、监督国有资产职责的组织批准或研究决定，代表该组织从事经营管理工作的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="通过伪造国家机关公文、证件担任国家工作人员职务并利用该职务从事公务的人员">
+  <data key="d0">通过伪造国家机关公文、证件担任国家工作人员职务并利用该职务从事公务的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="国家机关、国有公司、企业委派到非国有公司、企业从事公务但尚未依照规定程序获取该单位职务的人员">
+  <data key="d0">国家机关、国有公司、企业委派到非国有公司、企业从事公务但尚未依照规定程序获取该单位职务的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="在农村合作基金会兼职从事管理工作的国家工作人员">
+  <data key="d0">在农村合作基金会兼职从事管理工作的国家工作人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="中国证监会等事业单位中从事公务的人员">
+  <data key="d0">中国证监会等事业单位中从事公务的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="其他由法律授权从事公务的人员">
+  <data key="d0">其他由法律授权从事公务的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="救灾、抢险、防汛、优抚、扶贫、移民、救济款物的管理人员">
+  <data key="d0">救灾、抢险、防汛、优抚、扶贫、移民、救济款物的管理人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="社会捐赠公益事业款物的管理人员">
+  <data key="d0">社会捐赠公益事业款物的管理人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="国有土地的经营和管理人员">
+  <data key="d0">国有土地的经营和管理人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="土地征收、征用补偿费用的管理人员">
+  <data key="d0">土地征收、征用补偿费用的管理人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="代征、代缴税款人员">
+  <data key="d0">代征、代缴税款人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="有关计划生育、户籍、征兵工作人员">
+  <data key="d0">有关计划生育、户籍、征兵工作人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="协助人民政府从事的其他行政管理工作人员">
+  <data key="d0">协助人民政府从事的其他行政管理工作人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="非国家工作人员">
+  <data key="d0">非国家工作人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污罪共犯情形">
+  <data key="d0">贪污罪共犯情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="与国家工作人员勾结，伙同贪污的非国家工作人员">
+  <data key="d0">与国家工作人员勾结，伙同贪污的非国家工作人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="公司、企业或者其他单位中，不具有国家工作人员身份的人与国家工作人员勾结，分别利用各自的职务便利，共同将本单位财物非法占为己有的人员">
+  <data key="d0">公司、企业或者其他单位中，不具有国家工作人员身份的人与国家工作人员勾结，分别利用各自的职务便利，共同将本单位财物非法占为己有的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="教唆、帮助国家工作人员实施贪污行为的非国家工作人员">
+  <data key="d0">教唆、帮助国家工作人员实施贪污行为的非国家工作人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="单位与国家工作人员勾结共同贪污的直接责任人员">
+  <data key="d0">单位与国家工作人员勾结共同贪污的直接责任人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污罪共犯主体成立">
+  <data key="d0">贪污罪共犯主体成立</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="公共财物或非国有单位财物">
+  <data key="d0">公共财物或非国有单位财物</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="国有财产">
+  <data key="d0">国有财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="劳动群众集体所有的财产">
+  <data key="d0">劳动群众集体所有的财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="用于扶贫和其他公益事业的社会捐助或者专项基金的财产">
+  <data key="d0">用于扶贫和其他公益事业的社会捐助或者专项基金的财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的私人财产">
+  <data key="d0">在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的私人财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="非国有公司财物">
+  <data key="d0">非国有公司财物</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="企事业单位财物">
+  <data key="d0">企事业单位财物</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="社会团体财物">
+  <data key="d0">社会团体财物</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的公民合法收入、储蓄、房屋和其他生活资料；依法归个人、家庭所有的生产资料">
+  <data key="d0">在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的公民合法收入、储蓄、房屋和其他生活资料；依法归个人、家庭所有的生产资料</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的个体户和私营企业的合法财产">
+  <data key="d0">在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的个体户和私营企业的合法财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的依法归个人所有的股份、股票、债券和其他财产">
+  <data key="d0">在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的依法归个人所有的股份、股票、债券和其他财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="利用职务上便利">
+  <data key="d0">利用职务上便利</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="利用本人职务上主管、管理公共财物的便利">
+  <data key="d0">利用本人职务上主管、管理公共财物的便利</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="利用职务上有隶属关系的其他国家工作人员的职务便利">
+  <data key="d0">利用职务上有隶属关系的其他国家工作人员的职务便利</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="包括行为人利用其国家工作人员的特定身份冒用职务便利">
+  <data key="d0">包括行为人利用其国家工作人员的特定身份冒用职务便利</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="行为人利用其职责范围内调拨、转移、使用或者以其他方式支配公共财产的职权所形成的便利条件">
+  <data key="d0">行为人利用其职责范围内调拨、转移、使用或者以其他方式支配公共财产的职权所形成的便利条件</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="行为人利用其职责范围内领取、支出等经办公共财物流转事务的权限">
+  <data key="d0">行为人利用其职责范围内领取、支出等经办公共财物流转事务的权限</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="行为人利用其职责范围内具有监守或保管公共财物的职权">
+  <data key="d0">行为人利用其职责范围内具有监守或保管公共财物的职权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="直接故意">
+  <data key="d0">直接故意</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="行为人明知自己利用职务之便所实施的行为会发生非法占有公共国有财物结果，并希望这种结果的发生">
+  <data key="d0">行为人明知自己利用职务之便所实施的行为会发生非法占有公共国有财物结果，并希望这种结果的发生</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="行为人明知自己利用职务之便所实施的行为会发生非法占有非国有单位财物的结果，并希望这种结果的发生">
+  <data key="d0">行为人明知自己利用职务之便所实施的行为会发生非法占有非国有单位财物的结果，并希望这种结果的发生</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="非法占有公共财物的目的">
+  <data key="d0">非法占有公共财物的目的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="行为人企图将公共（国有）财物或非国有单位财物永久地占为己有">
+  <data key="d0">行为人企图将公共（国有）财物或非国有单位财物永久地占为己有</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="行为人希望将公共（国有）财物或非国有单位财物非法获取后转送他人">
+  <data key="d0">行为人希望将公共（国有）财物或非国有单位财物非法获取后转送他人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="侵吞、窃取、骗取或者以其他手段非法占有公共财物">
+  <data key="d0">侵吞、窃取、骗取或者以其他手段非法占有公共财物</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="行为人将自己管理或经手的公共财物非法转移归自己或他人所有">
+  <data key="d0">行为人将自己管理或经手的公共财物非法转移归自己或他人所有</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="行为人利用职务之便，采取秘密窃取的方式，将自己管理的公共财物非法占有的行为">
+  <data key="d0">行为人利用职务之便，采取秘密窃取的方式，将自己管理的公共财物非法占有的行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="行为人利用职务之便，采取虚构事实或隐瞒真相的方法，非法占有财物的行为">
+  <data key="d0">行为人利用职务之便，采取虚构事实或隐瞒真相的方法，非法占有财物的行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="国家工作人员利用职务上的便利内外勾结将自己管理、经营的公共（国有）财物以“合法”形式转给与其勾结的外部人员，然后迂回取回，据为己有的行为">
+  <data key="d0">国家工作人员利用职务上的便利内外勾结将自己管理、经营的公共（国有）财物以“合法”形式转给与其勾结的外部人员，然后迂回取回，据为己有的行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="公款私存、私贷坐吃利息">
+  <data key="d0">公款私存、私贷坐吃利息</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="利用回扣非法占有公款">
+  <data key="d0">利用回扣非法占有公款</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="间接贪污">
+  <data key="d0">间接贪污</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="占有应交单位的劳务收入">
+  <data key="d0">占有应交单位的劳务收入</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="挪用公共财物后进行平账的">
+  <data key="d0">挪用公共财物后进行平账的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="以借用为名长期占用公共财物，超出合理借用期限且无归还意图">
+  <data key="d0">以借用为名长期占用公共财物，超出合理借用期限且无归还意图</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="谎称公款被骗、被抢而实际自己占有公共财物的">
+  <data key="d0">谎称公款被骗、被抢而实际自己占有公共财物的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="利用计算机技术伪造、篡改账目或电子数据侵吞公款">
+  <data key="d0">利用计算机技术伪造、篡改账目或电子数据侵吞公款</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="虚报、冒领薪酬、奖金、补贴等">
+  <data key="d0">虚报、冒领薪酬、奖金、补贴等</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="与他人串通通过虚假合同、虚假交易转移公共财物">
+  <data key="d0">与他人串通通过虚假合同、虚假交易转移公共财物</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="挪用后携款潜逃">
+  <data key="d0">挪用后携款潜逃</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="非法占有股东股权">
+  <data key="d0">非法占有股东股权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="在扫黑除恶专项斗争中，公职人员利用职务便利侵吞涉黑涉恶相关公共财物">
+  <data key="d0">在扫黑除恶专项斗争中，公职人员利用职务便利侵吞涉黑涉恶相关公共财物</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="在危害生产安全刑事案件中，国家工作人员利用职务便利侵吞安全生产相关公共财物">
+  <data key="d0">在危害生产安全刑事案件中，国家工作人员利用职务便利侵吞安全生产相关公共财物</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="将自己管理或经手的公共财物加以隐匿、扣留">
+  <data key="d0">将自己管理或经手的公共财物加以隐匿、扣留</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="将自己管理、使用或经手的公共财物非法转卖或擅自赠送他人">
+  <data key="d0">将自己管理、使用或经手的公共财物非法转卖或擅自赠送他人</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="将追缴的赃款赃物或罚没款物私自用掉或非法据为私有">
+  <data key="d0">将追缴的赃款赃物或罚没款物私自用掉或非法据为私有</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="具有六种情节之一">
+  <data key="d0">具有六种情节之一</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污救灾、抢险、防汛、优抚、扶贫、移民、救济、防疫、社会捐助等特定款物的">
+  <data key="d0">贪污救灾、抢险、防汛、优抚、扶贫、移民、救济、防疫、社会捐助等特定款物的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="曾因贪污、受贿、挪用公款受过党纪、行政处分的">
+  <data key="d0">曾因贪污、受贿、挪用公款受过党纪、行政处分的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="曾因故意犯罪受过刑事追究的">
+  <data key="d0">曾因故意犯罪受过刑事追究的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="赃款赃物用于非法活动的">
+  <data key="d0">赃款赃物用于非法活动的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="拒不交待赃款赃物去向或者拒不配合追缴工作，致使无法追缴的">
+  <data key="d0">拒不交待赃款赃物去向或者拒不配合追缴工作，致使无法追缴的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="造成恶劣影响或者其他严重后果的">
+  <data key="d0">造成恶劣影响或者其他严重后果的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污数额较大">
+  <data key="d0">贪污数额较大</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污数额在3万元以上不满20万元">
+  <data key="d0">贪污数额在3万元以上不满20万元</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污数额巨大">
+  <data key="d0">贪污数额巨大</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污数额在20万元以上不满300万元">
+  <data key="d0">贪污数额在20万元以上不满300万元</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污数额特别巨大">
+  <data key="d0">贪污数额特别巨大</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污数额在300万元以上">
+  <data key="d0">贪污数额在300万元以上</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="刑法第三百八十三条第一款规定的其他较重情节">
+  <data key="d0">刑法第三百八十三条第一款规定的其他较重情节</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污数额在一万元以上不满三万元">
+  <data key="d0">贪污数额在一万元以上不满三万元</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="刑法第三百八十三条第一款规定的其他严重情节">
+  <data key="d0">刑法第三百八十三条第一款规定的其他严重情节</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污数额在十万元以上不满二十万元">
+  <data key="d0">贪污数额在十万元以上不满二十万元</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="刑法第三百八十三条第一款规定的其他特别严重情节">
+  <data key="d0">刑法第三百八十三条第一款规定的其他特别严重情节</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污数额在一百五十万元以上不满三百万元">
+  <data key="d0">贪污数额在一百五十万元以上不满三百万元</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污罪主体成立">
+  <data key="d0">贪污罪主体成立</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="受国家机关、国有公司、企业、事业单位、人民团体委托管理、经营国有财产的人员">
+  <data key="d0">受国家机关、国有公司、企业、事业单位、人民团体委托管理、经营国有财产的人员</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="达到贪污罪一档刑罚">
+  <data key="d0">达到贪污罪一档刑罚</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="构成贪污罪">
+  <data key="d0">构成贪污罪</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="侵犯廉洁性，侵犯国家机关、国有企业事业单位的正常活动，侵犯公共财物所有权">
+  <data key="d0">侵犯廉洁性，侵犯国家机关、国有企业事业单位的正常活动，侵犯公共财物所有权</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="不是违规发放资金等一般违纪行为">
+  <data key="d0">不是违规发放资金等一般违纪行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="不是具有公共财物性质的单位小金库">
+  <data key="d0">不是具有公共财物性质的单位小金库</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="不是基层组织人员协助人民政府从事国有土地经营管理的合法行为">
+  <data key="d0">不是基层组织人员协助人民政府从事国有土地经营管理的合法行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="不是经过单位集体决策、体现单位意志的小金库使用行为">
+  <data key="d0">不是经过单位集体决策、体现单位意志的小金库使用行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="不是在单位授权下、未脱离本单位运营的账外股权转移行为">
+  <data key="d0">不是在单位授权下、未脱离本单位运营的账外股权转移行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="构成贪污罪共犯">
+  <data key="d0">构成贪污罪共犯</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="处三年以下有期徒刑或者拘役，并处罚金十万元以上五十万元以下">
+  <data key="d0">处三年以下有期徒刑或者拘役，并处罚金十万元以上五十万元以下</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="达到贪污罪二档刑罚">
+  <data key="d0">达到贪污罪二档刑罚</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="处三年以上十年以下有期徒刑，并处罚金二十万元以上犯罪数额二倍以下或者没收财产">
+  <data key="d0">处三年以上十年以下有期徒刑，并处罚金二十万元以上犯罪数额二倍以下或者没收财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="达到贪污罪三档刑罚">
+  <data key="d0">达到贪污罪三档刑罚</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="处十年以上有期徒刑或者无期徒刑，并处罚金五十万元以上犯罪数额二倍以下或者没收财产">
+  <data key="d0">处十年以上有期徒刑或者无期徒刑，并处罚金五十万元以上犯罪数额二倍以下或者没收财产</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="可以判处终身监禁，不得减刑、假释">
+  <data key="d0">可以判处终身监禁，不得减刑、假释</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="贪污数额在三百万元以上">
+  <data key="d0">贪污数额在三百万元以上</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="使国家和人民利益遭受特别重大损失">
+  <data key="d0">使国家和人民利益遭受特别重大损失</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="判处死刑缓期执行">
+  <data key="d0">判处死刑缓期执行</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="死刑缓期执行期间无故意犯罪">
+  <data key="d0">死刑缓期执行期间无故意犯罪</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="二年期满后依法减为无期徒刑">
+  <data key="d0">二年期满后依法减为无期徒刑</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">贪污罪</data>
+</node>
+<node id="可以判处无期徒刑或者死刑">
+  <data key="d0">可以判处无期徒刑或者死刑</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">贪污罪</data>
+</node>
+<edge source="国家机关工作人员" target="国家工作人员"/>
+<edge source="各级国家权力机关、行政机关、司法机关、监察机关中从事公务的人员" target="国家机关工作人员"/>
+<edge source="依照法律、法规规定行使国家行政管理职权的组织中从事公务的人员" target="国家机关工作人员"/>
+<edge source="受国家机关委托代表国家机关行使职权的组织中从事公务的人员" target="国家机关工作人员"/>
+<edge source="虽未列入国家机关人员编制但在国家机关中从事公务的人员（如合同制书记员）" target="国家机关工作人员"/>
+<edge source="国家工作人员" target="非国家工作人员"/>
+<edge source="国家工作人员" target="贪污罪主体成立"/>
+<edge source="国有公司、企业、事业单位、人民团体中从事公务的人员" target="国家工作人员"/>
+<edge source="国有公司、企业、事业单位、人民团体委派到非国有公司、企业、事业单位、社会团体从事公务的人员" target="国家工作人员"/>
+<edge source="其他依照法律从事公务的人员" target="国家工作人员"/>
+<edge source="依法履行职责的各级人民代表大会代表" target="其他依照法律从事公务的人员"/>
+<edge source="依法履行审判职责的人民陪审员" target="其他依照法律从事公务的人员"/>
+<edge source="协助乡镇人民政府、街道办事处从事行政管理工作的村民委员会、居民委员会等农村和城市基层组织人员" target="其他依照法律从事公务的人员"/>
+<edge source="国有控股、参股公司中经国家出资企业中负有管理、监督国有资产职责的组织批准或研究决定，代表该组织从事经营管理工作的人员" target="其他依照法律从事公务的人员"/>
+<edge source="通过伪造国家机关公文、证件担任国家工作人员职务并利用该职务从事公务的人员" target="其他依照法律从事公务的人员"/>
+<edge source="国家机关、国有公司、企业委派到非国有公司、企业从事公务但尚未依照规定程序获取该单位职务的人员" target="其他依照法律从事公务的人员"/>
+<edge source="在农村合作基金会兼职从事管理工作的国家工作人员" target="其他依照法律从事公务的人员"/>
+<edge source="中国证监会等事业单位中从事公务的人员" target="其他依照法律从事公务的人员"/>
+<edge source="其他由法律授权从事公务的人员" target="其他依照法律从事公务的人员"/>
+<edge source="救灾、抢险、防汛、优抚、扶贫、移民、救济款物的管理人员" target="协助乡镇人民政府、街道办事处从事行政管理工作的村民委员会、居民委员会等农村和城市基层组织人员"/>
+<edge source="社会捐赠公益事业款物的管理人员" target="协助乡镇人民政府、街道办事处从事行政管理工作的村民委员会、居民委员会等农村和城市基层组织人员"/>
+<edge source="国有土地的经营和管理人员" target="协助乡镇人民政府、街道办事处从事行政管理工作的村民委员会、居民委员会等农村和城市基层组织人员"/>
+<edge source="土地征收、征用补偿费用的管理人员" target="协助乡镇人民政府、街道办事处从事行政管理工作的村民委员会、居民委员会等农村和城市基层组织人员"/>
+<edge source="代征、代缴税款人员" target="协助乡镇人民政府、街道办事处从事行政管理工作的村民委员会、居民委员会等农村和城市基层组织人员"/>
+<edge source="有关计划生育、户籍、征兵工作人员" target="协助乡镇人民政府、街道办事处从事行政管理工作的村民委员会、居民委员会等农村和城市基层组织人员"/>
+<edge source="协助人民政府从事的其他行政管理工作人员" target="协助乡镇人民政府、街道办事处从事行政管理工作的村民委员会、居民委员会等农村和城市基层组织人员"/>
+<edge source="非国家工作人员" target="贪污罪共犯主体成立"/>
+<edge source="贪污罪共犯情形" target="贪污罪共犯主体成立"/>
+<edge source="与国家工作人员勾结，伙同贪污的非国家工作人员" target="贪污罪共犯情形"/>
+<edge source="公司、企业或者其他单位中，不具有国家工作人员身份的人与国家工作人员勾结，分别利用各自的职务便利，共同将本单位财物非法占为己有的人员" target="贪污罪共犯情形"/>
+<edge source="教唆、帮助国家工作人员实施贪污行为的非国家工作人员" target="贪污罪共犯情形"/>
+<edge source="单位与国家工作人员勾结共同贪污的直接责任人员" target="贪污罪共犯情形"/>
+<edge source="贪污罪共犯主体成立" target="构成贪污罪共犯"/>
+<edge source="公共财物或非国有单位财物" target="构成贪污罪"/>
+<edge source="国有财产" target="公共财物或非国有单位财物"/>
+<edge source="劳动群众集体所有的财产" target="公共财物或非国有单位财物"/>
+<edge source="用于扶贫和其他公益事业的社会捐助或者专项基金的财产" target="公共财物或非国有单位财物"/>
+<edge source="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的私人财产" target="公共财物或非国有单位财物"/>
+<edge source="非国有公司财物" target="公共财物或非国有单位财物"/>
+<edge source="企事业单位财物" target="公共财物或非国有单位财物"/>
+<edge source="社会团体财物" target="公共财物或非国有单位财物"/>
+<edge source="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的公民合法收入、储蓄、房屋和其他生活资料；依法归个人、家庭所有的生产资料" target="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的私人财产"/>
+<edge source="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的个体户和私营企业的合法财产" target="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的私人财产"/>
+<edge source="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的依法归个人所有的股份、股票、债券和其他财产" target="在国家机关、国有公司、企业、集体企业和人民团体管理、使用或者运输中的私人财产"/>
+<edge source="利用职务上便利" target="构成贪污罪"/>
+<edge source="利用本人职务上主管、管理公共财物的便利" target="利用职务上便利"/>
+<edge source="利用职务上有隶属关系的其他国家工作人员的职务便利" target="利用职务上便利"/>
+<edge source="包括行为人利用其国家工作人员的特定身份冒用职务便利" target="利用职务上便利"/>
+<edge source="行为人利用其职责范围内调拨、转移、使用或者以其他方式支配公共财产的职权所形成的便利条件" target="利用职务上便利"/>
+<edge source="行为人利用其职责范围内领取、支出等经办公共财物流转事务的权限" target="利用职务上便利"/>
+<edge source="行为人利用其职责范围内具有监守或保管公共财物的职权" target="利用职务上便利"/>
+<edge source="直接故意" target="构成贪污罪"/>
+<edge source="行为人明知自己利用职务之便所实施的行为会发生非法占有公共国有财物结果，并希望这种结果的发生" target="直接故意"/>
+<edge source="行为人明知自己利用职务之便所实施的行为会发生非法占有非国有单位财物的结果，并希望这种结果的发生" target="直接故意"/>
+<edge source="非法占有公共财物的目的" target="构成贪污罪"/>
+<edge source="行为人企图将公共（国有）财物或非国有单位财物永久地占为己有" target="非法占有公共财物的目的"/>
+<edge source="行为人希望将公共（国有）财物或非国有单位财物非法获取后转送他人" target="非法占有公共财物的目的"/>
+<edge source="侵吞、窃取、骗取或者以其他手段非法占有公共财物" target="构成贪污罪"/>
+<edge source="行为人将自己管理或经手的公共财物非法转移归自己或他人所有" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="行为人利用职务之便，采取秘密窃取的方式，将自己管理的公共财物非法占有的行为" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="行为人利用职务之便，采取虚构事实或隐瞒真相的方法，非法占有财物的行为" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="国家工作人员利用职务上的便利内外勾结将自己管理、经营的公共（国有）财物以“合法”形式转给与其勾结的外部人员，然后迂回取回，据为己有的行为" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="公款私存、私贷坐吃利息" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="利用回扣非法占有公款" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="间接贪污" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="占有应交单位的劳务收入" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="挪用公共财物后进行平账的" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="以借用为名长期占用公共财物，超出合理借用期限且无归还意图" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="谎称公款被骗、被抢而实际自己占有公共财物的" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="利用计算机技术伪造、篡改账目或电子数据侵吞公款" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="虚报、冒领薪酬、奖金、补贴等" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="与他人串通通过虚假合同、虚假交易转移公共财物" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="挪用后携款潜逃" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="非法占有股东股权" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="在扫黑除恶专项斗争中，公职人员利用职务便利侵吞涉黑涉恶相关公共财物" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="在危害生产安全刑事案件中，国家工作人员利用职务便利侵吞安全生产相关公共财物" target="侵吞、窃取、骗取或者以其他手段非法占有公共财物"/>
+<edge source="将自己管理或经手的公共财物加以隐匿、扣留" target="行为人将自己管理或经手的公共财物非法转移归自己或他人所有"/>
+<edge source="将自己管理、使用或经手的公共财物非法转卖或擅自赠送他人" target="行为人将自己管理或经手的公共财物非法转移归自己或他人所有"/>
+<edge source="将追缴的赃款赃物或罚没款物私自用掉或非法据为私有" target="行为人将自己管理或经手的公共财物非法转移归自己或他人所有"/>
+<edge source="具有六种情节之一" target="刑法第三百八十三条第一款规定的其他较重情节"/>
+<edge source="具有六种情节之一" target="刑法第三百八十三条第一款规定的其他严重情节"/>
+<edge source="具有六种情节之一" target="刑法第三百八十三条第一款规定的其他特别严重情节"/>
+<edge source="贪污救灾、抢险、防汛、优抚、扶贫、移民、救济、防疫、社会捐助等特定款物的" target="具有六种情节之一"/>
+<edge source="曾因贪污、受贿、挪用公款受过党纪、行政处分的" target="具有六种情节之一"/>
+<edge source="曾因故意犯罪受过刑事追究的" target="具有六种情节之一"/>
+<edge source="赃款赃物用于非法活动的" target="具有六种情节之一"/>
+<edge source="拒不交待赃款赃物去向或者拒不配合追缴工作，致使无法追缴的" target="具有六种情节之一"/>
+<edge source="造成恶劣影响或者其他严重后果的" target="具有六种情节之一"/>
+<edge source="贪污数额较大" target="达到贪污罪一档刑罚"/>
+<edge source="贪污数额在3万元以上不满20万元" target="贪污数额较大"/>
+<edge source="贪污数额巨大" target="达到贪污罪二档刑罚"/>
+<edge source="贪污数额在20万元以上不满300万元" target="贪污数额巨大"/>
+<edge source="贪污数额特别巨大" target="达到贪污罪三档刑罚"/>
+<edge source="贪污数额在300万元以上" target="贪污数额特别巨大"/>
+<edge source="刑法第三百八十三条第一款规定的其他较重情节" target="达到贪污罪一档刑罚"/>
+<edge source="贪污数额在一万元以上不满三万元" target="刑法第三百八十三条第一款规定的其他较重情节"/>
+<edge source="刑法第三百八十三条第一款规定的其他严重情节" target="达到贪污罪二档刑罚"/>
+<edge source="贪污数额在十万元以上不满二十万元" target="刑法第三百八十三条第一款规定的其他严重情节"/>
+<edge source="刑法第三百八十三条第一款规定的其他特别严重情节" target="达到贪污罪三档刑罚"/>
+<edge source="贪污数额在一百五十万元以上不满三百万元" target="刑法第三百八十三条第一款规定的其他特别严重情节"/>
+<edge source="贪污罪主体成立" target="构成贪污罪"/>
+<edge source="受国家机关、国有公司、企业、事业单位、人民团体委托管理、经营国有财产的人员" target="贪污罪主体成立"/>
+<edge source="达到贪污罪一档刑罚" target="处三年以下有期徒刑或者拘役，并处罚金十万元以上五十万元以下"/>
+<edge source="构成贪污罪" target="构成贪污罪共犯"/>
+<edge source="构成贪污罪" target="处三年以下有期徒刑或者拘役，并处罚金十万元以上五十万元以下"/>
+<edge source="构成贪污罪" target="处三年以上十年以下有期徒刑，并处罚金二十万元以上犯罪数额二倍以下或者没收财产"/>
+<edge source="构成贪污罪" target="处十年以上有期徒刑或者无期徒刑，并处罚金五十万元以上犯罪数额二倍以下或者没收财产"/>
+<edge source="构成贪污罪" target="可以判处终身监禁，不得减刑、假释"/>
+<edge source="构成贪污罪" target="可以判处无期徒刑或者死刑"/>
+<edge source="侵犯廉洁性，侵犯国家机关、国有企业事业单位的正常活动，侵犯公共财物所有权" target="构成贪污罪"/>
+<edge source="不是违规发放资金等一般违纪行为" target="构成贪污罪"/>
+<edge source="不是具有公共财物性质的单位小金库" target="构成贪污罪"/>
+<edge source="不是基层组织人员协助人民政府从事国有土地经营管理的合法行为" target="构成贪污罪"/>
+<edge source="不是经过单位集体决策、体现单位意志的小金库使用行为" target="构成贪污罪"/>
+<edge source="不是在单位授权下、未脱离本单位运营的账外股权转移行为" target="构成贪污罪"/>
+<edge source="达到贪污罪二档刑罚" target="处三年以上十年以下有期徒刑，并处罚金二十万元以上犯罪数额二倍以下或者没收财产"/>
+<edge source="达到贪污罪三档刑罚" target="处十年以上有期徒刑或者无期徒刑，并处罚金五十万元以上犯罪数额二倍以下或者没收财产"/>
+<edge source="贪污数额在三百万元以上" target="可以判处终身监禁，不得减刑、假释"/>
+<edge source="贪污数额在三百万元以上" target="可以判处无期徒刑或者死刑"/>
+<edge source="使国家和人民利益遭受特别重大损失" target="可以判处终身监禁，不得减刑、假释"/>
+<edge source="使国家和人民利益遭受特别重大损失" target="可以判处无期徒刑或者死刑"/>
+<edge source="判处死刑缓期执行" target="可以判处终身监禁，不得减刑、假释"/>
+<edge source="死刑缓期执行期间无故意犯罪" target="可以判处终身监禁，不得减刑、假释"/>
+<edge source="二年期满后依法减为无期徒刑" target="可以判处终身监禁，不得减刑、假释"/>
+</graph></graphml>
