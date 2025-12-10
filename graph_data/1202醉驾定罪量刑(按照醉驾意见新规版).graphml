@@ -1,0 +1,535 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d4" for="node" attr.name="case_type" attr.type="string"/>
+<key id="d3" for="node" attr.name="operation" attr.type="string"/>
+<key id="d2" for="node" attr.name="prompt" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="node_name" attr.type="string"/>
+<graph edgedefault="directed"><node id="可能构成醉酒型危险驾驶罪">
+  <data key="d0">可能构成醉酒型危险驾驶罪</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在道路上驾驶机动车">
+  <data key="d0">在道路上驾驶机动车</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="血液酒精含量数值mg/100mL≥80">
+  <data key="d0">血液酒精含量数值mg/100mL≥80</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="不构成紧急避险">
+  <data key="d0">不构成紧急避险</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="醉酒后出于急救伤病人员等紧急情况，不得已驾驶机动车">
+  <data key="d0">醉酒后出于急救伤病人员等紧急情况，不得已驾驶机动车</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="不存在《醉驾意见》第10条的从重情节">
+  <data key="d0">不存在《醉驾意见》第10条的从重情节</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="造成交通事故且负事故全部或者主要责任的">
+  <data key="d0">造成交通事故且负事故全部或者主要责任的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="造成交通事故后逃逸的">
+  <data key="d0">造成交通事故后逃逸的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="未取得机动车驾驶证驾驶汽车的">
+  <data key="d0">未取得机动车驾驶证驾驶汽车的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="严重超员、超载、超速驾驶的">
+  <data key="d0">严重超员、超载、超速驾驶的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="服用国家规定管制的精神药品或者麻醉药品后驾驶的">
+  <data key="d0">服用国家规定管制的精神药品或者麻醉药品后驾驶的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="驾驶机动车从事客运活动且载有乘客的">
+  <data key="d0">驾驶机动车从事客运活动且载有乘客的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="驾驶机动车从事校车业务且载有师生的">
+  <data key="d0">驾驶机动车从事校车业务且载有师生的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在高速公路上驾驶的">
+  <data key="d0">在高速公路上驾驶的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="驾驶重型载货汽车的">
+  <data key="d0">驾驶重型载货汽车的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="运输危险化学品、危险货物的">
+  <data key="d0">运输危险化学品、危险货物的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="逃避、阻碍公安机关依法检查的">
+  <data key="d0">逃避、阻碍公安机关依法检查的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="实施威胁、打击报复、引诱、贿买证人、鉴定人等人员或者毁灭、伪造证据等妨害司法行为的">
+  <data key="d0">实施威胁、打击报复、引诱、贿买证人、鉴定人等人员或者毁灭、伪造证据等妨害司法行为的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="二年内曾因饮酒后驾驶机动车被查获或者受过行政处罚的">
+  <data key="d0">二年内曾因饮酒后驾驶机动车被查获或者受过行政处罚的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="五年内曾因危险驾驶行为被判决有罪或者作相对不起诉的">
+  <data key="d0">五年内曾因危险驾驶行为被判决有罪或者作相对不起诉的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="其他需要从重处理的情形">
+  <data key="d0">其他需要从重处理的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="存在《醉驾意见》第12条的显著轻微情形">
+  <data key="d0">存在《醉驾意见》第12条的显著轻微情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="血液酒精含量数值mg/100mL&lt;150">
+  <data key="d0">血液酒精含量数值mg/100mL&lt;150</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="出于急救伤病人员等紧急情况驾驶机动车，且不构成紧急避险的">
+  <data key="d0">出于急救伤病人员等紧急情况驾驶机动车，且不构成紧急避险的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在居民小区、停车场等场所因挪车、停车入位等短距离驾驶机动车的">
+  <data key="d0">在居民小区、停车场等场所因挪车、停车入位等短距离驾驶机动车的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="由他人驾驶至居民小区、停车场等场所短距离接替驾驶停放机动车的，或者为了交由他人驾驶，自居民小区、停车场等场所短距离驶出的">
+  <data key="d0">由他人驾驶至居民小区、停车场等场所短距离接替驾驶停放机动车的，或者为了交由他人驾驶，自居民小区、停车场等场所短距离驶出的</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="其他情节显著轻微的情形">
+  <data key="d0">其他情节显著轻微的情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="情节显著轻微、危害不大">
+  <data key="d0">情节显著轻微、危害不大</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="不存在《醉驾意见》第10条从重情节">
+  <data key="d0">不存在《醉驾意见》第10条从重情节</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="存在《醉驾意见》第12条显著轻微情形">
+  <data key="d0">存在《醉驾意见》第12条显著轻微情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="法定不起诉">
+  <data key="d0">法定不起诉</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="存在从轻处罚情节">
+  <data key="d0">存在从轻处罚情节</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在居民小区、停车场等场所因挪车、停车入位等短距离驾驶机动车">
+  <data key="d0">在居民小区、停车场等场所因挪车、停车入位等短距离驾驶机动车</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="由他人驾驶至居民小区、公共停车场等场所后短距离接替驾驶停放，或自该场所短距离驶出即交由或等待他人驾驶">
+  <data key="d0">由他人驾驶至居民小区、公共停车场等场所后短距离接替驾驶停放，或自该场所短距离驶出即交由或等待他人驾驶</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="醉酒后在道路上短距离行驶即自愿主动寻找安全地点停车，放弃继续醉驾（遇路检停止驾驶除外）">
+  <data key="d0">醉酒后在道路上短距离行驶即自愿主动寻找安全地点停车，放弃继续醉驾（遇路检停止驾驶除外）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="因代驾未至指定地点接驾或未将机动车停至指定地点等代驾服务瑕疵，导致短距离驾驶机动车">
+  <data key="d0">因代驾未至指定地点接驾或未将机动车停至指定地点等代驾服务瑕疵，导致短距离驾驶机动车</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="出于急救伤病人员或逃避侵害等紧急情况驾驶机动车">
+  <data key="d0">出于急救伤病人员或逃避侵害等紧急情况驾驶机动车</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="饮酒后与驾驶行为间隔时间较长，被告人身体无异常反应，自身及社会公众的经验法则均无法认知其处于醉酒状态">
+  <data key="d0">饮酒后与驾驶行为间隔时间较长，被告人身体无异常反应，自身及社会公众的经验法则均无法认知其处于醉酒状态</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在普通道路上醉酒驾驶摩托车、轻便摩托车">
+  <data key="d0">在普通道路上醉酒驾驶摩托车、轻便摩托车</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="构成自首或坦白，即自动投案且如实供述罪行，或到案后如实供述基本犯罪事实且配合酒精测试和血样抽取">
+  <data key="d0">构成自首或坦白，即自动投案且如实供述罪行，或到案后如实供述基本犯罪事实且配合酒精测试和血样抽取</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="具有揭发他人犯罪行为且查证属实、提供破案重要线索从而得以侦破其他案件、阻止他人犯罪活动、协助抓捕其他嫌犯等立功或重大立功行为">
+  <data key="d0">具有揭发他人犯罪行为且查证属实、提供破案重要线索从而得以侦破其他案件、阻止他人犯罪活动、协助抓捕其他嫌犯等立功或重大立功行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="犯罪情节轻微">
+  <data key="d0">犯罪情节轻微</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="不存在《醉驾意见》第12条的显著轻微情形">
+  <data key="d0">不存在《醉驾意见》第12条的显著轻微情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="相对不起诉或起诉但建议免予刑事处罚">
+  <data key="d0">相对不起诉或起诉但建议免予刑事处罚</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="不属于相对不起诉情形">
+  <data key="d0">不属于相对不起诉情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="相对不起诉">
+  <data key="d0">相对不起诉</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="不属于法定不起诉情形">
+  <data key="d0">不属于法定不起诉情形</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NOT</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="构成醉酒型危险驾驶罪，检察院应当起诉由法院定罪量刑">
+  <data key="d0">构成醉酒型危险驾驶罪，检察院应当起诉由法院定罪量刑</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="刑期起点">
+  <data key="d0">刑期起点</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NON_EXCLUSIVE</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="初始罚金数额">
+  <data key="d0">初始罚金数额</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NON_EXCLUSIVE</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在[30, 60]天区间内酌情选取">
+  <data key="d0">在[30, 60]天区间内酌情选取</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在[1000, 2000]元区间内酌情选取，营运机动车的5000元">
+  <data key="d0">在[1000, 2000]元区间内酌情选取，营运机动车的5000元</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">AND</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="存在从重处罚情节，基准刑的刑期天数增加至90天以上">
+  <data key="d0">存在从重处罚情节，基准刑的刑期天数增加至90天以上</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">OR</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在高速公路、学校周边、居民区、繁华路段等人流车流密集的特殊路段或早晚高峰时段醉酒驾驶">
+  <data key="d0">在高速公路、学校周边、居民区、繁华路段等人流车流密集的特殊路段或早晚高峰时段醉酒驾驶</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="驾驶载有乘客的营运客车、校车、中型以上客车、重型载货汽车、危险品运输车、工程运输车等特殊车辆时醉酒驾驶">
+  <data key="d0">驾驶载有乘客的营运客车、校车、中型以上客车、重型载货汽车、危险品运输车、工程运输车等特殊车辆时醉酒驾驶</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="存在无证驾驶、驾驶证被吊销、驾驶与准驾车型不符或使用伪造、变造驾驶证等驾驶资质问题">
+  <data key="d0">存在无证驾驶、驾驶证被吊销、驾驶与准驾车型不符或使用伪造、变造驾驶证等驾驶资质问题</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="驾驶安全装置不全、安全机件失灵、拼装、已达报废标准的机动车，或悬挂伪造、变造号牌、使用伪造、变造行驶证的机动车（被告人无认识可能性除外）">
+  <data key="d0">驾驶安全装置不全、安全机件失灵、拼装、已达报废标准的机动车，或悬挂伪造、变造号牌、使用伪造、变造行驶证的机动车（被告人无认识可能性除外）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在醉酒驾驶的同时，存在严重超员（客运超额定乘员20%）、严重超载（货运超核定载质量30%）、严重超速（超规定时速50%）、不按信号灯驾驶、逆向行驶等严重交通违法行为">
+  <data key="d0">在醉酒驾驶的同时，存在严重超员（客运超额定乘员20%）、严重超载（货运超核定载质量30%）、严重超速（超规定时速50%）、不按信号灯驾驶、逆向行驶等严重交通违法行为</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="醉酒驾驶发生非单方事故，造成他人轻微伤以上伤害或较大财产损失，且负事故全部或主要责任">
+  <data key="d0">醉酒驾驶发生非单方事故，造成他人轻微伤以上伤害或较大财产损失，且负事故全部或主要责任</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在发生交通事故后为逃避法律追究而逃逸，但尚未构成其他犯罪">
+  <data key="d0">在发生交通事故后为逃避法律追究而逃逸，但尚未构成其他犯罪</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="采取冲卡、绕卡，找人顶包、指使他人作伪证，驾车或弃车逃逸，拒绝打开车门车窗，不配合吹气式酒精测试、不配合抽取血样，遭遇检查时大量饮水/饮酒，或以暴力、威胁手段拒绝、阻碍检查（未达到构成其他犯罪的严重程度）">
+  <data key="d0">采取冲卡、绕卡，找人顶包、指使他人作伪证，驾车或弃车逃逸，拒绝打开车门车窗，不配合吹气式酒精测试、不配合抽取血样，遭遇检查时大量饮水/饮酒，或以暴力、威胁手段拒绝、阻碍检查（未达到构成其他犯罪的严重程度）</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="在诉讼期间拒不到案、逃跑，或严重违反取保候审规定">
+  <data key="d0">在诉讼期间拒不到案、逃跑，或严重违反取保候审规定</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="2年内因酒驾被查获或受行政处罚，或5年内因危险驾驶被定罪或作相对不起诉">
+  <data key="d0">2年内因酒驾被查获或受行政处罚，或5年内因危险驾驶被定罪或作相对不起诉</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="血液酒精含量达到或超过200mg/100mL，且辨认、控制能力明显削弱">
+  <data key="d0">血液酒精含量达到或超过200mg/100mL，且辨认、控制能力明显削弱</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="宣告刑的刑期天数">
+  <data key="d0">宣告刑的刑期天数</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3">NON_EXCLUSIVE</data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<node id="基准刑的刑期天数">
+  <data key="d0">基准刑的刑期天数</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4">危险驾驶罪</data>
+</node>
+<edge source="可能构成醉酒型危险驾驶罪" target="情节显著轻微、危害不大"/>
+<edge source="可能构成醉酒型危险驾驶罪" target="犯罪情节轻微"/>
+<edge source="可能构成醉酒型危险驾驶罪" target="构成醉酒型危险驾驶罪，检察院应当起诉由法院定罪量刑"/>
+<edge source="在道路上驾驶机动车" target="可能构成醉酒型危险驾驶罪"/>
+<edge source="血液酒精含量数值mg/100mL≥80" target="可能构成醉酒型危险驾驶罪"/>
+<edge source="不构成紧急避险" target="情节显著轻微、危害不大"/>
+<edge source="不构成紧急避险" target="犯罪情节轻微"/>
+<edge source="不构成紧急避险" target="构成醉酒型危险驾驶罪，检察院应当起诉由法院定罪量刑"/>
+<edge source="醉酒后出于急救伤病人员等紧急情况，不得已驾驶机动车" target="不构成紧急避险"/>
+<edge source="造成交通事故且负事故全部或者主要责任的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="造成交通事故后逃逸的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="未取得机动车驾驶证驾驶汽车的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="严重超员、超载、超速驾驶的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="服用国家规定管制的精神药品或者麻醉药品后驾驶的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="驾驶机动车从事客运活动且载有乘客的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="驾驶机动车从事校车业务且载有师生的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="在高速公路上驾驶的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="驾驶重型载货汽车的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="运输危险化学品、危险货物的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="逃避、阻碍公安机关依法检查的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="实施威胁、打击报复、引诱、贿买证人、鉴定人等人员或者毁灭、伪造证据等妨害司法行为的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="二年内曾因饮酒后驾驶机动车被查获或者受过行政处罚的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="五年内曾因危险驾驶行为被判决有罪或者作相对不起诉的" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="其他需要从重处理的情形" target="不存在《醉驾意见》第10条的从重情节"/>
+<edge source="血液酒精含量数值mg/100mL&lt;150" target="存在《醉驾意见》第12条的显著轻微情形"/>
+<edge source="出于急救伤病人员等紧急情况驾驶机动车，且不构成紧急避险的" target="存在《醉驾意见》第12条的显著轻微情形"/>
+<edge source="在居民小区、停车场等场所因挪车、停车入位等短距离驾驶机动车的" target="存在《醉驾意见》第12条的显著轻微情形"/>
+<edge source="由他人驾驶至居民小区、停车场等场所短距离接替驾驶停放机动车的，或者为了交由他人驾驶，自居民小区、停车场等场所短距离驶出的" target="存在《醉驾意见》第12条的显著轻微情形"/>
+<edge source="其他情节显著轻微的情形" target="存在《醉驾意见》第12条的显著轻微情形"/>
+<edge source="情节显著轻微、危害不大" target="法定不起诉"/>
+<edge source="不存在《醉驾意见》第10条从重情节" target="情节显著轻微、危害不大"/>
+<edge source="不存在《醉驾意见》第10条从重情节" target="犯罪情节轻微"/>
+<edge source="存在《醉驾意见》第12条显著轻微情形" target="情节显著轻微、危害不大"/>
+<edge source="法定不起诉" target="不属于法定不起诉情形"/>
+<edge source="存在从轻处罚情节" target="犯罪情节轻微"/>
+<edge source="存在从轻处罚情节" target="宣告刑的刑期天数"/>
+<edge source="在居民小区、停车场等场所因挪车、停车入位等短距离驾驶机动车" target="存在从轻处罚情节"/>
+<edge source="由他人驾驶至居民小区、公共停车场等场所后短距离接替驾驶停放，或自该场所短距离驶出即交由或等待他人驾驶" target="存在从轻处罚情节"/>
+<edge source="醉酒后在道路上短距离行驶即自愿主动寻找安全地点停车，放弃继续醉驾（遇路检停止驾驶除外）" target="存在从轻处罚情节"/>
+<edge source="因代驾未至指定地点接驾或未将机动车停至指定地点等代驾服务瑕疵，导致短距离驾驶机动车" target="存在从轻处罚情节"/>
+<edge source="出于急救伤病人员或逃避侵害等紧急情况驾驶机动车" target="存在从轻处罚情节"/>
+<edge source="饮酒后与驾驶行为间隔时间较长，被告人身体无异常反应，自身及社会公众的经验法则均无法认知其处于醉酒状态" target="存在从轻处罚情节"/>
+<edge source="在普通道路上醉酒驾驶摩托车、轻便摩托车" target="存在从轻处罚情节"/>
+<edge source="构成自首或坦白，即自动投案且如实供述罪行，或到案后如实供述基本犯罪事实且配合酒精测试和血样抽取" target="存在从轻处罚情节"/>
+<edge source="具有揭发他人犯罪行为且查证属实、提供破案重要线索从而得以侦破其他案件、阻止他人犯罪活动、协助抓捕其他嫌犯等立功或重大立功行为" target="存在从轻处罚情节"/>
+<edge source="犯罪情节轻微" target="相对不起诉或起诉但建议免予刑事处罚"/>
+<edge source="不存在《醉驾意见》第12条的显著轻微情形" target="犯罪情节轻微"/>
+<edge source="不属于相对不起诉情形" target="构成醉酒型危险驾驶罪，检察院应当起诉由法院定罪量刑"/>
+<edge source="相对不起诉" target="不属于相对不起诉情形"/>
+<edge source="不属于法定不起诉情形" target="构成醉酒型危险驾驶罪，检察院应当起诉由法院定罪量刑"/>
+<edge source="构成醉酒型危险驾驶罪，检察院应当起诉由法院定罪量刑" target="刑期起点"/>
+<edge source="构成醉酒型危险驾驶罪，检察院应当起诉由法院定罪量刑" target="初始罚金数额"/>
+<edge source="刑期起点" target="在[30, 60]天区间内酌情选取"/>
+<edge source="初始罚金数额" target="在[1000, 2000]元区间内酌情选取，营运机动车的5000元"/>
+<edge source="在高速公路、学校周边、居民区、繁华路段等人流车流密集的特殊路段或早晚高峰时段醉酒驾驶" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="驾驶载有乘客的营运客车、校车、中型以上客车、重型载货汽车、危险品运输车、工程运输车等特殊车辆时醉酒驾驶" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="存在无证驾驶、驾驶证被吊销、驾驶与准驾车型不符或使用伪造、变造驾驶证等驾驶资质问题" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="驾驶安全装置不全、安全机件失灵、拼装、已达报废标准的机动车，或悬挂伪造、变造号牌、使用伪造、变造行驶证的机动车（被告人无认识可能性除外）" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="在醉酒驾驶的同时，存在严重超员（客运超额定乘员20%）、严重超载（货运超核定载质量30%）、严重超速（超规定时速50%）、不按信号灯驾驶、逆向行驶等严重交通违法行为" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="醉酒驾驶发生非单方事故，造成他人轻微伤以上伤害或较大财产损失，且负事故全部或主要责任" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="在发生交通事故后为逃避法律追究而逃逸，但尚未构成其他犯罪" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="采取冲卡、绕卡，找人顶包、指使他人作伪证，驾车或弃车逃逸，拒绝打开车门车窗，不配合吹气式酒精测试、不配合抽取血样，遭遇检查时大量饮水/饮酒，或以暴力、威胁手段拒绝、阻碍检查（未达到构成其他犯罪的严重程度）" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="在诉讼期间拒不到案、逃跑，或严重违反取保候审规定" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="2年内因酒驾被查获或受行政处罚，或5年内因危险驾驶被定罪或作相对不起诉" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="血液酒精含量达到或超过200mg/100mL，且辨认、控制能力明显削弱" target="存在从重处罚情节，基准刑的刑期天数增加至90天以上"/>
+<edge source="基准刑的刑期天数" target="宣告刑的刑期天数"/>
+</graph></graphml>
