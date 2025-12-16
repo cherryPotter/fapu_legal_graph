@@ -23,19 +23,13 @@ except ImportError:
     HAS_BS4 = False
 
 class NodeResponse(BaseModel):
-    """
-    这里定义你希望大模型返回的数据结构。
-    Field 中的 description 非常重要，它相当于给模型的'微型Prompt'。
-    """
+
     question: str = Field(description="问题")
     answer: bool = Field(description="是或否")
 
 
 class NodeResponseList(BaseModel):
-    """
-    多个节点的响应列表。
-    用于批量返回多个节点的判断结果。
-    """
+
     nodes: List[NodeResponse] = Field(
         description="节点响应列表，包含所有问题的判断结果。每个元素必须包含一个问题（question）及其对应的答案（answer，是/否，bool类型）。必须严格按照输入问题列表的顺序依次返回，且返回的节点数量必须与输入问题数量完全一致。"
     )
@@ -365,6 +359,53 @@ class GraphExecutor:
             "\n\n=== 叶子节点 ===\n" +
             ("\n".join(leaf_lines) if leaf_lines else "  (无)")
         )
+    
+    def to_json(self, graph: nx.DiGraph) -> Dict:
+        """
+        将结果转换为JSON格式
+        
+        Returns:
+            包含三个部分的字典：
+            1. input_nodes: 入度为0的节点（输入节点）
+            2. graph_nodes: 根据图谱执行出来的所有节点
+            3. leaf_nodes_from_judgement: 真实判决书对应的叶子节点
+        """
+        # 1. 输入节点（入度为0的节点）
+        zero_indegree_nodes = [n for n in graph.nodes if graph.in_degree(n) == 0]
+        input_nodes = {
+            node: {
+                "value": bool(self.results.get(node, False)),
+                "explanation": self.explanations.get(node, "")
+            }
+            for node in zero_indegree_nodes
+        }
+        
+        # 2. 根据图谱执行出来的所有节点
+        graph_nodes = {
+            node: {
+                "value": bool(self.results.get(node, False)),
+                "explanation": self.explanations.get(node, "")
+            }
+            for node in self.results.keys()
+        }
+        
+        # 3. 真实判决书对应的叶子节点
+        leaf_nodes = [n for n in graph.nodes if graph.out_degree(n) == 0]
+        leaf_nodes_from_judgement = {
+            node: {
+                "value": bool(self.results.get(node, False)),
+                "explanation": self.explanations.get(node, ""),  # 使用图谱推理的解释
+                "from_judgement": self.judgement_results.get(node, False)
+            }
+            for node in leaf_nodes
+            if node in self.judgement_results
+        }
+        
+        return {
+            "input_nodes": input_nodes,
+            "graph_nodes": graph_nodes,
+            "leaf_nodes_from_judgement": leaf_nodes_from_judgement
+        }
 
 
 def parse_args() -> argparse.Namespace:
@@ -411,11 +452,11 @@ def main():
         G = G.to_directed()
 
     print(f"成功加载图：节点 {G.number_of_nodes()}，边 {G.number_of_edges()}")
-    # 打印入度为 0 的节点，便于确认推理起点
+
     # zero_indegree_nodes = [n for n in G.nodes if G.in_degree(n) == 0]
     # print(f"入度为 0 的节点({len(zero_indegree_nodes)}): {zero_indegree_nodes}")
     
-    # 创建 LLM 客户端
+
     llm = create_llm_client()
     
 
@@ -425,6 +466,7 @@ def main():
 
     
     compare_report = ""
+    judgement_text = ""
     # 提取判决文本并评估叶子节点
     if facts_path.suffix.lower() in ['.html', '.htm']:
         judgement_text = extract_judgement_from_html(facts_path)
@@ -457,8 +499,19 @@ def main():
     
     if args.output:
         out_path = Path(args.output).expanduser()
-        out_path.write_text(report+"\n"+compare_report, encoding='utf-8')
-        print(f"推理结果已写入 {out_path}")
+        # 确保输出目录存在
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        # 判断输出格式：如果输出文件扩展名是.json，则输出JSON格式
+        if out_path.suffix.lower() == '.json':
+            # 输出JSON格式
+            json_result = executor.to_json(G)
+            out_path.write_text(json.dumps(json_result, ensure_ascii=False, indent=2), encoding='utf-8')
+            print(f"推理结果（JSON格式）已写入 {out_path}")
+        else:
+            # 输出文本格式
+            out_path.write_text(report+"\n"+compare_report, encoding='utf-8')
+            print(f"推理结果已写入 {out_path}")
     else:
         print(report)
         print(compare_report)
