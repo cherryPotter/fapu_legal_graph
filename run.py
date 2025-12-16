@@ -31,6 +31,16 @@ class NodeResponse(BaseModel):
     answer: bool = Field(description="是或否")
 
 
+class NodeResponseList(BaseModel):
+    """
+    多个节点的响应列表。
+    用于批量返回多个节点的判断结果。
+    """
+    nodes: List[NodeResponse] = Field(
+        description="节点响应列表，包含所有问题的判断结果。每个元素必须包含一个问题（question）及其对应的答案（answer，是/否，bool类型）。必须严格按照输入问题列表的顺序依次返回，且返回的节点数量必须与输入问题数量完全一致。"
+    )
+
+
 
 def extract_facts_from_html(html_path: Path) -> str:
     """从 HTML 文件中提取【判决如下】之前的案件事实部分。
@@ -160,9 +170,7 @@ def normalize_operation(operation: str) -> str:
 
 
 def create_llm_client() -> LangchainLLMClient:
-    """创建用于节点评估的 LLM 客户端。
-    
-    该客户端可以同时用于单节点推理和批量处理。
+    """创建用于单节点评估的 LLM 客户端。
     
     Returns:
         配置好的 LangchainLLMClient 实例
@@ -187,6 +195,32 @@ def create_llm_client() -> LangchainLLMClient:
     )
 
 
+def create_llm_client_for_list() -> LangchainLLMClient:
+    """创建用于批量节点评估的 LLM 客户端，返回 NodeResponseList。
+    
+    Returns:
+        配置好的 LangchainLLMClient 实例，返回 NodeResponseList
+    """
+    # 创建 prompt 模板，支持 {facts} 和 {questions} 作为输入变量
+    prompt_template = PromptTemplate(
+        prompt_name="node_evaluation_batch",
+        system_prompt="你是法律推理助手。请阅读事实描述并回答所有问题。每个问题都必须回答是或否，不确定的回答否。请严格按照问题列表的顺序依次返回每个问题的判断结果。",
+        human_template='''【事实】\n{facts}\n\n【问题列表】\n{questions}\n\n请对上述每个问题分别判断是否成立，严格按照问题列表的顺序返回结果列表。每个结果必须包含问题文本和答案（是/否）。''',
+        model_config={
+            "model": "qwen-max",
+            "max_tokens": 4096,
+            "temperature": 0.1
+        },
+        input_variables=["facts", "questions"]
+    )
+    
+    return LangchainLLMClient(
+        prompt_template=prompt_template,
+        provider="qwen",
+        structured_output_schema=NodeResponseList
+    )
+
+
 class GraphExecutor:
     def __init__(self, graph: nx.DiGraph, llm: LangchainLLMClient, facts: str):
         self.graph = graph
@@ -203,22 +237,37 @@ class GraphExecutor:
         zero_indegree_nodes = [n for n in self.graph.nodes if self.graph.in_degree(n) == 0]
         
         if zero_indegree_nodes:
-            print(f"\n开始逐个处理 {len(zero_indegree_nodes)} 个入度为 0 的节点...")
+            print(f"\n开始批量处理 {len(zero_indegree_nodes)} 个入度为 0 的节点...")
             
-            # 逐个调用 chat 方法
+            # 准备问题列表，将所有节点的问题合并成一个 prompt
+            questions_text = "\n".join([
+                f"{i+1}. 根据事实，判断问题【{node}】是否成立。必须回答是或否，不确定的回答否。"
+                for i, node in enumerate(zero_indegree_nodes)
+            ])
+            
+            # 创建用于批量处理的 LLM 客户端
+            batch_llm = create_llm_client_for_list()
+            
+            # 调用一次 chat 方法，返回 NodeResponseList
+            response = batch_llm.chat({"facts": self.facts, "questions": questions_text})
+            
+            # 处理结果：NodeResponseList 对象有 nodes 字段（List[NodeResponse] 类型）
+            node_responses = response.nodes
+            
+            # 安全检查：确保返回的节点数量与输入一致
+            if len(node_responses) != len(zero_indegree_nodes):
+                raise RuntimeError(
+                    f"返回的节点数量 ({len(node_responses)}) 与输入的节点数量 "
+                    f"({len(zero_indegree_nodes)}) 不匹配"
+                )
+            
+            # 处理结果
             print(f"处理结果:")
-            for i, node in enumerate(zero_indegree_nodes, 1):
-                question = f'根据事实，判断问题【{node}】是否成立。必须回答是或否，不确定的回答否。'
-                # 调用 chat 方法
-                response = self.llm.chat({"facts": self.facts, "question": question})
-                
-                # 处理结果：NodeResponse 对象有 answer 字段（bool 类型）
-                
-                value = bool(response.answer)
-                
+            for i, (node, node_response) in enumerate(zip(zero_indegree_nodes, node_responses), 1):
+                value = bool(node_response.answer)
                 self.results[node] = value
                 self.explanations[node] = "root"
-                print(f"  [{i}] {response}")
+                print(f"  [{i}] {node}: {node_response.answer}")
         
         # 第二步：按照拓扑顺序执行，处理其他节点直到叶子节点
         print(f"\n开始按拓扑顺序执行推理...")
@@ -303,8 +352,8 @@ class GraphExecutor:
     def summary(self) -> str:
         lines = []
         for node, value in self.results.items():
-            #explanation = self.explanations.get(node, '')
-            lines.append(f"{node}: {value}\n")
+            explanation = self.explanations.get(node, '')
+            lines.append(f"{node}: {value}: explanation={explanation}\n")
 
         leaves = [n for n in self.graph.nodes if self.graph.out_degree(n) == 0]
         leaf_lines = [f"  - {leaf}: {'是' if self.results.get(leaf) else '否'}"
