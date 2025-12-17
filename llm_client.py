@@ -5,6 +5,7 @@ All LLM implementations should extend this class.
 
 import logging
 import os
+import traceback
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Any, AsyncIterator, Dict, Iterator, List, Optional, Type, Union
@@ -302,6 +303,14 @@ class LangchainLLMClient(LLMClient):
                 max_tokens=model_config.get("max_tokens", 4096),
                 temperature=model_config.get("temperature", 0.0)
             )
+        elif provider == "openai":
+            return ChatOpenAI(
+                    base_url="https://api2.aigcbest.top/v1",
+                    api_key=os.getenv("OPENAI_API_KEY_FOR_CLARA"),
+                    model=model_config.get("model"),
+                    max_tokens=model_config.get("max_tokens"),
+                    temperature=model_config.get("temperature")
+                )
 
         raise ValueError(f"Unsupported provider: {provider}. Currently only 'glm' is implemented.")
 

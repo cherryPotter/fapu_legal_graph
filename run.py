@@ -10,6 +10,8 @@ import os
 import sys
 import json
 import re
+import time
+import traceback
 from pathlib import Path
 from typing import Dict, Tuple, Optional, List
 from openai import OpenAI
@@ -26,6 +28,8 @@ class NodeResponse(BaseModel):
 
     question: str = Field(description="问题")
     answer: bool = Field(description="是或否")
+    #TODO 尤其是数字类型的
+    #reasoning: str = Field(description="推理过程")
 
 
 class NodeResponseList(BaseModel):
@@ -133,8 +137,8 @@ def extract_judgement_from_html(html_path: Path) -> str:
 
 
 def normalize_operation(operation: str) -> str:
-    """将 operation 规范化为 '与' 或 '或'，默认返回 '与'。
-    支持中英文格式：'或'/'OR' 和 '与'/'AND'
+    """将 operation 规范化为 '与'、'或'、'非'，默认返回 '与'。
+    支持中英文格式：'或'/'OR'，'与'/'AND'，'非'/'NOT'/ '!'。
     """
     if not operation:
         return '与'
@@ -142,10 +146,9 @@ def normalize_operation(operation: str) -> str:
     if not ops:
         return '与'
     
-    # 检查是否包含 OR（或）操作
     has_or = False
-    # 检查是否包含 AND（与）操作
     has_and = False
+    has_not = False
     
     for op in ops:
         op_upper = op.upper()
@@ -153,7 +156,12 @@ def normalize_operation(operation: str) -> str:
             has_or = True
         if op == '与' or op_upper == 'AND':
             has_and = True
+        if op == '非' or op_upper == 'NOT' or op == '!':
+            has_not = True
     
+    # 仅包含非时，返回非
+    if has_not and not (has_or or has_and):
+        return '非'
     # 如果同时存在 OR 和 AND，优先使用 OR（任一满足即可）
     if has_or and has_and:
         return '或'
@@ -172,10 +180,10 @@ def create_llm_client() -> LangchainLLMClient:
     # 创建 prompt 模板，支持 {facts} 和 {question} 作为输入变量
     prompt_template = PromptTemplate(
         prompt_name="node_evaluation",
-        system_prompt="你是法律推理助手。请阅读事实描述并回答问题。",
-        human_template='''【事实】\n{facts}\n\n【问题】\n{question}''',
+        system_prompt="你是法律推理助手。请阅读事实描述并回答问题。若问题为否定表述（如以“不是”“不属于”“不构成”开头），回答“是”表示否定成立，回答“否”表示否定不成立。必须回答是或否，不确定的回答否，禁止模糊回答。",
+        human_template='''【事实】{facts}\n\n【问题】:{question}\n\n请判断上述命题是否为真。若命题为否定表述（如“不是违规发放资金等一般违纪行为”），回答“是”表示否定成立（不存在该行为/属性），回答“否”表示否定不成立（存在该行为/属性）。如果是数字相关的问题，包括区间判断，请先进行数值计算或抽取，再判断是否符合区间范围。必须回答是或否，不确定的回答否，禁止模糊或不确定表述。''',
         model_config={
-            "model": "qwen-max",
+            "model": "gpt-4o",
             "max_tokens": 4096,
             "temperature": 0.1
         },
@@ -184,7 +192,7 @@ def create_llm_client() -> LangchainLLMClient:
     
     return LangchainLLMClient(
         prompt_template=prompt_template,
-        provider="qwen",
+        provider="openai",
         structured_output_schema=NodeResponse
     )
 
@@ -198,10 +206,20 @@ def create_llm_client_for_list() -> LangchainLLMClient:
     # 创建 prompt 模板，支持 {facts} 和 {questions} 作为输入变量
     prompt_template = PromptTemplate(
         prompt_name="node_evaluation_batch",
-        system_prompt="你是法律推理助手。请阅读事实描述并回答所有问题。每个问题都必须回答是或否，不确定的回答否。请严格按照问题列表的顺序依次返回每个问题的判断结果。",
-        human_template='''【事实】\n{facts}\n\n【问题列表】\n{questions}\n\n请对上述每个问题分别判断是否成立，严格按照问题列表的顺序返回结果列表。每个结果必须包含问题文本和答案（是/否）。''',
+        system_prompt="你是法律推理助手。请阅读事实描述并回答所有问题。若问题为否定表述（如以“不是”“不属于”“不构成”开头），回答“是”表示否定成立，回答“否”表示否定不成立。每个问题都必须回答是或否，不确定的回答否。请严格按照问题列表的顺序依次返回每个问题的判断结果。",
+        human_template='''【事实】:{facts}\n\n【问题列表】:{questions}\n\n请对上述每个问题分别判断是否成立，严格按照问题列表的顺序返回结果列表。每个结果必须包含问题文本和答案（是/否）。若命题为否定表述，回答“是”表示否定成立，回答“否”表示否定不成立。禁止使用模糊或不确定表述。
+        
+        1) 数字与区间问题必须执行“先抽取/计算，后判断”的流程：
+        - 先从【事实】中抽取该问题对应的“唯一关键数值”。
+        - 将金额统一换算为人民币“元”的整数（例如 19.9 万元 = 199000）。
+        - 再根据区间边界进行比较判断。
+        2) 互斥一致性约束（强制）：
+        - 对同一数值的互斥区间问题（例如“3万元以上不满20万元”与“20万元以上不满300万元”），在最终输出前必须做一致性复核：
+            - 最终只能有一个区间问题回答“是”，其余必须为“否”。
+            - 若数值=200000元，则“3万以上不满20万”为“否”，“20万以上不满300万”为“是”。
+            - 若数值<200000元且≥30000元，则前者为“是”，后者为“否”。''',
         model_config={
-            "model": "qwen-max",
+            "model": "gpt-4o",
             "max_tokens": 4096,
             "temperature": 0.1
         },
@@ -210,7 +228,7 @@ def create_llm_client_for_list() -> LangchainLLMClient:
     
     return LangchainLLMClient(
         prompt_template=prompt_template,
-        provider="qwen",
+        provider="openai",
         structured_output_schema=NodeResponseList
     )
 
@@ -239,11 +257,28 @@ class GraphExecutor:
                 for i, node in enumerate(zero_indegree_nodes)
             ])
             
-            # 创建用于批量处理的 LLM 客户端
-            batch_llm = create_llm_client_for_list()
             
-            # 调用一次 chat 方法，返回 NodeResponseList
-            response = batch_llm.chat({"facts": self.facts, "questions": questions_text})
+            # 调用 chat，带重试
+            response = None
+            max_retries = 3
+            base_delay = 2.0
+            for attempt in range(max_retries):
+                try:
+                    response = self.llm.chat({"facts": self.facts, "questions": questions_text})
+                    if response is not None and hasattr(response, "nodes"):
+                        break
+                    else:
+                        print(f"[DEBUG] 批量节点调用返回异常，type={type(response)}, value={response}")
+                        raise RuntimeError("LLM 返回 None 或无 nodes 字段")
+                except Exception as e:
+                    traceback.print_exc()
+                    if attempt < max_retries - 1:
+                        wait_time = base_delay * (2 ** attempt)
+                        print(f"[WARNING] 批量节点调用失败（尝试 {attempt+1}/{max_retries}）：{e}，{wait_time:.1f}s 后重试")
+                        time.sleep(wait_time)
+                    else:
+                        print(f"[ERROR] 批量节点调用失败，已重试 {max_retries} 次：{e}")
+                        raise
             
             # 处理结果：NodeResponseList 对象有 nodes 字段（List[NodeResponse] 类型）
             node_responses = response.nodes
@@ -277,6 +312,7 @@ class GraphExecutor:
             value, reason = self._evaluate_internal(node, preds)
             self.results[node] = value
             self.explanations[node] = reason
+            print(f"{node}: {value}: {reason}")
         
         return self.results
 
@@ -304,17 +340,35 @@ class GraphExecutor:
         
         print(f"\n开始评估 {len(leaf_nodes)} 个叶子节点...")
 
-        # 准备批量查询
-        batch_queries = [
-            {
-                "facts": judgement_text,
-                "question": f'根据判决书内容，判断问题【{node}】是否成立。必须回答是或否，不确定的回答否。'
-            }
-            for node in leaf_nodes
-        ]
+        # 将所有叶子节点的问题合并成一个 prompt，避免重复传入 facts
+        questions_text = "\n".join([
+            f"{i+1}. 根据判决书内容，判断问题【{node}】是否成立。必须回答是或否，不确定的回答否。"
+            for i, node in enumerate(leaf_nodes)
+        ])
         
-        # 调用 batch 方法
-        batch_results = llm.batch(batch_queries)
+        # 调用 chat 方法（带重试），期望返回 NodeResponseList
+        response = None
+        max_retries = 3
+        base_delay = 2.0
+        for attempt in range(max_retries):
+            try:
+                response = llm.chat({"facts": judgement_text, "questions": questions_text})
+                if response is not None and hasattr(response, "nodes"):
+                    break
+                else:
+                    print(f"[DEBUG] 叶子节点批量调用返回异常，type={type(response)}, value={response}")
+                    raise RuntimeError("LLM 返回 None 或无 nodes 字段")
+            except Exception as e:
+                traceback.print_exc()
+                if attempt < max_retries - 1:
+                    wait_time = base_delay * (2 ** attempt)
+                    print(f"[WARNING] 叶子节点评估失败（尝试 {attempt+1}/{max_retries}）：{e}，{wait_time:.1f}s 后重试")
+                    time.sleep(wait_time)
+                else:
+                    print(f"[ERROR] 叶子节点评估失败，已重试 {max_retries} 次：{e}")
+                    raise
+        
+        batch_results = response.nodes
         
         # 处理结果
         print(f"\n叶子节点评估结果:")
@@ -327,18 +381,31 @@ class GraphExecutor:
 
     def _evaluate_internal(self, node: str, preds: List[str]) -> Tuple[bool, str]:
         op = normalize_operation(self.graph.nodes[node].get('operation', '与'))
-        inputs = []
+        pred_bool_values = []
         for pred in preds:
             if pred not in self.results:
                 raise RuntimeError(f'节点 {pred} 尚未计算，无法计算 {node}')
-            inputs.append(self.results[pred])
+            pred_bool_values.append(self.results[pred])
 
         if op == '或':
-            value = any(inputs)
+            value = any(pred_bool_values)
             details = '、'.join(f"{p}:{'是' if self.results[p] else '否'}" for p in preds)
             reason = f"规则“或”计算，任一条件满足即可。输入：{details}"
+        elif op == '非':
+            if not pred_bool_values:
+                raise RuntimeError(f'节点 {node} 的前置为空，无法进行“非”计算')
+            if len(pred_bool_values) == 1:
+                value = not pred_bool_values[0]
+                details = f"{preds[0]}:{'是' if pred_bool_values[0] else '否'}"
+                reason = f"规则“非”计算，对前置结果取反。输入：{details}"
+            else:
+                # 多前置时，采用“任一为真则结果为假”的否定逻辑
+                # TODO：应该报错
+                value = not any(pred_bool_values)
+                details = '、'.join(f"{p}:{'是' if self.results[p] else '否'}" for p in preds)
+                reason = f"规则“非”计算，任一前置为真则结果为假。输入：{details}"
         else:
-            value = all(inputs)
+            value = all(pred_bool_values)
             details = '、'.join(f"{p}:{'是' if self.results[p] else '否'}" for p in preds)
             reason = f"规则“与”计算，全部条件需满足。输入：{details}"
         return value, reason
@@ -434,7 +501,6 @@ def main():
     # 根据文件扩展名判断是 HTML 还是纯文本文件
     if facts_path.suffix.lower() in ['.html', '.htm']:
         facts_text = extract_facts_from_html(facts_path)
-        print(f"已从 HTML 文件提取案件事实，长度: {len(facts_text)} 字符")
     else:
         facts_text = facts_path.read_text(encoding='utf-8').strip()
     
@@ -457,7 +523,7 @@ def main():
     # print(f"入度为 0 的节点({len(zero_indegree_nodes)}): {zero_indegree_nodes}")
     
 
-    llm = create_llm_client()
+    llm = create_llm_client_for_list()
     
 
     executor = GraphExecutor(G, llm, facts_text)
