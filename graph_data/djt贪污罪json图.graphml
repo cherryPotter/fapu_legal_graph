@@ -662,8 +662,8 @@
   <data key="d3">AND</data>
   <data key="d4">贪污罪</data>
 </node>
-<node id="贪污数额在十万元以上不满二十万元">
-  <data key="d0">贪污数额在十万元以上不满二十万元</data>
+<node id="贪污数额在十万元到二十万元之间">
+  <data key="d0">贪污数额在十万元到二十万元之间</data>
   <data key="d1"></data>
   <data key="d2"></data>
   <data key="d3"></data>
@@ -676,8 +676,8 @@
   <data key="d3">AND</data>
   <data key="d4">贪污罪</data>
 </node>
-<node id="贪污数额在一百五十万元以上不满三百万元">
-  <data key="d0">贪污数额在一百五十万元以上不满三百万元</data>
+<node id="贪污数额在一百五十万元到三百万元之间">
+  <data key="d0">贪污数额在一百五十万元到三百万元之间</data>
   <data key="d1"></data>
   <data key="d2"></data>
   <data key="d3"></data>
@@ -941,9 +941,9 @@
 <edge source="刑法第三百八十三条第一款规定的其他较重情节" target="达到贪污罪一档刑罚"/>
 <edge source="贪污数额在一万元以上不满三万元" target="刑法第三百八十三条第一款规定的其他较重情节"/>
 <edge source="刑法第三百八十三条第一款规定的其他严重情节" target="达到贪污罪二档刑罚"/>
-<edge source="贪污数额在十万元以上不满二十万元" target="刑法第三百八十三条第一款规定的其他严重情节"/>
+<edge source="贪污数额在十万元到二十万元之间" target="刑法第三百八十三条第一款规定的其他严重情节"/>
 <edge source="刑法第三百八十三条第一款规定的其他特别严重情节" target="达到贪污罪三档刑罚"/>
-<edge source="贪污数额在一百五十万元以上不满三百万元" target="刑法第三百八十三条第一款规定的其他特别严重情节"/>
+<edge source="贪污数额在一百五十万元到三百万元之间" target="刑法第三百八十三条第一款规定的其他特别严重情节"/>
 <edge source="贪污罪主体成立" target="构成贪污罪"/>
 <edge source="受国家机关、国有公司、企业、事业单位、人民团体委托管理、经营国有财产的人员" target="贪污罪主体成立"/>
 <edge source="达到贪污罪一档刑罚" target="处三年以下有期徒刑或者拘役，并处罚金十万元以上五十万元以下"/>
