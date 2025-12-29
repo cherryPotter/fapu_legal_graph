@@ -36,9 +36,7 @@ def check_graphml_for_cycles(graphml_file):
         if not G.is_directed():
             G = G.to_directed()
         
-        print(f"📊 图统计:")
-        print(f"  - 节点数: {G.number_of_nodes()}")
-        print(f"  - 边数: {G.number_of_edges()}")
+        print(f"📊 图统计: - 节点数: {G.number_of_nodes()} - 边数: {G.number_of_edges()}")
         print()
         
         # 检查是否存在环

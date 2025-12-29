@@ -33,7 +33,7 @@ def main():
         bad_nodes = []
         for k, v in leaf.items():
             v_val = bool(v.get("value", False))
-            j_val = bool(v.get("from_judgement", False))
+            j_val = bool(v.get("real_judgement", False))
             if v_val != j_val:
                 bad_nodes.append(k)
 

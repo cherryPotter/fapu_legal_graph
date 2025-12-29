@@ -80,12 +80,29 @@ def check_json_files():
         print("\n错误详情:")
         for error in errors:
             print(f"  {error}")
-        sys.exit(1)
+        # sys.exit(1)
     else:
         print("\n🎉 所有 JSON 文件检查通过！")
-        sys.exit(0)
+        # sys.exit(0)
+
+
+def json_to_graph():
+    for f in os.listdir("raw_graph_data"):
+        if f.endswith("json") == False:
+            continue
+        
+        graph_data_des_f = f'''graph_data/{f.replace('.json', '.graphml')}'''
+        cmd = f'''python json_to_graph_v3.py -f "raw_graph_data/{f}" -o "{graph_data_des_f}" --html-output "graph_html/{f.replace('.json', '.html')}"'''
+        print(cmd)
+        os.system(cmd)
+
+
+        cmd = f'''python check_json_postprocess.py "{graph_data_des_f}"'''
+        print(cmd)
+        os.system(cmd)
+
+    
 
 if __name__ == '__main__':
     check_json_files()
-
-
+    json_to_graph()
