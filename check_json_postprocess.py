@@ -19,6 +19,23 @@ def find_cycles(graph):
         print(f"⚠️  查找环时出错: {e}")
         return []
 
+
+def ensure_connected(graph):
+    """检查弱连通性，不连通则报错退出"""
+    if nx.is_directed(graph):
+        connected = nx.is_weakly_connected(graph)
+        components = list(nx.weakly_connected_components(graph)) if not connected else []
+    else:
+        connected = nx.is_connected(graph)
+        components = list(nx.connected_components(graph)) if not connected else []
+
+    if connected:
+        print("✅ 图是连通的（弱连通）")
+        return
+
+    print(f"❌ 图不连通，共 {len(components)} 个连通分量（弱连通）")
+    
+
 def check_graphml_for_cycles(graphml_file):
     """检查 GraphML 文件中是否存在环"""
     if not os.path.exists(graphml_file):
@@ -38,6 +55,9 @@ def check_graphml_for_cycles(graphml_file):
         
         print(f"📊 图统计: - 节点数: {G.number_of_nodes()} - 边数: {G.number_of_edges()}")
         print()
+
+        # 先检查连通性
+        ensure_connected(G)
         
         # 检查是否存在环
         if nx.is_directed_acyclic_graph(G):

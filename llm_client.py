@@ -136,23 +136,6 @@ class LLMClient(ABC):
 
         return messages
 
-    # Optional methods with placeholder implementations
-    # Child classes can override these if they support these features
-
-    def stream(self, query: Dict[str, Any]) -> Iterator[str]:
-        """
-        Stream response for a single query.
-
-        Args:
-            query: Query dictionary with variables for prompt template
-
-        Yields:
-            Response text chunks
-
-        Raises:
-            NotImplementedError: If streaming is not implemented for this client
-        """
-        raise NotImplementedError(f"Streaming not implemented for {self.__class__.__name__}")
 
     def batch(self, queries: List[Dict[str, Any]]) -> List[Union[str, BaseModel]]:
         """
@@ -168,53 +151,6 @@ class LLMClient(ABC):
             NotImplementedError: If batch processing is not implemented for this client
         """
         raise NotImplementedError(f"Batch processing not implemented for {self.__class__.__name__}")
-
-    async def achat(self, query: Dict[str, Any]) -> Union[str, BaseModel]:
-        """
-        Process single query asynchronously.
-
-        Args:
-            query: Query dictionary with variables for prompt template
-
-        Returns:
-            Complete response text (str) or structured output (BaseModel instance)
-
-        Raises:
-            NotImplementedError: If async chat is not implemented for this client
-        """
-        raise NotImplementedError(f"Async chat not implemented for {self.__class__.__name__}")
-
-    async def astream(self, query: Dict[str, Any]) -> AsyncIterator[str]:
-        """
-        Stream response for a single query asynchronously.
-
-        Args:
-            query: Query dictionary with variables for prompt template
-
-        Yields:
-            Response text chunks
-
-        Raises:
-            NotImplementedError: If async streaming is not implemented for this client
-        """
-        raise NotImplementedError(f"Async streaming not implemented for {self.__class__.__name__}")
-        # This is required for async generator type hint, but won't be reached
-        yield ""  # pragma: no cover
-
-    async def abatch(self, queries: List[Dict[str, Any]]) -> List[Union[str, BaseModel]]:
-        """
-        Process multiple queries asynchronously.
-
-        Args:
-            queries: List of query dictionaries
-
-        Returns:
-            List of responses (str or BaseModel instances)
-
-        Raises:
-            NotImplementedError: If async batch processing is not implemented for this client
-        """
-        raise NotImplementedError(f"Async batch processing not implemented for {self.__class__.__name__}")
 
 
 class LangchainLLMClient(LLMClient):
@@ -295,14 +231,7 @@ class LangchainLLMClient(LLMClient):
                 max_tokens=model_config.get("max_tokens", 4096),
                 temperature=model_config.get("temperature", 0.25)
             )
-        elif provider == "qwen":
-            return ChatOpenAI(
-                base_url=os.getenv("QWEN_API_BASE"),
-                api_key=os.getenv("QWEN_API_KEY"),
-                model=model_config.get("model", "qwen-max"),
-                max_tokens=model_config.get("max_tokens", 4096),
-                temperature=model_config.get("temperature", 0.0)
-            )
+
         elif provider == "openai":
             return ChatOpenAI(
                     base_url="https://api2.aigcbest.top/v1",
@@ -384,16 +313,3 @@ class LangchainLLMClient(LLMClient):
             return [response.content for response in responses]
 
 
-
-# Create a prompt template
-template = PromptTemplate(
-    prompt_name="test_prompt",
-    system_prompt="You are a helpful assistant.",
-    human_template="Answer this: {question}",
-    model_config={
-        "model": "qwen-max",
-        "max_tokens": 4096,
-        "temperature": 0.0
-    },
-    input_variables=["question"]
-)

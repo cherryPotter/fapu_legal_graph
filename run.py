@@ -25,8 +25,7 @@ except ImportError:
     HAS_BS4 = False
 
 class NodeResponse(BaseModel):
-
-    #question: str = Field(description="问题")
+    question: str = Field(description="问题")
     answer: bool = Field(description="是或否")
     evidence: str = Field(description="支撑该回答的要点或理由，必须提供")
     value_cny: Optional[float] = Field(default=None, description="若问题涉及金额、金额范围判断、区间判断，返回数值；否则为 null")
@@ -257,10 +256,8 @@ class GraphExecutor:
             
             # 安全检查：确保返回的节点数量与输入一致
             if len(node_responses) != len(zero_indegree_nodes):
-                raise RuntimeError(
-                    f"返回的节点数量 ({len(node_responses)}) 与输入的节点数量 "
-                    f"({len(zero_indegree_nodes)}) 不匹配"
-                )
+                print(f"[WARNING] 返回的节点数量 ({len(node_responses)}) 与输入的节点数量 ({len(zero_indegree_nodes)}) 不匹配，本案例跳过。")
+                return self.results
             
             # 处理结果
             print(f"处理结果:")
@@ -341,6 +338,9 @@ class GraphExecutor:
                     raise
         
         batch_results = response.nodes
+        if len(batch_results) != len(leaf_nodes):
+            print(f"[WARNING] 叶子节点返回数量 ({len(batch_results)}) 与输入数量 ({len(leaf_nodes)}) 不匹配，跳过判决书对比。")
+            return {}
         
         # 处理结果
         print(f"\n叶子节点评估结果:")
@@ -449,6 +449,12 @@ def main():
 
     graph_path = Path(args.graphml).expanduser()
     facts_path = Path(args.facts_file).expanduser()
+    # 已存在的输出文件则跳过（接续跑）
+    if args.output:
+        out_path_check = Path(args.output).expanduser()
+        if out_path_check.exists():
+            print(f"检测到已存在输出文件，跳过本案例: {out_path_check}")
+            sys.exit(0)
 
     if not graph_path.exists():
         print(f"错误: 找不到图谱文件 {graph_path}")

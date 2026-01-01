@@ -15,10 +15,9 @@ def check_json_files():
     raw_data_dir = os.path.join(os.path.dirname(__file__), RAW_GRAPH_DATA_DIR)
     
     if not os.path.exists(raw_data_dir):
-        print(f"❌ 目录不存在: {raw_data_dir}")
+        print(f"目录不存在: {raw_data_dir}")
         sys.exit(1)
     
-    # 获取所有 JSON 文件
     all_files = os.listdir(raw_data_dir)
     json_files = [
         os.path.join(raw_data_dir, f) 
@@ -27,13 +26,12 @@ def check_json_files():
     ]
     
     if not json_files:
-        print(f"⚠️  在 {raw_data_dir} 目录下未找到 JSON 文件")
+        print(f"在 {raw_data_dir} 目录下未找到 JSON 文件")
         sys.exit(0)
     
-    # 按文件名排序
     json_files.sort()
     
-    print(f"📂 找到 {len(json_files)} 个 JSON 文件，开始检查...\n")
+    print(f"找到 {len(json_files)} 个 JSON 文件，开始检查...\n")
     
     success_count = 0
     error_count = 0
@@ -72,8 +70,8 @@ def check_json_files():
     # 输出总结
     print(f"\n{'='*60}")
     print(f"检查完成:")
-    print(f"  ✅ 成功: {success_count} 个文件")
-    print(f"  ❌ 失败: {error_count} 个文件")
+    print(f"  成功: {success_count} 个文件")
+    print(f"  失败: {error_count} 个文件")
     print(f"{'='*60}")
     
     if errors:
@@ -82,17 +80,17 @@ def check_json_files():
             print(f"  {error}")
         # sys.exit(1)
     else:
-        print("\n🎉 所有 JSON 文件检查通过！")
+        print("\n所有 JSON 文件检查通过！")
         # sys.exit(0)
 
 
 def json_to_graph():
-    for f in os.listdir("raw_graph_data"):
+    for f in os.listdir(RAW_GRAPH_DATA_DIR):
         if f.endswith("json") == False:
             continue
         
         graph_data_des_f = f'''graph_data/{f.replace('.json', '.graphml')}'''
-        cmd = f'''python json_to_graph_v3.py -f "raw_graph_data/{f}" -o "{graph_data_des_f}" --html-output "graph_html/{f.replace('.json', '.html')}"'''
+        cmd = f'''python json_to_graph_v3.py -f "{RAW_GRAPH_DATA_DIR}/{f}" -o "{graph_data_des_f}" --html-output "graph_html/{f.replace('.json', '.html')}"'''
         print(cmd)
         os.system(cmd)
 
@@ -104,5 +102,8 @@ def json_to_graph():
     
 
 if __name__ == '__main__':
+    print("=" * 36)
+    print("检查 JSON 文件 合法性")
     check_json_files()
+    print("=" * 36)
     json_to_graph()
