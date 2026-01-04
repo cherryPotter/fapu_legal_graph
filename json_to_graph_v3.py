@@ -1,8 +1,5 @@
-"""
-法条图谱可视化工具 v3
-从 graph_data 目录下的 JSON 文件读取"规则"数据，
-使用"案由"作为节点属性，生成可视化图谱
-"""
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 from pyvis.network import Network
 import networkx as nx
 import matplotlib
@@ -12,6 +9,8 @@ import webbrowser
 import os
 import json
 import argparse
+import re
+import ast
 
 # 确保中文能够正确显示
 matplotlib.rcParams['font.sans-serif'] = ['SimHei', 'Noto Sans CJK SC', 'Arial Unicode MS', 'DejaVu Sans']
@@ -22,65 +21,55 @@ matplotlib.rcParams['axes.unicode_minus'] = False
 # ==========================================
 GRAPH_DATA_DIR = ""
 
-def convert_logic_op(计算方式):
+def convert_logic_op(logic_op):
     """将中文逻辑操作符转换为英文"""
-    if not 计算方式:
+    if not logic_op:
         return "AND"
-    计算方式 = 计算方式.strip()
-    if 计算方式 == "与":
+    logic_op = logic_op.strip()
+    if logic_op == "与":
         return "AND"
-    elif 计算方式 == "或":
+    elif logic_op == "或":
         return "OR"
-    elif 计算方式 == "非" or 计算方式 == "否":
+    elif logic_op == "非" or logic_op == "否":
         return "NOT"
-    elif 计算方式 == "不互斥":
+    elif logic_op == "不互斥":
         return "NON_EXCLUSIVE"
-    elif 计算方式.upper() == "AND":
+    elif logic_op.upper() == "AND":
         return "AND"
-    elif 计算方式.upper() == "OR":
+    elif logic_op.upper() == "OR":
         return "OR"
-    elif 计算方式.upper() == "NOT":
+    elif logic_op.upper() == "NOT":
         return "NOT"
-    elif 计算方式.upper() == "NON_EXCLUSIVE":
+    elif logic_op.upper() == "NON_EXCLUSIVE":
         return "NON_EXCLUSIVE"
     else:
         return "AND"  # 默认
 
 def load_rules_from_json_files(file_list=None):
-    """
-    从 graph_data 目录下的 JSON 文件加载规则数据
-    返回融合后的规则数据列表，每个规则包含案由信息
-    
-    Args:
-        file_list: 可选，指定要处理的文件名列表。如果为 None，则处理所有文件。
-                   文件名可以是完整路径，或相对于 graph_data 目录的文件名。
-    """
     graph_data_dir = os.path.join(os.path.dirname(__file__), GRAPH_DATA_DIR)
     
     if not os.path.exists(graph_data_dir):
-        print(f"⚠️  目录不存在: {graph_data_dir}")
+        print(f"目录不存在: {graph_data_dir}")
         return [], []
     
-    # 如果指定了文件列表，只处理这些文件
+
     if file_list:
         json_files = []
         for file_name in file_list:
-            # 如果已经是完整路径
             if os.path.isabs(file_name):
                 if os.path.exists(file_name):
                     json_files.append(file_name)
                 else:
-                    print(f"⚠️  文件不存在: {file_name}")
+                    print(f"文件不存在: {file_name}")
             else:
-                # 相对路径，尝试在 graph_data 目录下查找
                 full_path = os.path.join(graph_data_dir, file_name)
                 if os.path.exists(full_path):
                     json_files.append(full_path)
                 else:
-                    print(f"⚠️  文件不存在: {full_path}")
+                    print(f"文件不存在: {full_path}")
         
         if not json_files:
-            print(f"⚠️  没有找到任何有效的 JSON 文件")
+            print(f"没有找到任何有效的 JSON 文件")
             return [], []
     else:
         # 获取所有 JSON 文件
@@ -95,11 +84,11 @@ def load_rules_from_json_files(file_list=None):
             print(f"⚠️  在 {graph_data_dir} 目录下未找到 JSON 文件")
             return [], []
     
-    # 存储所有规则数据（每个规则包含案由信息）
+
     all_rules = []
     case_types = []
     
-    # 按文件名排序，确保顺序一致
+
     json_files.sort()
     
     print(f"📂 找到 {len(json_files)} 个 JSON 文件:")
@@ -121,8 +110,7 @@ def load_rules_from_json_files(file_list=None):
                 rule_count = 0
                 for rule in data["规则"]:
                     rule_type = rule.get("类型", "")
-                    # 处理"逻辑运算"和"定义"类型的规则
-                    if rule_type == "逻辑运算" or rule_type == "定义":
+                    if rule_type == "逻辑运算":
                         # 转换规则格式
                         converted_rule = {
                             "result": rule.get("结果", ""),
@@ -143,6 +131,112 @@ def load_rules_from_json_files(file_list=None):
                         elif isinstance(result, str) and result:
                             all_rules.append(converted_rule)
                             rule_count += 1
+                    elif rule_type == "算术运算":
+                        # 处理算术运算类型
+                        arithmetic_rules = rule.get("算术规则", [])
+                        if not arithmetic_rules:
+                            # 兼容旧格式：使用"算式"字段
+                            arithmetic_rules = rule.get("算式", [])
+                        
+                        result = rule.get("结果", "")
+                        if arithmetic_rules and result:
+                            # 转换规则格式
+                            converted_rule = {
+                                "result": result,
+                                "conditions": [],
+                                "logic": "ARITHMETIC",
+                                "arithmetic_rules": arithmetic_rules,
+                                "case_type": case_type
+                            }
+                            
+                            # 处理"结果"可能是字符串或数组的情况
+                            if isinstance(result, list):
+                                for r in result:
+                                    rule_copy = converted_rule.copy()
+                                    rule_copy["result"] = r
+                                    all_rules.append(rule_copy)
+                                    rule_count += 1
+                            elif isinstance(result, str) and result:
+                                all_rules.append(converted_rule)
+                                rule_count += 1
+                    elif rule_type == "集合":
+                        conditions = rule.get("条件", [])
+                        if isinstance(conditions, str):
+                            conditions = [conditions]
+                        elif not isinstance(conditions, list):
+                            conditions = []
+                        
+                        result = rule.get("结果", "")
+                        logic_op = rule.get("计算方式", "")
+                        
+                        if conditions and result:
+                            # 转换规则格式
+                            converted_rule = {
+                                "result": result,
+                                "conditions": conditions,
+                                "logic": convert_logic_op(logic_op),
+                                "case_type": case_type
+                            }
+                            
+                            # 处理"结果"可能是字符串或数组的情况
+                            if isinstance(result, list):
+                                # 如果结果是数组，为每个结果创建一个规则
+                                for r in result:
+                                    rule_copy = converted_rule.copy()
+                                    rule_copy["result"] = r
+                                    all_rules.append(rule_copy)
+                                    rule_count += 1
+                            elif isinstance(result, str) and result:
+                                all_rules.append(converted_rule)
+                                rule_count += 1
+                    elif rule_type == "条件判断":
+                        # 处理条件判断类型
+                        inputs = rule.get("输入", [])
+                        if isinstance(inputs, str):
+                            inputs = [inputs]
+                        elif not isinstance(inputs, list):
+                            inputs = []
+                        
+                        conditions_raw = rule.get("条件", [])
+                        # 条件可能是数组或对象
+                        conditions_list = []
+                        if isinstance(conditions_raw, list):
+                            conditions_list = conditions_raw
+                        elif isinstance(conditions_raw, dict):
+                            # 如果是对象，提取所有值
+                            conditions_list = list(conditions_raw.values())
+                        elif isinstance(conditions_raw, str):
+                            conditions_list = [conditions_raw]
+                        
+                        # 合并输入和条件作为条件列表
+                        all_conditions = inputs + conditions_list
+                        
+                        calculation = rule.get("计算", {})
+                        result = rule.get("结果", "")
+                        
+                        if all_conditions and calculation and result:
+                            # 转换规则格式
+                            converted_rule = {
+                                "result": result,
+                                "conditions": all_conditions,
+                                "logic": "CONDITIONAL",
+                                "conditional_inputs": inputs,
+                                "conditional_conditions": conditions_raw,
+                                "conditional_calculation": calculation,
+                                "case_type": case_type
+                            }
+                            
+                            # 处理"结果"可能是字符串或数组的情况
+                            if isinstance(result, list):
+                                # 如果结果是数组，为每个结果创建一个规则
+                                for r in result:
+                                    rule_copy = converted_rule.copy()
+                                    rule_copy["result"] = r
+                                    all_rules.append(rule_copy)
+                                    rule_count += 1
+                            elif isinstance(result, str) and result:
+                                all_rules.append(converted_rule)
+                                rule_count += 1
                 
                 print(f"    规则数: {rule_count}")
         
@@ -151,7 +245,7 @@ def load_rules_from_json_files(file_list=None):
             import traceback
             traceback.print_exc()
     
-    print(f"\n✅ 共加载 {len(all_rules)} 条规则")
+    print(f"\n 共加载 {len(all_rules)} 条规则")
     return all_rules, case_types
 
 # ==========================================
@@ -163,14 +257,10 @@ def parse_args():
         description='法条图谱可视化工具 v3 - 从"规则"字段生成图谱，使用"案由"作为节点属性',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-示例:
-  # 处理所有 graph_data 目录下的 JSON 文件
   python json_to_graph_v3.py
 
-  # 只处理指定的文件（文件名相对于 graph_data 目录）
   python json_to_graph_v3.py -f "1201醉驾量刑(按照醉驾意见新规加入不起诉规则版).json"
 
-  # 使用完整路径指定文件
   python json_to_graph_v3.py -f graph_data/1201醉驾量刑(按照醉驾意见新规加入不起诉规则版).json
         """
     )
@@ -264,8 +354,8 @@ def add_node_safe(name, n_type="concept", is_result_node=False, logic="", case_t
             # 结果节点：红色，椭圆，减小字体和节点大小
             net.add_node(name, label=name, color="#ff4d4d", shape="ellipse", font={'size': 16, 'color': 'white'}, size=25)
         else:
-            # 普通条件：浅蓝色，矩形，减小字体和节点大小
-            net.add_node(name, label=name, color="#d1d8e0", shape="box", font={'size': 12}, size=20)
+            # 普通条件：默认浅绿色，矩形，减小字体和节点大小（最后会根据入度更新颜色）
+            net.add_node(name, label=name, color="#a8e6cf", shape="box", font={'size': 12}, size=20)
     
     # 处理 networkx 图的节点（无论是新节点还是已存在的节点，都需要合并属性）
     # 如果节点已存在，获取现有属性；否则使用默认值
@@ -326,9 +416,12 @@ for idx, rule in enumerate(rules_data):
     conditions = rule.get("conditions", [])
     logic = rule.get("logic", "AND")
     case_type = rule.get("case_type", "")
+    arithmetic_rules = rule.get("arithmetic_rules", [])
     
-    # 跳过无效规则
-    if not result or not conditions:
+    # 跳过无效规则（算术运算和条件判断允许conditions为空）
+    if not result:
+        continue
+    if logic not in ["ARITHMETIC", "CONDITIONAL"] and not conditions:
         continue
     
     # 处理"结果"可能是字符串或数组的情况
@@ -337,10 +430,38 @@ for idx, rule in enumerate(rules_data):
             continue
         result = result[0]  # 取第一个结果
     
+    # 对于算术运算，从算术规则中提取变量名作为条件
+    if logic == "ARITHMETIC" and arithmetic_rules:
+        # 从算术表达式中提取变量名（中文字符、字母、数字、下划线的组合）
+        all_vars = set()
+        for arith_rule in arithmetic_rules:
+            # 匹配变量名：中文字符、字母、数字、下划线的组合
+            vars_in_rule = re.findall(r'[\u4e00-\u9fff\w]+', arith_rule)
+            all_vars.update(vars_in_rule)
+        conditions = list(all_vars)
+    
+    # 对于条件判断，从计算规则中提取变量名作为条件（如果conditions为空）
+    if logic == "CONDITIONAL" and not conditions:
+        conditional_calculation = rule.get("conditional_calculation", {})
+        all_vars = set()
+        
+        def extract_vars_from_obj(obj):
+            """递归提取对象中的所有变量名"""
+            if isinstance(obj, dict):
+                for value in obj.values():
+                    extract_vars_from_obj(value)
+            elif isinstance(obj, str):
+                # 从字符串中提取变量名
+                vars_in_str = re.findall(r'[\u4e00-\u9fff\w]+', obj)
+                all_vars.update(vars_in_str)
+        
+        extract_vars_from_obj(conditional_calculation)
+        conditions = list(all_vars)
+    
     # A. 确保结果节点存在
     add_node_safe(result, n_type="result", is_result_node=True, logic=logic, case_type=case_type)
     
-    # B. 创建一个逻辑聚合点 (显示为 "AND" 或 "OR" 或 "NOT" 或 "⊕")
+    # B. 创建一个逻辑聚合点 (显示为 "AND" 或 "OR" 或 "NOT" 或 "⊕" 或 "ARITH")
     # 为了让多条路径分开展示，我们给每个情形造一个独立的门
     gate_id = f"PATH_{idx}"
     
@@ -350,6 +471,16 @@ for idx, rule in enumerate(rules_data):
         gate_color = "#95e1d3"  # 浅绿色
         gate_shape = "hexagon"  # 使用六边形区分
         gate_font_color = "black"
+    elif logic == "ARITHMETIC":
+        gate_label = "ARITH"  # 算术运算
+        gate_color = "#9b59b6"  # 紫色
+        gate_shape = "triangle"  # 三角形
+        gate_font_color = "white"
+    elif logic == "CONDITIONAL":
+        gate_label = "IF"  # 条件判断
+        gate_color = "#f39c12"  # 橙色
+        gate_shape = "square"  # 方形
+        gate_font_color = "white"
     else:
         # AND、OR、NOT 保持原来的样式（红色菱形）
         gate_label = logic
@@ -383,6 +514,180 @@ for idx, rule in enumerate(rules_data):
         # 在 networkx 图中添加边：条件 -> 结果（直接连接，不包含逻辑门）
         if not nx_graph.has_edge(cond, result):
             nx_graph.add_edge(cond, result)
+
+# ==========================================
+# 3.5. 处理比较表达式节点，建立变量关联
+# ==========================================
+def extract_variables_from_expression(expr_str):
+    """
+    从表达式中提取变量名，使用AST解析和eval验证
+    返回变量名列表
+    """
+    try:
+        # 将中文比较运算符替换为Python运算符
+        expr_normalized = expr_str.replace('≥', '>=').replace('≤', '<=').replace('≠', '!=')
+        
+        # 先提取所有可能的变量名（中文字符、字母、数字、下划线的组合）
+        all_tokens = re.findall(r'[\u4e00-\u9fff\w]+', expr_normalized)
+        
+        # 过滤掉纯数字和数字单位（如"万"、"千"等）
+        number_units = {'万', '千', '百', '十', '元', '万', '千', '百', '十'}
+        potential_vars = [t for t in all_tokens if not (t.replace('.', '').replace('-', '').isdigit() or t in number_units)]
+        
+        # 识别比较运算符位置，分割表达式获取变量部分
+        comparison_pattern = r'[><=!≥≤≠]+'
+        parts = re.split(comparison_pattern, expr_normalized)
+        
+        variables = set()
+        for part in parts:
+            part = part.strip()
+            if not part:
+                continue
+            
+            # 检查整个部分是否是纯数字或数字+单位的组合（如"3万"、"100万"）
+            # 如果是，跳过这个部分
+            part_clean = part.replace(' ', '').replace(',', '')
+            if re.match(r'^[\d.]+[万千百十元]*$', part_clean):
+                continue
+            
+            # 提取该部分的变量名（排除数字和单位）
+            tokens = re.findall(r'[\u4e00-\u9fff\w]+', part)
+            for token in tokens:
+                # 排除纯数字、单位、以及数字开头的token（如"3万"会被分割，但"3"会被过滤）
+                is_pure_number = token.replace('.', '').replace('-', '').isdigit()
+                is_unit = token in number_units
+                # 检查是否是数字+单位的组合（如"3万"、"100万"）
+                is_number_with_unit = re.match(r'^[\d.]+[万千百十元]*$', token)
+                
+                if not (is_pure_number or is_unit or is_number_with_unit):
+                    variables.add(token)
+        
+        # 如果没有找到变量，使用potential_vars作为后备
+        if not variables:
+            variables = set(potential_vars)
+        
+        # 使用eval验证：构建context字典
+        if variables:
+            context = build_context_for_eval(list(variables))
+            # 尝试构建测试表达式验证变量名
+            try:
+                test_expr = expr_normalized
+                for var in variables:
+                    # 将变量替换为占位值（用于验证语法）
+                    test_expr = re.sub(r'\b' + re.escape(var) + r'\b', '0', test_expr)
+                # 验证表达式语法（不实际执行）
+                ast.parse(test_expr, mode='eval')
+            except:
+                # 如果验证失败，仍然返回提取的变量
+                pass
+        
+        return list(variables) if variables else []
+    except:
+        # 如果全部失败，使用正则表达式作为后备
+        vars_found = re.findall(r'[\u4e00-\u9fff\w]+', expr_str)
+        number_units = {'万', '千', '百', '十', '元'}
+        # 更严格的过滤：排除纯数字、单位、以及数字+单位的组合
+        filtered_vars = []
+        for v in vars_found:
+            is_pure_number = v.replace('.', '').replace('-', '').isdigit()
+            is_unit = v in number_units
+            is_number_with_unit = re.match(r'^[\d.]+[万千百十元]*$', v)
+            if not (is_pure_number or is_unit or is_number_with_unit):
+                filtered_vars.append(v)
+        return filtered_vars
+
+def build_context_for_eval(variables):
+    """
+    为eval构建context字典，将变量名映射到占位值
+    这样可以验证表达式语法，而不实际执行
+    """
+    context = {}
+    for var in variables:
+        # 使用一个占位值，确保eval可以验证语法
+        context[var] = 0
+    return context
+
+# 处理所有节点，识别比较表达式并建立关联
+comparison_ops = ['>', '<', '>=', '<=', '==', '!=', '≥', '≤', '≠']
+for node_name in list(nx_graph.nodes()):
+    # 检查节点名是否包含比较运算符
+    is_comparison = any(op in node_name for op in comparison_ops)
+    
+    if is_comparison:
+        # 提取变量名
+        variables = extract_variables_from_expression(node_name)
+        
+        # 为每个变量建立到表达式的边
+        for var in variables:
+            # 确保变量节点存在
+            if var not in nx_graph.nodes():
+                add_node_safe(var, n_type="concept", case_type="")
+            
+            # 建立变量 -> 表达式的边
+            if not nx_graph.has_edge(var, node_name):
+                nx_graph.add_edge(var, node_name)
+                # 在可视化图中也添加边
+                if var in added_nodes and node_name in added_nodes:
+                    net.add_edge(var, node_name, arrows="to", color="#3498db", width=1.5)
+
+# ==========================================
+# 3.6. 更新节点颜色：只有入度为0的节点才显示为灰色
+# ==========================================
+# 遍历所有节点，根据入度更新颜色
+# 直接修改pyvis Network的nodes列表中的节点数据
+for node_name in list(nx_graph.nodes()):
+    in_degree = nx_graph.in_degree(node_name)
+    
+    # 检查节点是否在可视化图中（排除逻辑门节点）
+    if node_name in added_nodes and not node_name.startswith("PATH_"):
+        # 获取节点在networkx图中的信息，判断是否是结果节点
+        node_attrs = nx_graph.nodes[node_name]
+        operation = node_attrs.get("operation", "")
+        is_result = operation or node_name in result_nodes
+        
+        # 根据入度确定颜色
+        if in_degree == 0:
+            if is_result:
+                # 结果节点保持红色
+                node_color = "#ff4d4d"
+            else:
+                # 入度为0的普通节点：灰色（浅蓝色）
+                node_color = "#d1d8e0"
+        else:
+            if is_result:
+                # 结果节点保持红色
+                node_color = "#ff4d4d"
+            else:
+                # 如果入度不为0且不是结果节点，使用浅绿色
+                node_color = "#a8e6cf"
+        
+        # 直接修改节点的颜色属性
+        # pyvis的Network对象内部使用nodes列表存储节点数据
+        try:
+            # 遍历nodes列表，找到对应的节点并更新颜色
+            nodes_list = list(net.nodes)
+            for i, node in enumerate(nodes_list):
+                # pyvis节点可能使用'id'或'label'作为标识
+                node_id = node.get('id') or node.get('label')
+                if node_id == node_name:
+                    # 直接修改节点字典的颜色
+                    node['color'] = node_color
+                    # 更新nodes列表
+                    net.nodes[i] = node
+                    break
+        except Exception as e:
+            # 如果更新失败，尝试其他方法
+            try:
+                # 尝试通过节点的内部数据结构更新
+                if hasattr(net, 'nodes') and isinstance(net.nodes, list):
+                    for node in net.nodes:
+                        if isinstance(node, dict):
+                            node_id = node.get('id') or node.get('label')
+                            if node_id == node_name:
+                                node['color'] = node_color
+                                break
+            except:
+                pass
 
 # ==========================================
 # 4. 设置层次化布局 (Hierarchical Layout)
@@ -428,16 +733,99 @@ for node in nx_graph.nodes():
 # 保存为 GraphML 格式
 graphml_output = args.output
 nx.write_graphml(nx_graph, graphml_output, encoding='utf-8')
-print(f"\n📊 NetworkX 图统计:")
+print(f"\n图统计:")
 print(f"  - 节点数: {nx_graph.number_of_nodes()}")
 print(f"  - 边数: {nx_graph.number_of_edges()}")
-print(f"✅ GraphML 文件已保存: {os.path.abspath(graphml_output)}")
+print(f"  - GraphML文件已保存: {os.path.abspath(graphml_output)}")
 
 # ==========================================
 # 6. 生成 HTML 可视化并打开
 # ==========================================
 output_file = args.html_output
+
+for node_name in list(nx_graph.nodes()):
+    in_degree = nx_graph.in_degree(node_name)
+    
+    if node_name in added_nodes and not node_name.startswith("PATH_"):
+        node_attrs = nx_graph.nodes[node_name]
+        operation = node_attrs.get("operation", "")
+        is_result = operation or node_name in result_nodes
+        
+        # 根据入度确定颜色
+        if in_degree == 0:
+            if is_result:
+                node_color = "#ff4d4d"
+            else:
+                node_color = "#d1d8e0"
+        else:
+            if is_result:
+                # 结果节点保持红色
+                node_color = "#ff4d4d"
+            else:
+                # 如果入度不为0且不是结果节点，使用浅绿色
+                node_color = "#a8e6cf"
+        
+        try:
+            for node in net.nodes:
+                if isinstance(node, dict):
+                    node_id = node.get('id') or node.get('label')
+                    if node_id == node_name:
+                        node['color'] = node_color
+                        break
+        except:
+            pass
+
 net.write_html(output_file)
+
+# 在write_html之后，通过修改HTML来更新节点颜色（作为备用方案）
+try:
+    with open(output_file, 'r', encoding='utf-8') as f:
+        html_content = f.read()
+    
+    # 为每个节点根据入度更新颜色
+    for node_name in list(nx_graph.nodes()):
+        in_degree = nx_graph.in_degree(node_name)
+        
+        # 检查节点是否在可视化图中（排除逻辑门节点）
+        if node_name in added_nodes and not node_name.startswith("PATH_"):
+            # 获取节点在networkx图中的信息，判断是否是结果节点
+            node_attrs = nx_graph.nodes[node_name]
+            operation = node_attrs.get("operation", "")
+            is_result = operation or node_name in result_nodes
+            
+            # 根据入度确定颜色
+            if in_degree == 0:
+                if is_result:
+                    # 结果节点保持红色
+                    node_color = "#ff4d4d"
+                else:
+                    # 入度为0的普通节点：灰色（浅蓝色）
+                    node_color = "#d1d8e0"
+            else:
+                if is_result:
+                    # 结果节点保持红色
+                    node_color = "#ff4d4d"
+                else:
+                    # 如果入度不为0且不是结果节点，使用浅绿色
+                    node_color = "#a8e6cf"
+            
+            # 在HTML中查找并替换节点颜色
+            # pyvis生成的HTML中，节点数据在JavaScript的nodes数组中
+            import json
+            escaped_name = json.dumps(node_name)
+            
+            # 使用正则表达式匹配并替换节点颜色
+            # 匹配模式：{"id": "节点名", ..., "color": "旧颜色", ...}
+            # 需要处理可能的转义字符
+            pattern = rf'("id":\s*{re.escape(escaped_name)}[^}}]*"color":\s*")[^"]*(")'
+            replacement = rf'\1{node_color}\2'
+            html_content = re.sub(pattern, replacement, html_content)
+    
+    # 写回修改后的HTML
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(html_content)
+except Exception as e:
+    pass
 
 # 优化 HTML 样式，使其铺满浏览器窗口
 try:
@@ -481,5 +869,3 @@ print(f"✅ 图谱已生成: {os.path.abspath(output_file)}")
 print(f"\n📝 输出文件:")
 print(f"  - GraphML: {os.path.abspath(graphml_output)} (用于图遍历)")
 print(f"  - HTML: {os.path.abspath(output_file)} (交互式可视化)")
-# webbrowser.open("file://" + os.path.abspath(output_file))
-
