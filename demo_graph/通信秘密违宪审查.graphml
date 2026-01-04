@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d4" for="node" attr.name="case_type" attr.type="string" />
+  <key id="d3" for="node" attr.name="operation" attr.type="string" />
+  <key id="d2" for="node" attr.name="prompt" attr.type="string" />
+  <key id="d1" for="node" attr.name="type" attr.type="string" />
+  <key id="d0" for="node" attr.name="node_name" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="落入宪法权利保护范围">
+      <data key="d0">落入宪法权利保护范围</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">OR</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="是通信秘密">
+      <data key="d0">是通信秘密</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">OR</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="是通信自由">
+      <data key="d0">是通信自由</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="是通信秘密主体情形">
+      <data key="d0">是通信秘密主体情形</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">AND</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="不是公开信息">
+      <data key="d0">不是公开信息</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="通信内容">
+      <data key="d0">通信内容</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="是通信秘密特别适用情形">
+      <data key="d0">是通信秘密特别适用情形</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">AND</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="公开信息">
+      <data key="d0">公开信息</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="通信信息">
+      <data key="d0">通信信息</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="技术上可保密">
+      <data key="d0">技术上可保密</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="主观上认为是秘密">
+      <data key="d0">主观上认为是秘密</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="信息集合体">
+      <data key="d0">信息集合体</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="反映隐私信息">
+      <data key="d0">反映隐私信息</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="构成限制">
+      <data key="d0">构成限制</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">AND</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="公权力行使">
+      <data key="d0">公权力行使</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="对权利构成限制">
+      <data key="d0">对权利构成限制</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="公民未放弃权利">
+      <data key="d0">公民未放弃权利</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="加重法律保留下，公权力行使合宪">
+      <data key="d0">加重法律保留下，公权力行使合宪</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">AND</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="因国家安全或者追查刑事犯罪的需要">
+      <data key="d0">因国家安全或者追查刑事犯罪的需要</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="公安机关或者检察机关行使公权力">
+      <data key="d0">公安机关或者检察机关行使公权力</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="依照法律规定的程序对通信进行检查">
+      <data key="d0">依照法律规定的程序对通信进行检查</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="加重法律保留下，公权力行使违宪">
+      <data key="d0">加重法律保留下，公权力行使违宪</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">NOT</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="公权力行使合宪">
+      <data key="d0">公权力行使合宪</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="权利保护范围加宽">
+      <data key="d0">权利保护范围加宽</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">AND</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="合宪的要求高">
+      <data key="d0">合宪的要求高</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">AND,OR</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="主体要件窄">
+      <data key="d0">主体要件窄</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="程序要件高">
+      <data key="d0">程序要件高</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="理由要件窄">
+      <data key="d0">理由要件窄</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="加重的法律保留">
+      <data key="d0">加重的法律保留</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">OR</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="合宪要求与权利保护不匹配，应当降低合宪的要求">
+      <data key="d0">合宪要求与权利保护不匹配，应当降低合宪的要求</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">AND</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="单纯法律保留，符合比例原则">
+      <data key="d0">单纯法律保留，符合比例原则</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">AND</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="单纯法律保留下，公权力行使合宪">
+      <data key="d0">单纯法律保留下，公权力行使合宪</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">AND</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="是法律作出的限制">
+      <data key="d0">是法律作出的限制</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="符合比例原则">
+      <data key="d0">符合比例原则</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3" />
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <node id="单纯法律保留下，公权力行使违宪">
+      <data key="d0">单纯法律保留下，公权力行使违宪</data>
+      <data key="d1" />
+      <data key="d2" />
+      <data key="d3">NOT</data>
+      <data key="d4">通信秘密违宪审查</data>
+    </node>
+    <edge source="落入宪法权利保护范围" target="构成限制" />
+    <edge source="是通信秘密" target="落入宪法权利保护范围" />
+    <edge source="是通信秘密" target="合宪的要求高" />
+    <edge source="是通信秘密" target="加重的法律保留" />
+    <edge source="是通信自由" target="落入宪法权利保护范围" />
+    <edge source="是通信自由" target="合宪的要求高" />
+    <edge source="是通信自由" target="加重的法律保留" />
+    <edge source="是通信秘密主体情形" target="是通信秘密" />
+    <edge source="不是公开信息" target="是通信秘密主体情形" />
+    <edge source="通信内容" target="是通信秘密主体情形" />
+    <edge source="是通信秘密特别适用情形" target="是通信秘密" />
+    <edge source="是通信秘密特别适用情形" target="权利保护范围加宽" />
+    <edge source="公开信息" target="是通信秘密特别适用情形" />
+    <edge source="通信信息" target="是通信秘密特别适用情形" />
+    <edge source="技术上可保密" target="是通信秘密特别适用情形" />
+    <edge source="主观上认为是秘密" target="是通信秘密特别适用情形" />
+    <edge source="信息集合体" target="是通信秘密特别适用情形" />
+    <edge source="反映隐私信息" target="是通信秘密特别适用情形" />
+    <edge source="构成限制" target="加重法律保留下，公权力行使合宪" />
+    <edge source="公权力行使" target="构成限制" />
+    <edge source="对权利构成限制" target="构成限制" />
+    <edge source="公民未放弃权利" target="构成限制" />
+    <edge source="因国家安全或者追查刑事犯罪的需要" target="加重法律保留下，公权力行使合宪" />
+    <edge source="公安机关或者检察机关行使公权力" target="加重法律保留下，公权力行使合宪" />
+    <edge source="依照法律规定的程序对通信进行检查" target="加重法律保留下，公权力行使合宪" />
+    <edge source="加重法律保留下，公权力行使违宪" target="单纯法律保留下，公权力行使合宪" />
+    <edge source="公权力行使合宪" target="加重法律保留下，公权力行使违宪" />
+    <edge source="权利保护范围加宽" target="合宪要求与权利保护不匹配，应当降低合宪的要求" />
+    <edge source="权利保护范围加宽" target="单纯法律保留下，公权力行使合宪" />
+    <edge source="合宪的要求高" target="合宪要求与权利保护不匹配，应当降低合宪的要求" />
+    <edge source="主体要件窄" target="合宪的要求高" />
+    <edge source="程序要件高" target="合宪的要求高" />
+    <edge source="理由要件窄" target="合宪的要求高" />
+    <edge source="加重的法律保留" target="单纯法律保留，符合比例原则" />
+    <edge source="合宪要求与权利保护不匹配，应当降低合宪的要求" target="单纯法律保留，符合比例原则" />
+    <edge source="单纯法律保留，符合比例原则" target="单纯法律保留下，公权力行使合宪" />
+    <edge source="单纯法律保留下，公权力行使合宪" target="单纯法律保留下，公权力行使违宪" />
+    <edge source="是法律作出的限制" target="单纯法律保留下，公权力行使合宪" />
+    <edge source="符合比例原则" target="单纯法律保留下，公权力行使合宪" />
+  </graph>
+</graphml>
