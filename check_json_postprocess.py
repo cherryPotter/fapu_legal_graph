@@ -31,38 +31,43 @@ def ensure_connected(graph):
 
     if connected:
         print("✅ 图是连通的（弱连通）")
-        return
+        return True
+    else:
+        print(f"❌ 图不连通，共 {len(components)} 个连通分量（弱连通）")
+        return False
 
-    print(f"❌ 图不连通，共 {len(components)} 个连通分量（弱连通）")
-    
 
-def check_graphml_for_cycles(graphml_file):
-    """检查 GraphML 文件中是否存在环"""
-    if not os.path.exists(graphml_file):
-        print(f"❌ 文件不存在: {graphml_file}")
-        sys.exit(1)
+def check_graph_for_cycles(graph):
+    """
+    检查 networkx 图对象中是否存在环
     
-    print(f"📂 检查文件: {os.path.basename(graphml_file)}")
+    Args:
+        graph: networkx 图对象（DiGraph 或 Graph）
+    
+    Returns:
+        tuple: (has_cycles: bool, cycles: list, cycle_nodes: set)
+            - has_cycles: 是否存在环
+            - cycles: 环的列表
+            - cycle_nodes: 涉及环的节点集合
+    """
     print(f"🔍 检测环（cycle）...\n")
     
     try:
-        # 读取 GraphML 文件
-        G = nx.read_graphml(graphml_file)
-        
-        # 如果不是有向图，转换为有向图
+        # 确保是有向图
+        G = graph
         if not G.is_directed():
             G = G.to_directed()
         
         print(f"📊 图统计: - 节点数: {G.number_of_nodes()} - 边数: {G.number_of_edges()}")
         print()
-
-        # 先检查连通性
-        ensure_connected(G)
+        
+        # 检查连通性
+        is_connected = ensure_connected(G)
         
         # 检查是否存在环
         if nx.is_directed_acyclic_graph(G):
             print("✅ 图中不存在环（DAG - 有向无环图）")
-            sys.exit(0)
+            return False, [], set()
         else:
             print("❌ 图中存在环！\n")
             
@@ -91,10 +96,41 @@ def check_graphml_for_cycles(graphml_file):
                     node_name = G.nodes[node].get('node_name', node)
                     print(f"  - {node} ({node_name})")
                 
+                return True, cycles, all_cycle_nodes
             else:
                 print("⚠️  检测到环但无法列出具体路径")
-            
+                return True, [], set()
+                
+    except nx.NetworkXError as e:
+        print(f"❌ NetworkX 错误: {e}")
+        raise
+    except Exception as e:
+        print(f"❌ 检查图时出错: {e}")
+        import traceback
+        traceback.print_exc()
+        raise
+
+
+def check_graphml_for_cycles(graphml_file):
+    """检查 GraphML 文件中是否存在环"""
+    if not os.path.exists(graphml_file):
+        print(f"❌ 文件不存在: {graphml_file}")
+        sys.exit(1)
+    
+    try:
+        # 读取 GraphML 文件
+        G = nx.read_graphml(graphml_file)
+        
+        print(f"📂 检查文件: {os.path.basename(graphml_file)}")
+        
+        # 使用新的检查函数
+        has_cycles, cycles, cycle_nodes = check_graph_for_cycles(G)
+        
+        # 根据检查结果退出
+        if has_cycles:
             sys.exit(1)
+        else:
+            sys.exit(0)
             
     except nx.NetworkXError as e:
         print(f"❌ NetworkX 错误: {e}")
