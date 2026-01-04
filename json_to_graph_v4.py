@@ -389,7 +389,7 @@ def build_graph_from_rules(rules_data):
     return nx_graph
 
 
-def json_to_graphml(json_file, output_file):
+def json_to_graphml(json_file, output_file=None):
     """
     将 JSON 文件转换为 GraphML 文件
     

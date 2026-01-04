@@ -1,5 +1,12 @@
 import tkinter as tk
 from tkinter import filedialog
+import subprocess
+import os
+import threading
+import sys
+from check_json import check_graph_json_file, check_result_json_file
+from json_to_graph_v4 import json_to_graphml
+from check_json_postprocess import check_graph_for_cycles
 
 
 def browse_file(target_var, entry_widget):
@@ -42,6 +49,109 @@ def on_text_focus_out(event, placeholder_text):
     if current_content == '':
         text_widget.insert('1.0', placeholder_text)
         text_widget.config(fg='grey')
+
+def execute_json_to_graph(graph_json_path, result_json_path, output_text):
+    """执行检查和处理流程"""
+    output_text.config(fg='black')
+    output_text.delete('1.0', tk.END)
+    
+    # 检查图谱JSON文件路径
+    if not graph_json_path or graph_json_path == '例如：C:/path/to/test.json':
+        output_text.insert('1.0', '❌ 错误：请先选择图谱JSON文件\n')
+        return
+    
+    if not os.path.exists(graph_json_path):
+        output_text.insert('1.0', f'❌ 错误：文件不存在: {graph_json_path}\n')
+        return
+    
+    # 检查结果节点JSON文件路径
+    if not result_json_path or result_json_path == '例如：C:/path/to/test.json':
+        output_text.insert('1.0', '❌ 错误：请先选择任务节点JSON文件\n')
+        return
+    
+    if not os.path.exists(result_json_path):
+        output_text.insert('1.0', f'❌ 错误：文件不存在: {result_json_path}\n')
+        return
+    
+    # 显示开始信息
+    output_text.insert('1.0', '=' * 60 + '\n')
+    output_text.insert(tk.END, '开始检查和处理...\n')
+    output_text.insert(tk.END, '=' * 60 + '\n\n')
+    output_text.update()
+    
+    # 在后台线程中执行，避免阻塞UI
+    def run_checks():
+        try:
+            output_lines = []
+            
+            # Step 1: 检查 JSON 文件
+            output_lines.append("Step 1: 检查 JSON 文件合法性\n")
+            output_lines.append("-" * 60 + "\n")
+            
+            def capture_print(*args, **kwargs):
+                """捕获 print 输出"""
+                output_lines.append(' '.join(str(arg) for arg in args))
+            
+            # 临时重定向 print
+            import builtins
+            original_print = builtins.print
+            builtins.print = capture_print
+            
+            try:
+                check_graph_json_file(graph_json_path)
+                check_result_json_file(result_json_path)
+            finally:
+                builtins.print = original_print
+            
+            output_lines.append("\n" + "=" * 60 + "\n\n")
+            
+            # Step 2: 转换为图（不保存文件）
+            output_lines.append("Step 2: 转换为图\n")
+            output_lines.append("-" * 60 + "\n")
+            
+            builtins.print = capture_print
+            try:
+                # 调用 json_to_graphml，不保存文件（传入 None）
+                nx_G = json_to_graphml(graph_json_path, None)
+            finally:
+                builtins.print = original_print
+            
+            output_lines.append("\n" + "=" * 60 + "\n\n")
+            
+            # Step 3: 检查图的环
+            output_lines.append("Step 3: 检查图的环\n")
+            output_lines.append("-" * 60 + "\n")
+            
+            builtins.print = capture_print
+            try:
+                has_cycles, cycles, cycle_nodes = check_graph_for_cycles(nx_G)
+                if not has_cycles:
+                    output_lines.append("\n✅ 图检查通过，不存在环\n")
+            finally:
+                builtins.print = original_print
+            
+            output_lines.append("\n" + "=" * 60 + "\n")
+            output_lines.append("✅ 所有检查完成！\n")
+            
+            # 在主线程中更新UI
+            def update_output():
+                output_text.insert(tk.END, '\n'.join(output_lines))
+            
+            output_text.after(0, update_output)
+            
+        except Exception as e:
+            import traceback
+            error_msg = f'\n\n❌ 错误: {str(e)}\n'
+            error_msg += traceback.format_exc()
+            
+            def show_error():
+                output_text.insert(tk.END, error_msg)
+            output_text.after(0, show_error)
+    
+    # 启动后台线程
+    thread = threading.Thread(target=run_checks)
+    thread.daemon = True
+    thread.start()
 
 def main():
     window = tk.Tk()
@@ -95,7 +205,30 @@ def main():
 
     graph_json_browse_button = tk.Button(conf_frame, text='浏览...', command=lambda: browse_file(graph_json_path_var, graph_json_file_entry))
     result_json_browse_button = tk.Button(conf_frame, text='浏览...', command=lambda: browse_file(result_json_path_var, result_json_file_entry))
-    execute_button = tk.Button(conf_frame, text='检查并执行')
+    
+    # 创建输出文本区域（需要在execute_button之前创建）
+    output_label = tk.Label(output_frame, text='执行结果：')
+    output_text = tk.Text(output_frame, fg='gray')
+    output_text_placeholder = '执行结果将在此处显示...'
+    output_text.insert('1.0', output_text_placeholder)
+    output_text.bind('<FocusIn>', lambda event: on_text_focus_in(event, output_text_placeholder))
+    output_text.bind('<FocusOut>', lambda event: on_text_focus_out(event, output_text_placeholder))
+    output_frame.columnconfigure(0, weight=1)
+    output_frame.rowconfigure(0, weight=0)
+    output_frame.rowconfigure(1, weight=1)
+    output_label.grid(row=0, column=0, padx=pad, pady=pad, sticky='nw')
+    output_text.grid(row=1, column=0, padx=pad, pady=pad, sticky='ew')
+    
+    # 修改execute_button，添加点击事件
+    execute_button = tk.Button(
+        conf_frame, 
+        text='检查并执行',
+        command=lambda: execute_json_to_graph(
+            graph_json_path_var.get(), 
+            result_json_path_var.get(), 
+            output_text
+        )
+    )
 
     platform_label.grid(row=0, column=0, padx=pad, pady=pad, sticky='e')
     api_label.grid(row=1, column=0, padx=pad, pady=pad, sticky='e')
@@ -123,19 +256,6 @@ def main():
     case_frame.rowconfigure(1, weight=1)
     case_label.grid(row=0, column=0, padx=pad, pady=pad, sticky='nw')
     case_text.grid(row=1, column=0, padx=pad, pady=pad, sticky='nswe')
-
-
-    output_label = tk.Label(output_frame, text='执行结果：')
-    output_text = tk.Text(output_frame, fg='gray')
-    output_text_placeholder = '执行结果将在此处显示...'
-    output_text.insert('1.0', output_text_placeholder)
-    output_text.bind('<FocusIn>', lambda event: on_text_focus_in(event, output_text_placeholder))
-    output_text.bind('<FocusOut>', lambda event: on_text_focus_out(event, output_text_placeholder))
-    output_frame.columnconfigure(0, weight=1)
-    output_frame.rowconfigure(0, weight=0)
-    output_frame.rowconfigure(1, weight=1)
-    output_label.grid(row=0, column=0, padx=pad, pady=pad, sticky='nw')
-    output_text.grid(row=1, column=0, padx=pad, pady=pad, sticky='ew')
 
 
     window.mainloop()
