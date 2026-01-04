@@ -1,9 +1,6 @@
 # fapu_legal_graph
 
-- 从环境变量里读这个模型 
-
-export QWEN_MODEL_ID="qwen-max"
-
+- model-name: "qwen-max"
 - token id: sk-8c959a49f9e243cfa4cde91ef2084c46
 - https://dashscope.aliyuncs.com/compatible-mode/v1
 
