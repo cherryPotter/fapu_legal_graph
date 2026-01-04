@@ -7,6 +7,7 @@ import sys
 from check_json import check_graph_json_file, check_result_json_file
 from json_to_graph_v4 import json_to_graphml
 from check_json_postprocess import check_graph_for_cycles
+from run_v2 import run_inference
 
 
 def browse_file(target_var, entry_widget):
@@ -50,7 +51,7 @@ def on_text_focus_out(event, placeholder_text):
         text_widget.insert('1.0', placeholder_text)
         text_widget.config(fg='grey')
 
-def execute_json_to_graph(graph_json_path, result_json_path, output_text):
+def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_text, platform_entry, api_entry):
     """执行检查和处理流程"""
     output_text.config(fg='black')
     output_text.delete('1.0', tk.END)
@@ -73,6 +74,23 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text):
         output_text.insert('1.0', f'❌ 错误：文件不存在: {result_json_path}\n')
         return
     
+    # 获取测试用例
+    facts = case_text.get('1.0', 'end-1c').strip()
+    if not facts or facts == '在此处输入测试用的案例...':
+        output_text.insert('1.0', '❌ 错误：请先输入测试用例\n')
+        return
+    
+    # 获取API配置
+    base_url = platform_entry.get().strip()
+    if not base_url or base_url == '例如：https://api.openai.com/v1':
+        output_text.insert('1.0', '❌ 错误：请先输入大模型平台网址\n')
+        return
+    
+    api_token = api_entry.get().strip()
+    if not api_token or api_token == '例如：sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx':
+        output_text.insert('1.0', '❌ 错误：请先输入API密钥\n')
+        return
+    
     # 显示开始信息
     output_text.insert('1.0', '=' * 60 + '\n')
     output_text.insert(tk.END, '开始检查和处理...\n')
@@ -82,15 +100,22 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text):
     # 在后台线程中执行，避免阻塞UI
     def run_checks():
         try:
-            output_lines = []
-            
-            # Step 1: 检查 JSON 文件
-            output_lines.append("Step 1: 检查 JSON 文件合法性\n")
-            output_lines.append("-" * 60 + "\n")
+            def append_output(text):
+                """实时追加输出到界面"""
+                def update():
+                    output_text.insert(tk.END, text)
+                    output_text.see(tk.END)  # 自动滚动到底部
+                    output_text.update()
+                output_text.after(0, update)
             
             def capture_print(*args, **kwargs):
-                """捕获 print 输出"""
-                output_lines.append(' '.join(str(arg) for arg in args))
+                """捕获 print 输出并实时显示"""
+                text = ' '.join(str(arg) for arg in args) + '\n'
+                append_output(text)
+            
+            # Step 1: 检查 JSON 文件
+            append_output("Step 1: 检查 JSON 文件合法性\n")
+            append_output("-" * 60 + "\n")
             
             # 临时重定向 print
             import builtins
@@ -103,11 +128,11 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text):
             finally:
                 builtins.print = original_print
             
-            output_lines.append("\n" + "=" * 60 + "\n\n")
+            append_output("\n" + "=" * 60 + "\n\n")
             
             # Step 2: 转换为图（不保存文件）
-            output_lines.append("Step 2: 转换为图\n")
-            output_lines.append("-" * 60 + "\n")
+            append_output("Step 2: 转换为图\n")
+            append_output("-" * 60 + "\n")
             
             builtins.print = capture_print
             try:
@@ -116,28 +141,45 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text):
             finally:
                 builtins.print = original_print
             
-            output_lines.append("\n" + "=" * 60 + "\n\n")
+            append_output("\n" + "=" * 60 + "\n\n")
             
             # Step 3: 检查图的环
-            output_lines.append("Step 3: 检查图的环\n")
-            output_lines.append("-" * 60 + "\n")
+            append_output("Step 3: 检查图的环\n")
+            append_output("-" * 60 + "\n")
             
             builtins.print = capture_print
             try:
                 has_cycles, cycles, cycle_nodes = check_graph_for_cycles(nx_G)
                 if not has_cycles:
-                    output_lines.append("\n✅ 图检查通过，不存在环\n")
+                    append_output("\n✅ 图检查通过，不存在环\n")
             finally:
                 builtins.print = original_print
             
-            output_lines.append("\n" + "=" * 60 + "\n")
-            output_lines.append("✅ 所有检查完成！\n")
+            append_output("\n" + "=" * 60 + "\n\n")
             
-            # 在主线程中更新UI
-            def update_output():
-                output_text.insert(tk.END, '\n'.join(output_lines))
+            # Step 4: 执行推理
+            append_output("Step 4: 执行图谱推理\n")
+            append_output("-" * 60 + "\n")
             
-            output_text.after(0, update_output)
+            builtins.print = capture_print
+            try:
+                # 从环境变量读取模型ID，如果没有则报错
+                model = os.getenv("QWEN_MODEL_ID")
+                if not model:
+                    raise ValueError("环境变量 QWEN_MODEL_ID 未设置，请先设置该环境变量")
+                run_inference(
+                    graph=nx_G,
+                    facts=facts,
+                    base_url=base_url,
+                    api_token=api_token,
+                    model=model
+                )
+                append_output("\n✅ 推理完成！\n")
+            finally:
+                builtins.print = original_print
+            
+            append_output("\n" + "=" * 60 + "\n")
+            append_output("✅ 所有步骤完成！\n")
             
         except Exception as e:
             import traceback
@@ -146,6 +188,7 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text):
             
             def show_error():
                 output_text.insert(tk.END, error_msg)
+                output_text.see(tk.END)
             output_text.after(0, show_error)
     
     # 启动后台线程
@@ -226,7 +269,10 @@ def main():
         command=lambda: execute_json_to_graph(
             graph_json_path_var.get(), 
             result_json_path_var.get(), 
-            output_text
+            output_text,
+            case_text,
+            platform_entry,
+            api_entry
         )
     )
 
