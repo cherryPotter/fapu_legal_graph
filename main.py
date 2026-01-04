@@ -51,7 +51,7 @@ def on_text_focus_out(event, placeholder_text):
         text_widget.insert('1.0', placeholder_text)
         text_widget.config(fg='grey')
 
-def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_text, platform_entry, api_entry):
+def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_text, platform_entry, api_entry, model_name_entry):
     """执行检查和处理流程"""
     output_text.config(fg='black')
     output_text.delete('1.0', tk.END)
@@ -91,9 +91,16 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_t
         output_text.insert('1.0', '❌ 错误：请先输入API密钥\n')
         return
     
+    # 获取模型名称
+    model_name = model_name_entry.get().strip()
+    if not model_name or model_name == '例如：qwen-max':
+        output_text.insert('1.0', '❌ 错误：请先输入模型名称\n')
+        return
+    
     # 显示开始信息
     output_text.insert('1.0', '=' * 60 + '\n')
     output_text.insert(tk.END, '开始检查和处理...\n')
+    output_text.insert(tk.END, f'模型名称: {model_name}\n')
     output_text.insert(tk.END, '=' * 60 + '\n\n')
     output_text.update()
     
@@ -163,16 +170,13 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_t
             
             builtins.print = capture_print
             try:
-                # 从环境变量读取模型ID，如果没有则报错
-                model = os.getenv("QWEN_MODEL_ID")
-                if not model:
-                    raise ValueError("环境变量 QWEN_MODEL_ID 未设置，请先设置该环境变量")
+                # 使用前端传入的模型名称
                 run_inference(
                     graph=nx_G,
                     facts=facts,
                     base_url=base_url,
                     api_token=api_token,
-                    model=model
+                    model=model_name
                 )
                 append_output("\n✅ 推理完成！\n")
             finally:
@@ -218,15 +222,21 @@ def main():
     output_frame.grid(row=1, column=0, columnspan=2, padx=pad, pady=pad, sticky='ew')
 
     platform_label = tk.Label(conf_frame, text='大模型平台网址：')
+    model_name_label = tk.Label(conf_frame, text='模型名称：')
     api_label = tk.Label(conf_frame, text='API密钥：')
     graph_json_file_label = tk.Label(conf_frame, text='图谱JSON文件路径：')
     result_json_file_label = tk.Label(conf_frame, text='任务节点JSON文件路径：')
 
     platform_entry = tk.Entry(conf_frame, fg='gray')
-    platform_entry_placeholder = '例如：https://api.openai.com/v1'
+    platform_entry_placeholder = '例如：https://dashscope.aliyuncs.com/compatible-mode/v1'
     platform_entry.insert(0, platform_entry_placeholder)
     platform_entry.bind('<FocusIn>', lambda event: on_entry_focus_in(event, platform_entry_placeholder))
     platform_entry.bind('<FocusOut>', lambda event: on_entry_focus_out(event, platform_entry_placeholder))
+    model_name_entry = tk.Entry(conf_frame, fg='gray')
+    model_name_entry_placeholder = '例如：qwen-max'
+    model_name_entry.insert(0, model_name_entry_placeholder)
+    model_name_entry.bind('<FocusIn>', lambda event: on_entry_focus_in(event, model_name_entry_placeholder))
+    model_name_entry.bind('<FocusOut>', lambda event: on_entry_focus_out(event, model_name_entry_placeholder))
     api_entry = tk.Entry(conf_frame, fg='gray')
     api_entry_placeholder = '例如：sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     api_entry.insert(0, api_entry_placeholder)
@@ -272,23 +282,26 @@ def main():
             output_text,
             case_text,
             platform_entry,
-            api_entry
+            api_entry,
+            model_name_entry
         )
     )
 
     platform_label.grid(row=0, column=0, padx=pad, pady=pad, sticky='e')
-    api_label.grid(row=1, column=0, padx=pad, pady=pad, sticky='e')
-    graph_json_file_label.grid(row=2, column=0, padx=pad, pady=pad, sticky='e')
-    result_json_file_label.grid(row=3, column=0, padx=pad, pady=pad, sticky='e')
+    model_name_label.grid(row=1, column=0, padx=pad, pady=pad, sticky='e')
+    api_label.grid(row=2, column=0, padx=pad, pady=pad, sticky='e')
+    graph_json_file_label.grid(row=3, column=0, padx=pad, pady=pad, sticky='e')
+    result_json_file_label.grid(row=4, column=0, padx=pad, pady=pad, sticky='e')
 
-    graph_json_browse_button.grid(row=2, column=2, padx=pad, pady=pad)
-    result_json_browse_button.grid(row=3, column=2, padx=pad, pady=pad)
-    execute_button.grid(row=4, column=0, columnspan=3, padx=pad, pady=pad)
+    graph_json_browse_button.grid(row=3, column=2, padx=pad, pady=pad)
+    result_json_browse_button.grid(row=4, column=2, padx=pad, pady=pad)
+    execute_button.grid(row=5, column=0, columnspan=3, padx=pad, pady=pad)
 
     platform_entry.grid(row=0, column=1, columnspan=2, padx=pad, pady=pad, sticky='ew')
-    api_entry.grid(row=1, column=1, columnspan=2, padx=pad, pady=pad, sticky='ew')
-    graph_json_file_entry.grid(row=2, column=1, padx=pad, pady=pad)
-    result_json_file_entry.grid(row=3, column=1, padx=pad, pady=pad)
+    model_name_entry.grid(row=1, column=1, columnspan=2, padx=pad, pady=pad, sticky='ew')
+    api_entry.grid(row=2, column=1, columnspan=2, padx=pad, pady=pad, sticky='ew')
+    graph_json_file_entry.grid(row=3, column=1, padx=pad, pady=pad)
+    result_json_file_entry.grid(row=4, column=1, padx=pad, pady=pad)
 
     
     case_label = tk.Label(case_frame, text='测试用例：')
