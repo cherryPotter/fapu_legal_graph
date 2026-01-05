@@ -1,14 +1,18 @@
 # fapu_legal_graph
 
-- model-name: "qwen-max"
+- 从环境变量里读这个模型 
+
+- 模型名称： qwen-max
+
+
 - token id: sk-8c959a49f9e243cfa4cde91ef2084c46
-- https://dashscope.aliyuncs.com/compatible-mode/v1
+- 大模型平台网址： https://dashscope.aliyuncs.com/compatible-mode/v1
 
-- 上传的文件: raw_graph_data/djt贪污罪json图.json
+- 图谱JSON文件: raw_graph_data/djt贪污罪json图.json
 
-- 结果文件: raw_graph_data/djt贪污罪_result_node.json
+- 任务节点JSON文件路径: raw_graph_data/djt贪污罪_result_node.json
 
-- 案件事实：
+- 测试用例：
 
 被告人任某某。原西安市临潼区文化和旅游体育局人民体育场场长。因涉嫌贪污罪，于2023年10月20日被西安市临潼区监察委员会采取留置措施。2024年1月29日经西安市临潼区人民检察院决定，同日由西安市公安局临潼分局执行拘留，同年2月7日经西安市临潼区人民检察院决定逮捕，同日由西安市公安局临潼分局执行逮捕。现羁押于西安市临潼区看守所。
 　　辩护人赵继强，陕西萃聚律师事务所律师。
