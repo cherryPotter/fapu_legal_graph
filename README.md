@@ -1,9 +1,6 @@
 # fapu_legal_graph
 
-- 从环境变量里读这个模型 
-
 - 模型名称： qwen-max
-
 
 - token id: sk-8c959a49f9e243cfa4cde91ef2084c46
 - 大模型平台网址： https://dashscope.aliyuncs.com/compatible-mode/v1
