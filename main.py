@@ -120,18 +120,23 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_t
                 text = ' '.join(str(arg) for arg in args) + '\n'
                 append_output(text)
             
-            # Step 1: 检查 JSON 文件
-            append_output("Step 1: 检查 JSON 文件合法性\n")
-            append_output("-" * 60 + "\n")
-            
             # 临时重定向 print
             import builtins
             original_print = builtins.print
             builtins.print = capture_print
             
+            # Step 1: 检查 JSON 文件
+            append_output("Step 1: 检查 JSON 文件合法性\n")
+            append_output("-" * 60 + "\n")
+            
             try:
-                check_graph_json_file(graph_json_path)
-                check_result_json_file(result_json_path)
+                graph_check_passed = check_graph_json_file(graph_json_path)
+                result_check_passed = check_result_json_file(result_json_path)
+                
+                if not graph_check_passed or not result_check_passed:
+                    append_output("\n❌ Step 1 检查失败，停止执行后续步骤\n")
+                    append_output("=" * 60 + "\n")
+                    return  # 提前返回，不执行后续步骤
             finally:
                 builtins.print = original_print
             
@@ -145,6 +150,11 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_t
             try:
                 # 调用 json_to_graphml，不保存文件（传入 None）
                 nx_G = json_to_graphml(graph_json_path, None)
+            except Exception as e:
+                append_output(f"\n❌ Step 2 转换失败: {e}\n")
+                append_output("停止执行后续步骤\n")
+                append_output("=" * 60 + "\n")
+                return  # 提前返回
             finally:
                 builtins.print = original_print
             
@@ -157,14 +167,18 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_t
             builtins.print = capture_print
             try:
                 has_cycles, cycles, cycle_nodes = check_graph_for_cycles(nx_G)
-                if not has_cycles:
+                if has_cycles:
+                    append_output("\n❌ 图检查失败，存在环，停止执行后续步骤\n")
+                    append_output("=" * 60 + "\n")
+                    return  # 提前返回，不执行 Step 4
+                else:
                     append_output("\n✅ 图检查通过，不存在环\n")
             finally:
                 builtins.print = original_print
             
             append_output("\n" + "=" * 60 + "\n\n")
             
-            # Step 4: 执行推理
+            # Step 4: 执行推理（只有前面都通过才执行）
             append_output("Step 4: 执行图谱推理\n")
             append_output("-" * 60 + "\n")
             

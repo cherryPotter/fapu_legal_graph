@@ -55,6 +55,19 @@ def load_rules_from_json_file(json_file):
     # 提取案由信息
     case_type = data.get("案由", "")
     
+    # 提取节点信息（名称、类型、提示词）
+    node_info_map = {}  # {节点名称: {"type": "逻辑"/"数值", "prompt": "提示词"}}
+    if "节点" in data and isinstance(data["节点"], list):
+        for node_item in data["节点"]:
+            node_name = node_item.get("名称", "")
+            node_type = node_item.get("类型", "逻辑")  # 默认是"逻辑"
+            node_prompt = node_item.get("提示词", "")
+            if node_name:
+                node_info_map[node_name] = {
+                    "type": node_type,
+                    "prompt": node_prompt
+                }
+    
     all_rules = []
     
     # 提取并融合"规则"数据，为每个规则添加案由信息
@@ -63,12 +76,26 @@ def load_rules_from_json_file(json_file):
             rule_type = rule.get("类型", "")
             if rule_type == "逻辑运算":
                 # 转换规则格式
-                converted_rule = {
-                    "result": rule.get("结果", ""),
-                    "conditions": rule.get("条件", []),
-                    "logic": convert_logic_op(rule.get("计算方式", "与")),
-                    "case_type": case_type
-                }
+                calc_method = rule.get("计算方式", "与")
+                # 检查是否是比较运算符
+                comparison_ops = ['>=', '<=', '>', '<', '==', '!=', '≥', '≤', '≠']
+                if calc_method in comparison_ops:
+                    # 比较运算符：保持原样，标记为 COMPARISON
+                    converted_rule = {
+                        "result": rule.get("结果", ""),
+                        "conditions": rule.get("条件", []),
+                        "logic": "COMPARISON",
+                        "comparison_op": calc_method,
+                        "case_type": case_type
+                    }
+                else:
+                    # 标准逻辑运算
+                    converted_rule = {
+                        "result": rule.get("结果", ""),
+                        "conditions": rule.get("条件", []),
+                        "logic": convert_logic_op(calc_method),
+                        "case_type": case_type
+                    }
                 
                 # 处理"结果"可能是字符串或数组的情况
                 result = converted_rule["result"]
@@ -165,7 +192,7 @@ def load_rules_from_json_file(json_file):
                     elif isinstance(result, str) and result:
                         all_rules.append(converted_rule)
     
-    return all_rules, case_type
+    return all_rules, case_type, node_info_map
 
 
 def extract_variables_from_expression(expr_str):
@@ -215,16 +242,19 @@ def extract_variables_from_expression(expr_str):
         return filtered_vars
 
 
-def build_graph_from_rules(rules_data):
+def build_graph_from_rules(rules_data, node_info_map=None):
     """
     从规则数据构建 networkx 图
     
     Args:
         rules_data: 规则列表
+        node_info_map: 节点信息字典 {节点名称: {"type": "逻辑"/"数值", "prompt": "提示词"}}
     
     Returns:
         networkx.DiGraph: 构建的图
     """
+    if node_info_map is None:
+        node_info_map = {}
     nx_graph = nx.DiGraph()
     node_case_map = {}
     result_nodes = set()
@@ -238,7 +268,7 @@ def build_graph_from_rules(rules_data):
             elif isinstance(result, list):
                 result_nodes.update(result)
     
-    def add_node_safe(name, logic="", case_type=""):
+    def add_node_safe(name, logic="", case_type="", node_type=None, prompt=None):
         """安全添加节点到 networkx 图"""
         if not name or (isinstance(name, list) and len(name) == 0):
             return
@@ -254,9 +284,28 @@ def build_graph_from_rules(rules_data):
             existing_attrs = nx_graph.nodes[name]
             existing_case = existing_attrs.get("case_type", "") or ""
             existing_op = existing_attrs.get("operation", "") or ""
+            existing_type = existing_attrs.get("type", "") or ""
+            existing_prompt = existing_attrs.get("prompt", "") or ""
         else:
             existing_case = ""
             existing_op = ""
+            existing_type = ""
+            existing_prompt = ""
+        
+        # 从节点信息字典中获取类型和提示词（如果未提供参数）
+        if node_type is None or prompt is None:
+            if name in node_info_map:
+                node_info = node_info_map[name]
+                if node_type is None:
+                    node_type = node_info.get("type", "逻辑")
+                if prompt is None:
+                    prompt = node_info.get("prompt", "")
+        
+        # 如果没有从节点信息字典获取到，使用默认值
+        if node_type is None:
+            node_type = "逻辑"  # 默认是"逻辑"
+        if prompt is None:
+            prompt = ""
         
         # 合并案由信息
         if case_type:
@@ -277,11 +326,15 @@ def build_graph_from_rules(rules_data):
         else:
             final_op = existing_op if existing_op else (logic if logic else "")
         
+        # 合并类型和提示词（优先使用已有的，如果已有则保留）
+        final_type = existing_type if existing_type else node_type
+        final_prompt = existing_prompt if existing_prompt else prompt
+        
         # 设置节点属性
         node_attrs = {
             "node_name": name,
-            "type": "",
-            "prompt": "",
+            "type": final_type,
+            "prompt": final_prompt,
             "operation": final_op,
             "case_type": final_case
         }
@@ -298,13 +351,17 @@ def build_graph_from_rules(rules_data):
         
         if not result:
             continue
-        if logic not in ["ARITHMETIC", "CONDITIONAL"] and not conditions:
+        if logic not in ["ARITHMETIC", "CONDITIONAL", "COMPARISON"] and not conditions:
             continue
         
         if isinstance(result, list):
             if len(result) == 0:
                 continue
             result = result[0]
+        
+        # 获取规则的特殊属性
+        comparison_op = rule.get("comparison_op", "")
+        conditional_calculation = rule.get("conditional_calculation", {})
         
         # 对于算术运算，从算术规则中提取变量名作为条件
         if logic == "ARITHMETIC" and arithmetic_rules:
@@ -316,7 +373,6 @@ def build_graph_from_rules(rules_data):
         
         # 对于条件判断，从计算规则中提取变量名作为条件
         if logic == "CONDITIONAL" and not conditions:
-            conditional_calculation = rule.get("conditional_calculation", {})
             all_vars = set()
             
             def extract_vars_from_obj(obj):
@@ -330,27 +386,33 @@ def build_graph_from_rules(rules_data):
             extract_vars_from_obj(conditional_calculation)
             conditions = list(all_vars)
         
-        # 添加结果节点
+        # 添加结果节点，并直接存储计算规则
         add_node_safe(result, logic=logic, case_type=case_type)
         
-        # 创建逻辑门节点（用于可视化）
-        gate_id = f"PATH_{idx}"
+        # 获取结果节点的现有属性，以便添加计算规则
+        if nx_graph.has_node(result):
+            result_attrs = dict(nx_graph.nodes[result])
+        else:
+            result_attrs = {}
         
-        # 将逻辑门节点添加到图中
-        gate_attrs = {
-            "node_name": gate_id,
-            "type": "gate",
-            "prompt": "",
-            "operation": logic,
-            "case_type": case_type
-        }
-        nx_graph.add_node(gate_id, **gate_attrs)
+        # 保存算术规则到结果节点属性
+        if logic == "ARITHMETIC" and arithmetic_rules:
+            result_attrs["arithmetic_rules"] = json.dumps(arithmetic_rules, ensure_ascii=False)
         
-        # 添加边：逻辑门 -> 结果
-        if not nx_graph.has_edge(gate_id, result):
-            nx_graph.add_edge(gate_id, result, logic=logic)
+        # 保存条件判断的计算规则到结果节点属性
+        if logic == "CONDITIONAL" and conditional_calculation:
+            result_attrs["conditional_calculation"] = json.dumps(conditional_calculation, ensure_ascii=False)
+            result_attrs["conditional_inputs"] = json.dumps(rule.get("conditional_inputs", []), ensure_ascii=False)
+            result_attrs["conditional_conditions"] = json.dumps(rule.get("conditional_conditions", {}), ensure_ascii=False)
         
-        # 处理条件
+        # 保存比较运算符到结果节点属性
+        if logic == "COMPARISON" and comparison_op:
+            result_attrs["comparison_op"] = comparison_op
+        
+        # 更新结果节点属性
+        nx_graph.nodes[result].update(result_attrs)
+        
+        # 处理条件，直接连接到结果节点（不再经过 PATH_X）
         for cond in conditions:
             if not cond:
                 continue
@@ -360,9 +422,9 @@ def build_graph_from_rules(rules_data):
             else:
                 add_node_safe(cond, case_type=case_type)
             
-            # 添加边：条件 -> 逻辑门
-            if not nx_graph.has_edge(cond, gate_id):
-                nx_graph.add_edge(cond, gate_id, logic=logic)
+            # 添加边：条件 -> 结果（直接连接）
+            if not nx_graph.has_edge(cond, result):
+                nx_graph.add_edge(cond, result, logic=logic)
     
     # 处理比较表达式节点，建立变量关联
     comparison_ops = ['>', '<', '>=', '<=', '==', '!=', '≥', '≤', '≠']
@@ -399,18 +461,19 @@ def json_to_graphml(json_file, output_file=None):
     """
     print(f"📂 读取 JSON 文件: {os.path.basename(json_file)}")
     
-    # 加载规则
-    rules_data, case_type = load_rules_from_json_file(json_file)
+    # 加载规则和节点信息
+    rules_data, case_type, node_info_map = load_rules_from_json_file(json_file)
     
     if not rules_data:
         raise ValueError("未加载到任何规则数据")
     
     print(f"📋 案由: {case_type}")
     print(f"📊 共加载 {len(rules_data)} 条规则")
+    print(f"📝 共加载 {len(node_info_map)} 个节点定义")
     
     # 构建图
     print("\n🔨 构建图谱...")
-    nx_graph = build_graph_from_rules(rules_data)
+    nx_graph = build_graph_from_rules(rules_data, node_info_map)
     
     # 保存 GraphML
     if output_file is not None:
