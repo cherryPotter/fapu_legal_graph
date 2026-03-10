@@ -11,7 +11,11 @@ from json_to_graph_v4 import *
 from check_json_postprocess import *
     
 def check_graph_json_file(json_file):
-    """检查图谱 JSON 文件"""
+    """检查图谱 JSON 文件
+    
+    Returns:
+        bool: 检查通过返回 True，否则返回 False
+    """
     file_name = os.path.basename(json_file)
     try:
         with open(json_file, 'r', encoding='utf-8') as f:
@@ -24,16 +28,15 @@ def check_graph_json_file(json_file):
         if missing_keys:
             error_msg = f"❌ {file_name} - 缺少必需的 key: {', '.join(missing_keys)}"
             print(error_msg)
+            return False
         else:
             print(f"✅ {file_name}")
-            
-    except json.JSONDecodeError as e:
-        error_msg = f"❌ {file_name} - JSON 解析错误: {e}"
-        print(error_msg)
+            return True
 
     except Exception as e:
         error_msg = f"❌ {file_name} - 加载失败: {e}"
-        print(error_msg)
+    print(error_msg)
+    return False
 
 
 def check_result_json_file(json_file):
