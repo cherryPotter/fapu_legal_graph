@@ -9,6 +9,80 @@ import json
 import sys
 from json_to_graph_v4 import *
 from check_json_postprocess import *
+
+
+def _validate_conditional_pairs(calc_obj, file_name, rule_index, result_name, errors):
+    """递归校验条件判断规则中每一层的成立/不成立分支是否成对出现。"""
+    if not isinstance(calc_obj, dict):
+        return
+
+    branch_state_map = {}
+    for key, value in calc_obj.items():
+        condition_name = None
+        branch_state = None
+        if isinstance(key, str):
+            if key.endswith("不成立"):
+                condition_name = key[:-3]
+                branch_state = "不成立"
+            elif key.endswith("成立"):
+                condition_name = key[:-2]
+                branch_state = "成立"
+
+        if condition_name is not None:
+            branch_state_map.setdefault(condition_name, set()).add(branch_state)
+
+        _validate_conditional_pairs(value, file_name, rule_index, result_name, errors)
+
+    for condition_name, states in branch_state_map.items():
+        if "成立" in states and "不成立" not in states:
+            errors.append(
+                f"❌ {file_name} - 规则 {rule_index}（结果: {result_name}）缺少配对分支: {condition_name}不成立"
+            )
+        elif "不成立" in states and "成立" not in states:
+            errors.append(
+                f"❌ {file_name} - 规则 {rule_index}（结果: {result_name}）缺少配对分支: {condition_name}成立"
+            )
+
+
+def check_conditional_rule_pairs(json_file):
+    """检查图谱 JSON 中条件判断规则的计算分支是否成对出现。"""
+    file_name = os.path.basename(json_file)
+    try:
+        with open(json_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+
+        rules = data.get("规则", [])
+        if not isinstance(rules, list):
+            error_msg = f"❌ {file_name} - '规则' 的值必须是数组类型"
+            print(error_msg)
+            return False
+
+        errors = []
+        for rule_index, rule in enumerate(rules):
+            if rule.get("类型") != "条件判断":
+                continue
+            calculation = rule.get("计算")
+            if calculation is None:
+                continue
+
+            result_name = rule.get("结果", "<未命名结果>")
+            _validate_conditional_pairs(calculation, file_name, rule_index, result_name, errors)
+
+        if errors:
+            for error in errors:
+                print(error)
+            return False
+
+        print(f"✅ {file_name} - 条件判断分支配对检查通过")
+        return True
+    except json.JSONDecodeError as e:
+        error_msg = f"❌ {file_name} - JSON 解析错误: {e}"
+        print(error_msg)
+        return False
+    except Exception as e:
+        error_msg = f"❌ {file_name} - 条件判断分支检查失败: {e}"
+        print(error_msg)
+        return False
     
 def check_graph_json_file(json_file):
     """检查图谱 JSON 文件
@@ -125,5 +199,9 @@ if __name__ == '__main__':
 
     # step3: 后处理再校验一下图
     check_graph_for_cycles(nx_G)
-    
 
+    print("=" * 36)
+
+    # step4: 检查条件判断规则的分支完整性
+    check_conditional_rule_pairs(input_graph_json)
+    

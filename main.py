@@ -4,7 +4,8 @@ import subprocess
 import os
 import threading
 import sys
-from check_json import check_graph_json_file, check_result_json_file
+import queue
+from check_json import check_graph_json_file, check_result_json_file, check_conditional_rule_pairs
 from json_to_graph_v4 import json_to_graphml
 from check_json_postprocess import check_graph_for_cycles
 from run_v2 import run_inference
@@ -102,18 +103,28 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_t
     output_text.insert(tk.END, '开始检查和处理...\n')
     output_text.insert(tk.END, f'模型名称: {model_name}\n')
     output_text.insert(tk.END, '=' * 60 + '\n\n')
-    output_text.update()
+
+    output_queue = queue.Queue()
+    worker_done = threading.Event()
+
+    def flush_output_queue():
+        while True:
+            try:
+                message = output_queue.get_nowait()
+            except queue.Empty:
+                break
+            output_text.insert(tk.END, message)
+            output_text.see(tk.END)
+
+        if not worker_done.is_set() or not output_queue.empty():
+            output_text.after(100, flush_output_queue)
     
     # 在后台线程中执行，避免阻塞UI
     def run_checks():
         try:
             def append_output(text):
                 """实时追加输出到界面"""
-                def update():
-                    output_text.insert(tk.END, text)
-                    output_text.see(tk.END)  # 自动滚动到底部
-                    output_text.update()
-                output_text.after(0, update)
+                output_queue.put(text)
             
             def capture_print(*args, **kwargs):
                 """捕获 print 输出并实时显示"""
@@ -178,8 +189,24 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_t
             
             append_output("\n" + "=" * 60 + "\n\n")
             
-            # Step 4: 执行推理（只有前面都通过才执行）
-            append_output("Step 4: 执行图谱推理\n")
+            # Step 4: 检查条件判断规则的分支完整性
+            append_output("Step 4: 检查条件判断规则分支配对\n")
+            append_output("-" * 60 + "\n")
+
+            builtins.print = capture_print
+            try:
+                conditional_pairs_passed = check_conditional_rule_pairs(graph_json_path)
+                if not conditional_pairs_passed:
+                    append_output("\n❌ Step 4 检查失败，停止执行后续步骤\n")
+                    append_output("=" * 60 + "\n")
+                    return  # 提前返回，不执行 Step 5
+            finally:
+                builtins.print = original_print
+
+            append_output("\n" + "=" * 60 + "\n\n")
+
+            # Step 5: 执行推理（只有前面都通过才执行）
+            append_output("Step 5: 执行图谱推理\n")
             append_output("-" * 60 + "\n")
             
             builtins.print = capture_print
@@ -203,16 +230,15 @@ def execute_json_to_graph(graph_json_path, result_json_path, output_text, case_t
             import traceback
             error_msg = f'\n\n❌ 错误: {str(e)}\n'
             error_msg += traceback.format_exc()
-            
-            def show_error():
-                output_text.insert(tk.END, error_msg)
-                output_text.see(tk.END)
-            output_text.after(0, show_error)
+            output_queue.put(error_msg)
+        finally:
+            worker_done.set()
     
     # 启动后台线程
     thread = threading.Thread(target=run_checks)
     thread.daemon = True
     thread.start()
+    flush_output_queue()
 
 def main():
     window = tk.Tk()

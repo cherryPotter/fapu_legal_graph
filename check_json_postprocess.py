@@ -34,7 +34,15 @@ def ensure_connected(graph):
         return True
     else:
         print(f"❌ 图不连通，共 {len(components)} 个连通分量（弱连通）")
-        return False
+        print("\n连通分量详情：")
+        for i, component in enumerate(components, 1):
+            nodes = sorted(list(component))
+            print(f"\n【第 {i} 个连通分量，共 {len(nodes)} 个节点】")
+            for j, node in enumerate(nodes, 1):
+                print(f"  节点 {j}: {node}")
+        print("\n" + "=" * 60)
+        print("❌ 图检查失败，图必须连通，停止执行")
+        sys.exit(1)
 
 
 def check_graph_for_cycles(graph):
